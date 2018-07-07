@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Choose Dates & Options</title>
+    </span>
+
+
+
+
+<span tal:omit-tag="" metal:fill-slot="body">
+
+               
+
+    <span tal:replace="structure
+    python:here.choose_dates_options_body(req=request)" />
+    </span> <!-- body -->
+</html>
+
+
+

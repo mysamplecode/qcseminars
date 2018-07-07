@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+  <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" />Method of Payment</title>
+    </span>
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<p style="color:#F00"><strong>International Customers - PLEASE NOTE:</strong> if
+    your credit card's financial institution is not an Australian bank, you
+    may incur a foreign transaction fee (typically about  3% of the total
+	  order price depending on your bank).</p>
+	<script language="JavaScript" src="/susjs/ccvalidate.js" type="text/javascript"></script>
+    <span tal:replace="structure python:here.capture_card_body(request)" />
+
+    </span>
+</html>
+
+ 

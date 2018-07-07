@@ -1,0 +1,108 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+  <span tal:omit-tag="" metal:fill-slot="head">
+    <title>Choose Offer Options</title>
+  </span>
+
+
+
+
+
+
+<span tal:omit-tag="" metal:fill-slot="body">
+<h1>Choose Offer Options</h1>
+      <p>You have at least one Offer in your shopping cart which requires 
+	that you choose between one or more Offer Items. Use the 
+	pulldown menus below to make your selections before proceeding 
+	to the next step*.</p>
+
+
+  <span tal:omit-tag=""
+      tal:define="offers
+      python:here.get_session_var_eval('cart_breakdown')['offers']">
+
+  <form action="update_breakout" method="post">
+    <span tal:omit-tag="" tal:repeat="offer offers">
+
+    <span tal:omit-tag="" tal:condition="python:here.should_show_offer(offer)">
+
+      <h3><span tal:replace="offer/offerheader/name" /> -
+	$<span
+	tal:replace="python:here.moneyfmt(offer['offerheader']['price'])" /></h3>
+
+
+	    <!-- Here, loop through the lines in the offer, and then
+		create an inner loop for the parts. -->
+
+	    <!-- There needs to be a form processor that takes the form
+		input and removes any unneeded 'or' items (once the user
+		has made his choices. -->
+
+      <table class='cart'>
+      <tr>
+	<th>Choose From the Items Listed Below:</th>
+	</tr>
+      <tr>
+	<td>
+	<table>
+	<span tal:omit-tag="" tal:repeat="line offer/lines">
+	  <tr>
+	    <td> <!-- line td -->
+	      <input type="hidden" name="offers.ordinal:records"
+		tal:attributes="value offer/ordinal" />
+		<input type="hidden" name="offers.line_id:records"
+		  tal:attributes="value line/offer_line_id" />
+
+	      <span tal:omit-tag="" tal:condition=
+		  "python:len(line['parts'])==1">
+
+		<span tal:omit-tag=""
+		  tal:repeat="part line/parts">
+
+		  <input type="hidden" name="offers.line_part_id:records"
+		    tal:attributes="value part/part_id">
+
+		</span> <!-- repeat parts -->
+	      </span> <!-- condition == 1 -->
+
+
+	      <span tal:omit-tag="" tal:condition=
+		  "python:len(line['parts'])>1">
+
+		<select name="offers.line_part_id:records">
+		<option value=0 > - Choose One -</option>
+		<span tal:omit-tag=""
+		  tal:repeat="part line/parts">
+		  <option tal:attributes="value
+		  part/part_id">
+		    <span tal:replace="part/name" />
+		    -
+		    <span
+		    tal:replace="part/category" />
+		    [Qty: <span
+		    tal:replace="part/quantity" />]
+		  </option>
+		</span>
+		</select>
+		</span> <!-- condition == multiple -->
+	    </td> <!-- /line td -->
+	  </tr>
+	</span>
+	</table>
+	</td>
+      </tr>
+      </table>
+      </span> <!-- offers cond -->
+    </span> <!-- offers repeat -->
+  <input type="submit" name="action" value="Confirm" /><br />
+  <span class="asterix">*Once you Confirm your choices here you will not be able to push the back button on your browser to modify your choices. To make changes, please <a href="/cart/">restart your checkout</a>.</span>
+  </form>
+
+  </span> <!-- define offers -->
+</span> <!-- body -->
+</html>
+
+
+ 

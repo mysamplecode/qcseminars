@@ -1,0 +1,1581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head profile="http://gmpg.org/xfn/11">
+
+
+<title>NLP Master Practitioner QC Seminars</title>
+
+<link rel="stylesheet" href="style.css" />
+<style type="text/css">
+body {background:transparent;}
+h2{color:red;}
+span.instructions{display:none !important;}
+.opt-in_alert{margin-top:40px;width:210px;font-size:12px;color:#999999;}
+select{width:150px;}
+.input{clear:both;display:block;}
+input{width:205px;}
+.not_verified_user{display:none;}
+#form_id_115{width:200px;}
+ol li {padding-bottom:15px;}
+.leftcontent{width:736px !important;}
+div#bluebox {
+    background: url("http://events.quantumchangeseminars.com/freenlp/images/box-topbg.gif") no-repeat scroll center top #D6E6FF;
+    margin-bottom: 0;
+    padding: 10px 20px;margin-left:50px;
+}
+ul.redticks {
+    list-style: none outside none;
+    margin-left: 0;
+    padding-left: 0;
+}
+ul.redticks li {
+    background-image: url("http://events.quantumchangeseminars.com/freenlp/report/images/redarrow.png");
+    background-repeat: no-repeat;
+    padding-left: 55px;  padding-bottom: 25px;
+}
+div#guaranteebox {
+    background-color: #FFF9CD;
+    border: 6px double #C3BB84;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+div.testimonialbox {
+    background: url("images/testimonialsbggreen.jpg") no-repeat scroll left top #FFFDE1;
+    font-size: 13px;
+    line-height: 14px;
+    padding: 50px 10px 10px;
+	width:180px;margin-left:15px;
+}
+div#testimonialsbox h3 {
+    font-family: 'AllerBold',Arial,sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 18px;
+    margin-top: 40px;
+}
+#testimonialsbox p {
+    font-size: 11px;
+    line-height: 14px;
+}
+.leftyt {
+    float: left;
+    padding-right: 5px;
+}
+#firstbox {
+    background: url("../images/firstbox-bg.gif") no-repeat scroll left top #FFFDE1;
+    margin-bottom: 0;
+    padding: 20px 20px 5px;
+    width: 400px;
+}
+
+/* CSS Document */
+
+/* The following Styles for the Event Calendar Display code provide many 
+of the class declarations you should need to style the calendars to suit
+your web site visually.
+
+You should look at the source HTML for your calendars
+so that you can perform considerably more innovative styling than we could
+use here for this generic calendar display. For instance, you could use a class 
+called "sku_XXX" (where XXX is the actual SKU ID from your database) for 
+Grouping by SKUs and for each "event_instance" so that you can use graphics
+or other forms of customization for your individual course types.
+
+Finally, all colors used in this style sheet begin with "#" so you can easy 
+perform a search and replace to quickly color the default template for your needs.
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* calendar global setting 
+
+The width of the register DIV is not set here so that it automatically 
+expands to fit the remaining space. This allows calendars with fewer 
+columns to display correctly. For instance, if you're building a multi-SKU
+calendar and using a Display Template to sort by SKU, you don't need an 
+"Event Name" DIV since the Grouping will already display the Event Name
+above each set of events scheduled for that event. The same can be done 
+with Grouping by Location.
+
+*/
+
+.event_calendar {
+	clear: both;
+}
+
+.event_calendar div{
+	padding: 0;
+	margin: 0;
+	font-size: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.event_calendar div a{
+	font-weight: normal;
+	text-decoration: underline;
+	color: blue;
+}
+
+.event_calendar div a:hover {
+}
+
+.event_calendar p {
+	line-height: normal;
+}
+
+
+.event_calendar {
+	width: 99%;
+	border: solid #000000 2px;
+
+}
+
+.event_calendar div.description {
+	width: 12%;
+}
+
+.event_calendar div.date {
+	width: 31%;
+}
+
+.event_calendar div.location{
+	width: 11%;
+}
+
+.event_calendar div.venue{
+	width: 15%;
+}
+
+.event_calendar div.availability{
+	width: 15%;
+}
+
+.event_calendar div.register{
+}
+
+.event_calendar div.odd div.description,
+.event_calendar div.odd div.date,
+.event_calendar div.odd div.location,
+.event_calendar div.odd div.venue,
+.event_calendar div.odd div.availability,
+.event_calendar div.odd div.register {
+	background-color: #DDDDDD;
+}
+
+.event_calendar div.even div.description,
+.event_calendar div.even div.date,
+.event_calendar div.even div.location,
+.event_calendar div.even div.venue,
+.event_calendar div.even div.availability,
+.event_calendar div.even div.register {
+	background-color: #FFFFFF;
+}
+
+/* /calendar global setting */
+
+
+
+
+
+/*  header */
+
+.event_calendar div.header {
+	background-color: #444444;
+	border-bottom: solid #000000 1px;
+}
+
+.event_calendar div.header div{
+	float: left;
+	color: #FFFFFF;
+	background-color: inherit;
+	border-right: solid #000000 1px;
+}
+
+.event_calendar div.header p {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin:0;
+}
+
+.event_calendar div.header div.register{
+	float: none;
+	border-right: none;
+}
+
+
+/*  /header */
+
+
+
+
+
+/*  footer */
+
+.event_calendar div.footer {
+	background-color: #444444;
+	border-top: solid #000000 1px;
+}
+
+.event_calendar div.footer div{
+	float: left;
+	color: #FFFFFF;
+	background-color: inherit;
+	border-right: solid #000000 1px;
+}
+
+.event_calendar div.footer p {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin:0;
+}
+
+.event_calendar div.footer div.register{
+	float: none;
+	border-right: none;
+}
+
+
+/*  /footer */
+
+
+
+
+
+/* event_instance  */
+
+.event_calendar div.event_instance{
+	clear: both;
+	border-bottom: solid #000000 1px;
+}
+
+.event_calendar div.event_instance div{
+	float: left;
+	border-right: solid #000000 1px;
+	height: 10em;
+}
+
+.event_calendar div.event_instance div.register{
+	float: none;
+	border-right: none;
+}
+
+.event_calendar div.event_instance p {
+	padding: 0 5px;
+	margin:0;
+	font-size: 1em;
+}
+
+
+/* /event_instance  */
+
+
+
+
+
+/* description - "Event Name"  */
+
+
+.event_calendar div.event_instance div.description p{
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.description a{
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.description span.event_id{
+	display: none;
+}
+
+/* /description - "Event Name"  */
+
+
+
+
+
+/* date  */
+
+
+div.date span.vague_date {
+	display:block;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.event_calendar div.date span.single_day {
+	font-weight:bold;
+}
+
+.event_calendar div.date span.single_day span.time{
+	display:block;
+}
+
+.event_calendar div.date span.multi_day span.end {
+	display:block;
+}
+
+.event_calendar div.date span.multi_day {
+	font-weight:normal;
+}
+
+.event_calendar div.date span.multi_day span.start_day,
+.event_calendar div.date span.multi_day span.start_time,
+.event_calendar div.date span.multi_day span.end_day,
+.event_calendar div.date span.multi_day span.end_time {
+	font-weight:bold;
+}
+
+.event_calendar div.date span.multi_day span.start_time,
+.event_calendar div.date span.multi_day span.end_time {
+	padding-left: 4px;
+	font-weight:normal;
+}
+
+.event_calendar div.date span.registration {
+	display:block;
+	margin-top: 10px;
+	font-style:italic;
+}
+
+.event_calendar div.date span.registration > span.single_day{
+}
+
+.event_calendar div.date span.registration span.instructions {
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_time span.instructions,
+.event_calendar div.date span.registration span.single_day span.reg_time + span.instructions {
+	padding-left: 4px;
+}
+
+.event_calendar div.date span.registration span.multi_day,
+.event_calendar div.date span.registration span.single_day {
+	font-weight:normal;
+
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_end {
+	display: block;
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_date {
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.single_day span.reg_time {
+	display: block;
+	float: left;
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.single_day span.reg_time + span.instructions {
+	float: left;
+	display: block;
+}
+
+
+
+/* /date  */
+
+
+
+
+
+/* location  */
+
+.event_calendar div.event_instance div.location p{
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* /location  */
+
+
+
+
+
+/* venue  */
+
+.event_calendar div.event_instance div.venue p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance div.venue span.venue_address {
+	display: block;
+}
+
+.event_calendar div.event_instance div.venue span.venue_name {
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.venue span.web_map{
+	display: block;
+	text-align: left;
+	float: left;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance div.venue span.booking_info {
+	display: block;
+	text-align: left;
+	float: right;
+	margin-top: 10px;
+}
+
+/* /venue  */
+
+
+
+
+
+/* availability  */
+
+.event_calendar div.event_instance div.availability p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance span.seating_available {
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance span.sold_out {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.event_calendar div.event_instance span.wait_list {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance span.no_wait_list {
+	display: block;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance span.null_capacity {
+	color: #FF0000;
+}
+/* /availability  */
+
+
+
+
+
+/* register  */
+
+.event_calendar div.event_instance div.register p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance div.register span.free{
+}
+
+.event_calendar div.event_instance div.register span.web_display {
+	display: block;
+}
+
+.event_calendar div.event_instance div.register span.web_display span.price{
+	text-decoration: line-through;
+}
+
+.event_calendar div.event_instance div.register span.selling_price {
+	display: block;
+	font-size: 1.25em;
+}
+
+.event_calendar div.event_instance div.register span.web_display + span.selling_price {
+	
+}
+
+.event_calendar div.event_instance div.register span.selling_price span.price {
+	display: block;
+	text-decoration: underline;
+}
+
+.event_calendar div.event_instance div.register span.selling_price span.price_description {
+	display: block;
+	margin-top: 10px;
+}
+
+/* /register  */
+
+
+
+
+
+/* Display Template Grouping Styles
+
+The following styles are used when your "Calendar Display Template"
+Groups by Sku, Program or Location. 
+
+*/
+
+div.sort_by_sku .event_calendar div.header div.register{
+	float: none;
+}
+
+div.sort_by_sku .event_calendar div.venue{
+	width: 15%;
+}
+
+div.sort_by_sku div.description_divider div,
+div.sort_by_program div.program_divider div,
+div.sort_by_location div.location_divider div {
+	background-color: #AAAAAA;
+	padding: 0;
+	margin:0;
+}
+
+div.sort_by_sku div.description_divider div.left,
+div.sort_by_program div.program_divider div.left,
+div.sort_by_location div.location_divider div.left {
+	display: none;
+}
+
+div.sort_by_sku div.description_divider div.right,
+div.sort_by_program div.program_divider div.right,
+div.sort_by_location div.location_divider div.right {
+	display: none;
+}
+
+div.sort_by_sku div.description_divider div.center,
+div.sort_by_program div.program_divider div.center,
+div.sort_by_location div.location_divider div.center {
+border-bottom: solid 1px #000000;
+}
+
+div.sort_by_sku div.description_divider div.center p,
+div.sort_by_program div.program_divider div.center p,
+div.sort_by_location div.location_divider div.center p {
+	padding: 0 0 0 15px;
+	margin: 0;
+	line-height: 2em;
+	font-size: 1.5em;
+	color: #000000;
+}
+
+
+
+/* /Display Template Grouping Styles  */
+
+
+
+
+
+/* Calendars without scheduled events  */
+
+.event_calendar div.no_events {
+	background-color: #DDDDDD;
+	padding: 0;
+	margin:0;
+}
+
+.event_calendar div.no_events p{
+	padding: 0;
+	margin: 0;
+	line-height: 4em;
+	font-size: 1.5em;
+	color: #000000;
+	text-align: center;
+}
+
+
+/* /Calendars without scheduled events  */
+
+
+
+/* Free NLP Styles */
+
+
+.free_nlp .event_calendar {
+	-moz-border-radius:12px 12px 12px 12px;
+	background-color:#FFFFDD;
+	border:4px dashed #FF0000;
+}
+
+.free_nlp .event_calendar div.event_instance p {
+	font-size:1.25em;
+}
+
+.free_nlp .event_calendar div.header div,
+.free_nlp .event_calendar div.footer div {
+	border: none;
+}
+
+.free_nlp .event_calendar .header,
+.free_nlp .event_calendar .footer {
+	width: auto;
+	height: 30px;
+	background-color: red;
+	border: none;
+	float: none;
+	text-shadow: 1px 1px 0 #000000;
+	padding-top: 5px;
+}
+
+
+.free_nlp .event_calendar div.date {
+	width: 40%;
+}
+
+.free_nlp .event_calendar div.venue {
+	width: 30%;
+}
+
+
+
+.free_nlp .event_calendar div.event_instance div  {
+	height: 124px;
+}
+
+.free_nlp .event_calendar .description,
+.free_nlp .event_calendar div.header .location,
+.free_nlp .event_calendar div.footer .location,
+.free_nlp .event_calendar .event_instance .location {
+	display: none;
+}
+
+.free_nlp .event_calendar .location_divider {
+	width: 100%;
+	float: none;
+	border-bottom: 1px solid black;
+}
+
+
+.free_nlp .event_calendar .location_divider + .event_instance {
+	clear: right;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld div,
+.free_nlp .event_calendar .location_divider .melbourne_vic div,
+.free_nlp .event_calendar .location_divider .perth_wa div,
+.free_nlp .event_calendar .location_divider .sydney_nsw div {
+	background-color: transparent;
+	border-bottom: none;
+	height: 120px;
+}
+
+.free_nlp .event_calendar .location_divider span.location {
+	font-size: 2.5em;
+	padding: 50px 0 0 100px;
+	display: block;
+	height: 120px;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld,
+.free_nlp .event_calendar .location_divider .melbourne_vic,
+.free_nlp .event_calendar .location_divider .perth_wa,
+.free_nlp .event_calendar .location_divider .sydney_nsw {
+	background-repeat: no-repeat;
+	height: 124px;
+	width: 100%;
+	background-color: white;
+	background-position: 600px;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_bris.png);
+}
+
+.free_nlp .event_calendar .location_divider .melbourne_vic{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_melb.png);
+}
+
+.free_nlp .event_calendar .location_divider .perth_wa{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_perth.png);
+}
+
+.free_nlp .event_calendar .location_divider .sydney_nsw  {
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_syd.png);
+}
+
+.free_nlp .event_calendar .event_instance .date p,
+.free_nlp .event_calendar .event_instance .venue p,
+.free_nlp .event_calendar .event_instance .register p {
+	padding: 20px 0 0 0;
+}
+
+.free_nlp .event_calendar .event_instance .date p {
+	padding: 20px 0 0 20px;
+}
+
+.free_nlp .event_calendar .event_instance .register span.price_category > a {
+	padding-top: 15px;
+	display: block;
+}
+
+.free_nlp .event_calendar .event_instance .register span.selling_price span.price {
+	display:inline;
+	font-size: 1.25em;
+}
+
+/* /Free NLP Styles */
+
+
+/* Main Calendar Page styles */
+
+.main_cal_venue .event_calendar {
+	width: 585px;
+	border: none;
+	border-bottom: 1px dotted rgb(153, 204, 255);
+}
+
+.main_cal_venue .event_calendar div.event_instance {
+	border: none;	
+	border-top: 1px dotted rgb(153, 204, 255);
+	padding: 10px 0;
+}
+
+.main_cal_venue .event_calendar div.event_instance div  {
+	border-right: none;
+	height: 4em;
+}
+
+.main_cal_venue .event_calendar .header,
+.main_cal_venue .event_calendar .footer,
+.main_cal_venue div.event_instance div.register span.web_display,
+.main_cal_venue div.event_instance div.register span.price_category > a,
+.main_cal_venue div.event_instance div.date span.registration {
+	display: none;
+}
+
+
+.main_cal_venue .event_calendar div.location{
+	width: 130px;
+}
+
+.main_cal_venue .event_calendar div.venue{
+	width: 150px;
+}
+
+
+.main_cal_venue .event_calendar div.event_instance div.location p{
+	font-size: 12px;
+	text-align: left;
+}
+
+.main_cal_venue .event_calendar div.date {
+	width: 200px;
+}
+
+.main_cal_venue .event_calendar div.date p {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+
+.main_cal_venue div.date span.vague_date {
+	display: block;
+	font-size: 1em;
+	font-weight:normal;
+	text-align:left;
+}
+
+.main_cal_venue .event_calendar div.register span {
+	text-align: right;
+}
+
+.main_cal_venue .event_calendar div.odd div.description,
+.main_cal_venue .event_calendar div.odd div.date,
+.main_cal_venue .event_calendar div.odd div.location,
+.main_cal_venue .event_calendar div.odd div.venue,
+.main_cal_venue .event_calendar div.odd div.availability,
+.main_cal_venue .event_calendar div.odd div.register {
+	background-color: transparent;
+}
+
+.main_cal_venue .event_calendar div.event_instance div.register span.selling_price span.price_description {
+	margin:0;
+	font-size: .8em;
+}
+
+.main_cal_venue .event_calendar div.no_events p {
+	line-height: 3em;
+}
+
+.main_cal_venue .event_calendar div.no_events {
+	background-color: #F6F6F6;
+	border-top: 1px dotted rgb(153, 204, 255);
+}
+
+.main_cal_venue .event_calendar div.event_instance div.venue span.web_map {
+    display: block;
+    float: none;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.main_cal_venue .event_calendar div.event_instance div.venue span.venue_name {
+    white-space: nowrap;
+}
+
+/* /Main Calendar Page styles */
+
+/* Side Bar iFrame event calendar styles */
+
+.side_bar_iframe .event_calendar {
+	width: 211px;
+	border: none;
+	border:none;
+	height: 300px;
+}
+
+.side_bar_iframe .event_calendar div.event_instance {
+	border: none;	
+	border-bottom: 1px dotted rgb(153, 204, 255);
+	padding: 5px 0;
+	/*height: 75px;*/
+}
+
+.side_bar_iframe .event_calendar div.event_instance div  {
+	border-right: none;
+	float: none;
+	height: auto;
+}
+
+.side_bar_iframe .event_calendar div.description,
+.side_bar_iframe .event_calendar div.location,
+.side_bar_iframe .event_calendar div.date,
+.side_bar_iframe .event_calendar div.register {
+	width: 100%;
+}
+
+.side_bar_iframe .event_calendar .header,
+.side_bar_iframe .event_calendar .footer,
+.side_bar_iframe div.event_instance div.register span.web_display,
+.side_bar_iframe div.event_instance div.register span.price_category > a,
+.side_bar_iframe div.event_instance div.date span.registration {
+	display: none;
+}
+
+.side_bar_iframe .event_calendar div.odd div.description,
+.side_bar_iframe .event_calendar div.odd div.date,
+.side_bar_iframe .event_calendar div.odd div.location,
+.side_bar_iframe .event_calendar div.odd div.venue,
+.side_bar_iframe .event_calendar div.odd div.availability,
+.side_bar_iframe .event_calendar div.odd div.register {
+	background-color: transparent;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.description p {
+	color:#0066CC;
+	font-weight:bold;
+	text-align:left;
+	font-size: 12px;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.location p,
+.side_bar_iframe .event_calendar div.event_instance div.date p,
+.side_bar_iframe .event_calendar div.event_instance div.register p,
+.side_bar_iframe div.event_instance div.register span.selling_price,
+.side_bar_iframe div.date span.vague_date {
+	font-size: 1em;
+	text-align: left;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.register span.selling_price span.price_description {
+	margin:0
+}
+
+.side_bar_iframe div.event_instance div.register span.selling_price a {
+	color:#003399;
+	text-decoration:none;
+}
+
+.side_bar_iframe div.event_instance div.register span.selling_price a:hover {
+	color:#003399;
+	text-decoration: underline;
+}
+
+.side_bar_iframe div.event_instance .date span.start span.instructions,
+.side_bar_iframe div.event_instance .date span.start_time,
+.side_bar_iframe div.event_instance .date span.end_time {
+	display: none;
+}
+
+.side_bar_iframe .event_calendar div.date span.multi_day span.end {
+	display:inline;
+}
+
+.side_bar_iframe .event_calendar div.date span.multi_day span.start_day,
+.side_bar_iframe .event_calendar div.date span.multi_day span.start_time,
+.side_bar_iframe .event_calendar div.date span.multi_day span.end_day,
+.side_bar_iframe .event_calendar div.date span.multi_day span.end_time {
+	font-weight: normal;
+}
+
+
+/* /Side Bar iFrame event calendar styles */
+
+</style>
+</head>
+<body>
+<div style="width:1011px;margin:auto;">
+<div style="float:left;width:1011px;">
+<img id="header" src="images/header.jpg" width="1011" height="218" alt="" />
+</div>
+<div style="float:left;width:1011px;clear:both;background-image:url(images/borderleft.jpg);background-repeat:repeat-y;">
+<div id="launchheaderbottom"></div>
+<div class="leftcontent">
+  <p><em>Have you been seeking  answers on how to remain spiritually connected, yet still live an abundant  life?</em></p>
+
+
+  <h1 style="text-align:center;padding-left:40px;padding-right:10px;">&ldquo;Now You Can  Stop Searching And Start Living The Life Of Purpose, Power And Prosperity You  Were Meant To Live&rdquo;</h1>
+  <p>Discover  how to finally get  crystal clear on who you really are and your purpose in life, so you can easily  manifest your dreams and desires&hellip;once and for all!</p>
+  <p>The  key to your future lies in the modern day application of this&nbsp;<strong><u>rediscovered ancient wisdom from magical Hawaii&hellip;</u></strong></p>
+  <div style="width:680px;clear:both;margin-left:40px;">
+<div style="width:160px;float:left;"><img src="http://events.quantumchangeseminars.com/public/common/www/freenlp/report/images/robertapic2.jpg" alt="http://events.quantumchangeseminars.com/public/common/www/freenlp/report/images/robertapic2.jpg" style="width:100px;padding-left:70px;" /></div>
+<div style="float:left;width:500px;">
+<p><strong>From The Desk Of: Roberta Faddoul</strong></p>
+
+<p>Managing Director of Quantum Change Seminars, 
+Co-developer of the revolutionary &quot;Quit Cigarettes In 60 Minutes&quot;&trade; Program, NLP Master Practitioner, NLP Trainer and Master Hypnotist</p>
+</div></div>
+<Br />
+<h2 style="padding:0px 30px 0px 30px;clear:both;"><img src="images/aloha.jpg" style="float:right;" /><img src="images/dearfriend.jpg" width="210" height="54" /></h2>
+<p>If you&rsquo;d like to finally have the  self-confidence and self-esteem to <u>choose</u> your purpose in life&hellip;</p>
+<p>&hellip;and leave behind the doubts and fears  that may have held you back from reaching your goals and dreams&hellip;. </p>
+<p>&hellip;and don&rsquo;t yet have satisfying answers&hellip; </p>
+<p>&hellip;then I have  some <strong>GOOD NEWS!</strong></p>
+<p>You&rsquo;re about to discover a profound and  very ancient system for living&hellip;</p>
+<p>&hellip;that few people know about&hellip;</p>
+<p>&hellip;and yet is ideal for anyone who wants  both spiritual fulfilment and material abundance. </p>
+<p>With this blueprint for successful  living, your life will be transformed. </p>
+<p><strong>EVERYTHING</strong>&nbsp;will  flow more easily for you&hellip;</p>
+<p>&hellip;and  you&rsquo;ll finally enjoy the fulfilling life you were meant to have.</p>
+<h1 align="center" style="padding-left:50px;">Why CERTAINTY Is The Key To Your  Future Happiness And Success</h1>
+<p>You see, when  you have a sense of CERTAINTY about who you really are and your purpose in  life&hellip;</p>
+<p>&hellip;making  decisions and taking action is EASY.&nbsp;  There&rsquo;s no doubt or hesitation about the <span style="background-color:#ccff33;">right path for you.</span> </p>
+<p>Imagine how  much more you can achieve when you&rsquo;re not held back by any doubt or hesitation  and you pursue your goals at 110% because you know that&rsquo;s exactly what you&rsquo;re  meant to be doing.</p>
+<p>And there&rsquo;s  another BIG BENEFIT to what I&rsquo;m about to reveal&hellip;</p>
+<p>&hellip;you&rsquo;ll have  all the ENERGY and vitality you&rsquo;ll need to live life to the FULL.</p>
+<p>But I&rsquo;m  getting a little ahead of myself here&hellip;</p>
+<p>First let me  explain more about why you might be struggling with those questions at the  start of this message&hellip;</p>
+<p>&hellip;and why,  even if you have enjoyed great success already, you still feel as if there is  something missing in your life.</p>
+<p>You see,  there&rsquo;s what I call&hellip;</p>
+<h1 align="center">The Prosperity Paradox Of The Modern  World</h1>
+<p><img src="images/waterfall.jpg" style="float:right;" />In the  Western World, we live in a time <br />
+  of prosperity  and opportunity almost unknown in history.&nbsp;  &nbsp;</p>
+<p>Sure, there  are problems and challenges to be faced&hellip;</p>
+<p>&hellip;and right  now there is certainly a fair amount of financial and economic turmoil around.</p>
+<p>But if you  step back for a moment, you&rsquo;ll realise that we enjoy a material standard of  living that even the &ldquo;rich and powerful&rdquo; of the past would have ENVIED.</p>
+<p>And yet, many  people are not satisfied with their lives&hellip;</p>
+<p>&hellip;there&rsquo;s an  emptiness, a VOID inside&hellip;</p>
+<p>&hellip;and too many  of us seem to endure lives of &ldquo;quiet desperation&rdquo;.</p>
+<p>The reason, I  believe, is that with all the fantastic progress that we&rsquo;ve made&hellip;</p>
+<p>&hellip;we&rsquo;ve left  something behind.</p>
+<p>We&rsquo;ve  forgotten some of the <span style="background-color:#ccff33;">profound wisdom</span> that helped us to achieve material success and prosperity in the  first place.</p>
+<p>We&rsquo;ve  forgotten&hellip;</p>
+
+<div style="background-image:url(images/payinfull.jpg);width:615px;height:172px;margin-left:60px;">
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=22&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<div style="background-image:url(images/payinpart.jpg);width:615px;height:172px;margin-left:60px;">
+
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=23&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<h1 align="center" style="clear:both;">The Natural Secrets Of Success, Happiness And Empowerment</h1>
+<p><img src="images/trees.jpg" style="float:right;" />Until very  recently in human history, we all lived our lives with a close connection to  the natural world.</p>
+<p>After all,  regardless of our progress and sophistication, we are a PART of that <span style="background-color:#ccff33;">natural world.</span></p>
+<p>And with that  connection came two things.</p>
+<p>Firstly, a  better understanding and connection with our higher selves that meant a greater  sense of <span style="background-color:#ccff33;">certainty about  who we are and our purpose in this life.</span></p>
+<p>Secondly, the  ability to benefit from the energy and power of the natural world.</p>
+<p>If that  second point seems perhaps a little &ldquo;out there&rdquo;, think just for a moment about  the incredible energy in say a hurricane or even the regular ebb and flow of  the tides.</p>
+<p>Now, the extraordinary  material progress of the last few centuries has come at a price&hellip;</p>
+<p>&hellip;because we&rsquo;ve  largely lost that connection with the natural world.</p>
+<p>As a result,  many of us feel adrift, we&rsquo;ve lost our spiritual grounding and understanding.</p>
+<p>That&rsquo;s why so  many of us struggle with those questions like&hellip;</p>
+<p>&hellip;Who am I?  What is my life&rsquo;s purpose? Why am I here?</p>
+<p>Fortunately,  not everybody forgot the ancient wisdoms.</p>
+<h1 align="center">Introducing HUNA&hellip;Ancient Hawaiian Wisdoms <br />
+  For Practical Living TODAY</h1>
+<p>HUNA is a science of healing, enlightenment and personal  empowerment.&nbsp; It&rsquo;s the practical system of living that evolved in ancient  times in the magical islands of Hawaii. </p>
+<p>Its origins go back thousands of years. It&rsquo;s not a religion, but an  integrated system of energy work, psychology and spirituality. It&rsquo;s not meant  to replace any religion or beliefs but to enhance them.</p>
+<p>Huna  shows you how to get in touch with your life-force energy (called &ldquo;mana&rdquo;), how  to use your energy more effectively and how to understand your connection with  the world around you (including with other people).</p>
+<p>And  there&rsquo;s something else&hellip;</p>
+<p>Pretty  much every single person who attends a Huna training experiences a profound  transformation.</p>
+<p>They  describe a sense of&nbsp;<strong>INNER PEACE</strong>, a&nbsp;<strong>CERTAINTY</strong>&nbsp;about their true identity and their&nbsp;<strong>PURPOSE</strong>&nbsp;in life.</p>
+<p>In  Huna, this blissful state is known as being &ldquo;Pono&rdquo;&hellip;</p>
+<p>&hellip;where  you feel that you are right with yourself and the world&hellip;</p>
+<p>&hellip;and  all is correctly aligned and as it was meant to be.</p>
+<p>It&rsquo;s  something you can now look forward to&hellip;</p>
+<h1 align="center" style="padding-left:40px;">Introducing The Huna Intensive  <br /> Training</h1>
+<p><img src="images/huna.jpg" style="float:right;" />Huna is a  PRACTICAL system for living&hellip;</p>
+<p>&hellip;and it&rsquo;s an  EXPERIENCE not a theory.</p>
+<p>That&rsquo;s why  the best way to learn Huna is at a LIVE TRAINING&hellip;</p>
+<p>&hellip;just like  the one that will be taking place <br />
+    <strong>23-28 April 2012</strong>&hellip;</p>
+<p>&hellip;in wonderful <strong>BYRON BAY</strong>.</p>
+<p>That&rsquo;s right,  for the FIRST TIME EVER you&rsquo;ll be able to discover for yourself the power and wisdom of Huna right here in  Australia.</p>
+<p>(Before this  you needed to travel all the way to Hawaii itself&hellip;a wonderful trip but somewhat  costly.)</p>
+<p>Over the  course of 6 days not only will you learn about Huna&hellip;</p>
+<p>&hellip;you&rsquo;ll  EXPERIENCE the power for yourself at the very deepest levels of your being.</p>
+<p>You will&hellip;</p>
+<h1 align="center" style="padding-left:40px;">Understand and connect with your  Higher Self in an 
+  easy but very powerful way </h1>
+<div style="clear:both;" id="bluebox"><ul class="redticks">
+<li>Tap  into universal sources of energy with a powerful way of adding energy to your  daily life</li>
+  <li><strong>Accelerate       your spiritual growth and understanding so that you are more centred and       have greater peace of mind</strong></li>
+
+  <li>Expand your mental powers with       access to resources that you didn&rsquo;t know existed</li>
+
+  <li><strong>Discover       the enormous power from simply controlling your breathing.&nbsp; Use these secrets to increase your energy       or simply to relax at will</strong></li>
+
+  <li>Improve and       strengthen  all areas of your life with Haipule,       the Hawaiian Manifestation process</li>
+  </ul>
+</div>
+<p>&hellip;and MUCH  More (such as finally being crystal clear on WHO you really are and your life&rsquo;s purpose). </p>
+<p>Allow me to  walk you through the 6 days of this amazing adventure in more detail&hellip;</p>
+
+		<div class="events_listing" style="clear:both;padding-left:80px;">
+			<h2><a name="huna" id="huna"></a>HUNA</h2>
+			<p>HUNA is the ancient and traditional system of personal empowerment, healing and enlightenment from the magical islands of Hawaii. With the power of HUNA at your command, you can reconnect with the natural world, revitalise your life...</p>
+			<span tal:omit-tag="" tal:replace="structure python:here.present_calendar(calendar_id=10,template_id=4)" />
+			<p style="clear:both;padding-top: 15px;font-size: 9px"><a href="#top">Back to Top</a></p>
+  </div>  
+  
+<h1 align="center">Day 1: Clearing Away And Healing The  Past <br />
+  To Prepare The Way For Your Bright  New Future<br />
+  &hellip;YOUR NEW START IN LIFE</h1>
+<p><img src="images/meditate.jpg" style="float:right;" />Pretty much  all of us carry with us some &ldquo;personal baggage&rdquo; from the past that is holding  us back in some way.</p>
+<p>Regrets about  the things we did&hellip;or did not do&hellip; and the guilt that can go with that&hellip;</p>
+<p>&hellip;anger about  past events and the actions of others&hellip;</p>
+<p>&hellip;the  lingering consequences of poor, limiting decisions that we made.</p>
+<p>We all have  to deal in some way with the consequences of these primary limiting emotions&hellip;</p>
+<p>&hellip;anger,  sadness, fear, guilt, anxiety and limiting decisions.</p>
+<p>But the GOOD  NEWS is that there is no longer any need to allow these issues to hold you  back.</p>
+<p>On the very first day of the HUNA  adventure you&rsquo;ll experience a powerful technique based on ancient Hawaiian  practices that will help you ease any pain&hellip;</p>
+<p>&hellip;physical, emotional or mental&hellip; </p>
+<p>&hellip;so  you can let go of the past experiences that might be holding you back.</p>
+<p>It&rsquo;s called the &ldquo;Dynamind&rdquo; technique  and you&rsquo;ll be astonished at how effective it can be. </p>
+<p>Before  that, you&rsquo;ll be introduced to the foundations and core principles of HUNA&hellip;</p>
+<p>&hellip;so  you can fully understand this ancient wisdom and apply it in your life.</p>
+<p>Here&rsquo;s  just some of what you&rsquo;ll discover&hellip;</p>
+<div style="clear:both;" id="bluebox">
+  <ul class="redticks"><li>The ancient origins of HUNA and why for many years       these teachings were little-known to the world at large</li>
+        <li><strong>The links between HUNA and Shamanism and how to       integrate this powerful knowledge into your daily life</strong> </li>
+        <li>The Science of       HUNA and how this translates into a practical (and powerful) system for       your daily life</li>
+        <li><strong>&ldquo;Aloha!&rdquo; You&rsquo;re       probably familiar with this word &hellip;but you&rsquo;ll discover that &ldquo;Aloha&rdquo; is MUCH       more than just a greeting and is actually at the very heart of HUNA</strong></li>
+        <li>The emotional burdens&nbsp;that we all carry around (even       though you may not be aware of them) and how to quickly free yourself</li>
+        <li><strong>WARNING!&nbsp;By       doing this you cause not just emotional problems but also potentially       serious physical problems as well</strong></li>
+        <li>How to quickly make changes in your life and achieve       the happiness and fulfilment you desire </li>
+        <li><strong>The foolproof       way to dissolve negative emotions and break free of self-imposed       limitations</strong></li>
+        </ul>
+</div>
+<p>&hellip;PLUS a full explanation,  demonstrations and experience of the &ldquo;Dynamind&rdquo; technique, the safe, easy and  fast method of healing. </p>
+<p>And that&rsquo;s  just the first day of our journey together&hellip;</p>
+<h1 align="center">Day 2: Supercharge Your Life With  More Energy <br />
+  Than You&rsquo;ve Ever Enjoyed Before</h1>
+<p><img src="images/jump.jpg" style="padding-left:10px;float:right;" />Now that you&rsquo;ve  let go of the burdens holding you back&hellip;</p>
+<p>&hellip;it&rsquo;s time to  reconnect with the incredible power and energy that&rsquo;s available to you in the  universe.</p>
+<p>When you  think about it, there is a virtually limitless amount of energy in the  universe.</p>
+<p>On this  second day, you&rsquo;ll discover how to reconnect to the world around you and tap  into this <strong>UNLIMITED POWER OF THE  UNIVERSE.</strong></p>
+<p>This skill of  tapping into the elemental power was well known to the ancient HUNA masters&hellip;</p>
+<p>&hellip;and now you  can take advantage TOO.</p>
+<p>Discover&hellip;</p>
+<div style="clear:both;" id="bluebox">
+<ul class="redticks">
+  <li><strong>The &ldquo;Four Selves&rdquo;  possess and how they are connected </strong></li>
+
+  <li>The dangers that arise when too       much emphasis is placed on one of the bodies at the expense of the others       (and why in the Western World you may suffer from these particular       problems)</li>
+
+  <li><strong>The       HUNA approach to balance in your life.&nbsp;       This may be VERY different to what you might expect</strong></li>
+
+  <li>How to connect with each of your Four Selves and       discover how they can work together to deliver you a richer, more       rewarding life</li>
+  <li><strong>The essence</strong><strong> of health and healing and how to use that knowledge       to virtually banish mental and physical disease from your life</strong></li>
+  <li>A different kind       of wisdom and intelligence that can transform your life (and build on what       you already know)</li>
+  <li><strong>The little-known       connection between Quantum Physics and HUNA</strong></li>
+  <li><strong>The real secret       to understanding and working with your emotions so that you have greater       joy and less anguish in your life</strong> </li>
+  <li>There are 7 5 elements that       are the fundamental building blocks of everything in the universe.&nbsp;       Here&rsquo;s what you need to know about them</li>
+  <li><strong>How to have more       control over your personal energy levels and your physical world</strong></li>
+  <li>The real secret behind chanting and how to harness       the true power of words to achieve what you want</li>
+  <li><strong>How to understand the hidden patterns that are       impacting your life right NOW so you can make changes and create a better       future</strong></li>
+  <li>The amazingly       simple foundation for tapping into and boosting your energy that you can       apply anytime, anywhere</li>
+  </ul>
+</div>
+<p>On this  second day you&rsquo;ll also experience a traditional Hawaiian  ceremony that&rsquo;s  an integral part of creating all the energy you need to have the life you want.</p>
+<p>Next&hellip;</p>
+<h1 style="padding-left:40px;"><img src="images/climb.jpg" style="padding-left:10px;float:right;" /> Day 3: Overcoming Challenges,</h1>
+  <p>Helping Others&hellip;And Discovering Your  Dream World</p>
+<p>On this third  day of our journey, we turn to applying your new knowledge, skill and power in  the area of helping others (and yourself) to heal themselves. </p>
+<p>You&rsquo;ll also  enter the amazing world of your dreams&hellip;</p>
+<div style="clear:both;" id="bluebox">
+  <ul class="redticks"><li>The source of your energy, how to tap  into it more effectively and put it to work in your life</li>
+  <li><strong>Practical  ways to experience, understand and boost the energy of the different elements (these  can easily fit in to your daily routine)</strong></li>
+  <li>What to do if you have too little (or  too much) energy. The answers may not be what seems obvious</li>
+  <li><strong>What  you MUST do first when you want to help somebody else experience a higher level  of energy </strong></li>
+  <li>The remarkable power of prayer&hellip;but not  as you might know it!</li>
+  <li><strong>The  simplest way to get started immediately to boost your energy levels</strong> </li>
+  <li>Why everybody sees the world in a  unique way&hellip;and how you can change your experience to get more of what you want</li>
+  <li><strong>When  you can control this&hellip;you can control (and change) reality</strong> </li>
+  <li>Why the Law Of Attraction seems to  fail for many people&hellip;and how to make sure it does work for you</li>
+  <li><strong>The  most important question to ask when you wish to change your experience or  circumstances </strong></li>
+  <li>A simple rule that will prevent  conflicts and give you greater certainty and peace of mind</li>
+  <li><strong>The  secret to gaining MAXIMUM power in your life&hellip;and what to do to get more of the  results you want</strong></li>
+  <li>Warning! Words and thoughts have power  and the consequences will show up in your life</li>
+  <li><strong>Why  affirmations sometimes work and sometimes do not (and how to make sure they  work for you)</strong></li>
+  <li>The  secrets to Huna healing and what must, and must not, be present for success</li>
+  <li><strong>Hawaiian insights into the Mind-Body  connection that you won&rsquo;t find in conventional medicine</strong></li>
+  <li>Why  chanting can actually have an impact on your physical body and improve your  well-being</li>
+  <li><strong>The explanation for actions that might  otherwise seem completely crazy</strong></li>
+  <li>The 7 principles that will guide you to live your       life successfully and achieve the true happiness and fulfilment you desire </li>
+  <li><strong>How to connect       with the most potent energy source available to you and the role played by       dance, hula and chanting</strong></li>
+  <li>What       to do when your life gets off-track and you seem to have &ldquo;lost&rdquo; skills,       power and drive </li>
+  </ul>
+</div>
+<p><img src="images/hands2.jpg" style="padding-left:10px;float:right;" />Also on this  day, you&rsquo;ll be introduced to an amazing world&hellip;the inner world of your dreams.</p>
+<p>Dreams are a  channel of communication between your different selves or minds.&nbsp;</p>
+<p>You&rsquo;ll  discover&hellip;</p>
+<div style="clear:both;" id="bluebox">
+<ul class="redticks">
+  <li>Recurring dreams and their  significance</li>
+  <li><strong>NIGHTMARES,  the dark secrets they reveal and how to banish them</strong></li>
+  <li>What your dreams are telling you about  your RELATIONSHIPS</li>
+  <li><strong>Insights  into work and career.&nbsp; Your dreams can  reveal if you&rsquo;re on the right path&hellip;or heading for disaster</strong></li>
+  <li>Family issues and conflicts can become  clearer with new perspectives from your dreams</li>
+  <li><strong>How  your dreams can help in solving problems that may have baffled you.&nbsp; Many famous figures have drawn on their  dreams to make astonishing breakthroughs&hellip;you can too!</strong></li>
+</ul></div>
+<p>The Dream  World is a fascinating place and when you understand the landscape, you&rsquo;ll find  that every aspect of your life will be enriched.</p>
+<p>Moving on to&hellip;</p>
+<h1 align="center">Day 4: How To Resolve Inner Conflicts<br />
+  So That Your Life Runs Smoothly</h1>
+<p><img src="images/stones.jpg" style="padding-left:10px;float:right;" />On Day 4 of  our journey together you&rsquo;ll get to enjoy TWO MORE major breakthroughs.</p>
+<p>By this  stage, you&rsquo;ll have a much better understanding of your true self and be well on  the way to achieving the balance and centeredness that is the state of being &ldquo;Pono&rdquo;.</p>
+<p>But there may  still remain some unresolved conflicts in your life that are holding you back.</p>
+<p>You have in  your life a relationship with the things that are <strong>EXTERNAL</strong> to you&hellip;</p>
+<p>&hellip;for example  money and other people&hellip; </p>
+<p>&hellip;and a part  of that experience you carry inside of yourself.</p>
+<p>If you&rsquo;re <strong>NOT</strong>  getting everything you want from those relationships&hellip;</p>
+<p>&hellip;that&rsquo;s the  sign of an unresolved conflict.</p>
+<p>Huna provides  an uplifting and energizing way to resolve those conflicts&hellip;</p>
+<p>&hellip;so that you  can move forward in your life.</p>
+<p>But that&rsquo;s  not all on this day&hellip;</p>
+<p>Building on  what you discovered previously about the<strong> DREAM WORLD&hellip;</strong></p>
+<p>&hellip;today you&rsquo;ll  get to experience a very special Huna <strong>DREAM TIME.</strong></p>
+<p>Think of this  as your very own personal guided tour of the dream world&hellip;</p>
+<p>&hellip;where you&rsquo;ll  get a map you can use over and over to explore this fascinating inner world.</p>
+<p>Coming up  next, something <strong>VERY SPECIAL&hellip;</strong></p>
+<h1 style="padding-left:40px;"><img src="images/australia.jpg" style="padding-left:10px;float:right;" />Day 5: A Journey Of Mystery And  Wonder As You Connect With The Natural Energy And Power Of Australia</h1>
+<p>Mastering Huna  is more about <strong>EXPERIENCING</strong> <br />
+  the knowledge  rather than simply learning techniques.</p>
+<p>And much of  the power of Huna comes from understanding the world around us&hellip;</p>
+<p>&hellip;and tapping  into the virtually <strong>UNLIMITED</strong>  energy of nature.</p>
+<p>Now, you can  access this energy and power anywhere&hellip;</p>
+<p>&hellip;BUT there  are certain special places and locations where it&rsquo;s much easier to connect.</p>
+<p>For example,  the majestic volcanoes of Hawaii and the surrounding areas.</p>
+<p>Now, there  are no active volcanoes in Australia to visit&hellip;</p>
+<p>&hellip;but there  ARE special locations where the power of the natural world is particularly  strong.</p>
+<p>We have  identified several such places in and near Byron Bay&hellip;</p>
+<p>&hellip;another  reason why we decided to hold the Huna experience there&hellip;</p>
+<p>&hellip;and we&rsquo;ll be  undertaking a field trip on this fifth day.</p>
+<p>At one of  these secret locations, you&rsquo;ll experience for yourself  how to connect with the different natural energies&hellip;</p>
+<p>&hellip;and use that  power to enhance your life.</p>
+<p>You&rsquo;ll also  discover how to identify these natural &ldquo;Power Points&rdquo; so that when you return  home you can continue to benefit from this amazing source of energy.</p>
+<p>And the great  thing about being able to do this here in Australia is that you get to work  with and understand the power of this great land directly.</p>
+<p>As you would  expect, the energy sources differ around the world.</p>
+<p>If you were  to learn Huna in Hawaii, the experience would be different&hellip;</p>
+<p>&hellip;and you&rsquo;d  have to adjust to the different Australian energy when you returned home.</p>
+<p>But there  will be no need for you to have to do that&hellip;</p>
+<p>&hellip;you&rsquo;ll  already have a local connection.</p>
+<p>There&rsquo;s no  set agenda for this field trip&hellip;</p>
+<p>&hellip;we&rsquo;ll be  guided by the energies that we discover and work with.</p>
+<p>If it&rsquo;s  anything like other Huna experiences&hellip;</p>
+<p>&hellip;I can  promise you a day of mystery, enchantment and wonder&hellip;</p>
+<p>&hellip;a day unlike  any other that you&rsquo;ve spent.</p>
+<p>On our return  we come to&hellip;</p>
+<h1 align="center">Day 6: Aloha! Next Steps&hellip;<br />
+  &hellip;And The Beginning Of Your New Life</h1>
+<p><img src="images/sandaloha.jpg" style="padding-left:10px;float:right;" />You might  know the word &ldquo;Aloha&rdquo; as a greeting&hellip;</p>
+<p>&hellip;but it&rsquo;s  also used in many other ways&hellip;</p>
+<p>&hellip;including  when you part company with someone.</p>
+<p>In the  Hawaiian language there isn&rsquo;t really a word for &ldquo;Goodbye&rdquo;&hellip;</p>
+<p>&hellip;it&rsquo;s more  like &ldquo;Until We Meet Again&rdquo;.</p>
+<p>So day 6 is  not really the end of the journey&hellip;</p>
+<p>&hellip;but just the  beginning of the next stage.<br />
+  On this day,  you&rsquo;ll be introduced to some new ways to use some of the techniques you&rsquo;ve  already discovered&hellip;</p>
+<p>&hellip;PLUS we&rsquo;ll  review everything covered so far, discuss the lineage of Huna (the origins and  history of this amazing science) and reveal where you can go from here.</p>
+<p>Here&rsquo;s what&rsquo;s  included&hellip;</p>
+<div style="clear:both;" id="bluebox"><ul class="redticks"><li><strong>More  ways to get more energy into your life&hellip;and those of the people you care about</strong></li>
+
+  <li>Discover a traditional casting system   used in Huna and how this   can help you (and others) solve  problems, dissolve stress and enjoy better health and vitality</li>
+
+  <li><strong>The  incredible history of Huna&hellip;how (and why) the teachings were little-known  for many  years and the Masters who kept alive this profound knowledge and wisdom for the  benefit of today&rsquo;s generations</strong></li>
+  <li>How to include the power of RITUAL in your life to       bring about the changes you want faster and with ease</li>
+  </ul>
+</div>
+<p><strong>&nbsp;</strong></p>
+<p>At the  completion of these 6 days, you'll possess profound skills and knowledge that  few other people even know about.</p>
+<p>And let there  be no doubt, you WILL have the power of Huna  at your command... </p>
+<p>&hellip;ready to help you make profound  changes in your life. </p>
+<p>That&rsquo;s because as your guide you&rsquo;ll have&hellip;</p>
+<div style="background-image:url(images/payinfull.jpg);width:615px;height:172px;margin-left:60px;">
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=22&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<div style="background-image:url(images/payinpart.jpg);width:615px;height:172px;margin-left:60px;">
+
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=23&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+<h1 align="center">Dr  Serge Kahili King &ndash; One  Of The World&rsquo;s Leading Huna Teachers And Experts</h1>
+
+  <p><img width="200" style="float:right;padding-left:10px;" title="serge" src="http://qcseminars.com/files/2012/02/serge.jpg" alt=""> Author, speaker, trainer, scholar,  humanitarian, shaman and adventurer, Dr Serge Kahili   King is truly one of the world&rsquo;s leading practitioners of  Huna.</p>
+  
+  <p>He has published the world&rsquo;s largest  selection of books and digital media on Huna and on the spirit of Aloha, the  attitude of love and peace for which the Hawaiian Islands  are so famous. He also writes extensively on Hawaiian culture.</p>
+  
+  <p>His books include <em>Urban Shaman</em>, <em>Huna: Ancient Hawaiian Secrets For Modern  Living</em> and&nbsp;<em>Instant Healing.</em>&nbsp;</p>
+  
+<p>  Serge began his Huna studies at the age  of fourteen when he was initiated into the path of Hawaiian shamanism by his  father.&nbsp; At eighteen he was adopted as  the grandson of Joseph Kahili of Kauai, a  &ldquo;kupua&rdquo; or shaman of the Hawaiian tradition.&nbsp;  Many years of training in the practice and traditions of Huna followed.</p>
+
+  <p> No recluse, Serge has travelled widely  and spent seven years in West Africa directing  community development and disaster relief programs.&nbsp; During that time, he also trained in African  shamanic traditions.</p>
+  
+  <p> In his search for knowledge, Serge has  made in-depth studies of other shamanic traditions around the world (including Mongolia) as  well as gaining an impressive array of more formal academic credentials.</p>
+<p>   He holds a Ph.D. in psychology from California Coast  University, a Master's degree in  International Management from the American Graduate School of International  Management (Thunderbird) in Arizona, and a  Bachelor's degree in Asian Studies from the University of Colorado.</p>
+<p>   In addition to speaking and teaching in  many countries, Dr. King is the founder and Executive Director of Aloha  International. This world-wide network of teachers, counsellors, therapists and  empowered individuals is dedicated to the purpose of sharing his teachings with  all those who desire a better life.</p>
+<p>   On his home island of Hawaii Serge gives  workshops and trainings throughout the year, and holds teaching sessions every  month that air regularly on cable television in the islands and on the US  mainland. </p>
+<p>   As you can  see, there really is nobody else with Serge&rsquo;s unique background and skills&hellip;and nobody  better to help you put the magic and power of Huna into your life.</p>
+<p>And, another  big PLUS is that&hellip; </p>
+
+<h1 align="center">The Huna Intensive   Training <br />
+  Will Be Held In Wonderful Byron Bay&hellip;</h1>
+<p>We've chosen a&nbsp;<strong><u>truly</u>&nbsp;outstanding</strong>&nbsp;location  for this event. </p>
+<img src="images/lighthouse.jpg" style="padding-left:30px;" />
+<p>It's wonderful  Byron Bay on the north coast of New South Wales.</p>
+<p>Rightly known  for magnificent beaches, beautiful scenery and a magical atmosphere, Byron Bay is located in one of  Australia&rsquo;s loveliest areas of natural beauty.</p>
+<p>It&rsquo;s close to  Mount Warning and Mount Warning National Park, places that are perfect for you  to connect with the natural energy of the Australian continent.</p>
+<p><img src="images/beach.jpg" style="padding-left:10px;float:right;" />You see,  Mount Warning is the central volcanic remnant of an ancient shield volcano (the  Tweed Volcano).&nbsp; Today, the vast areas  that were part of the volcano include many mountains and ranges such as the  Border Ranges, Tamborine Mountain and the Lamington Plateau.</p>
+<p>Due to Mount  Warning's proximity to Cape Byron, the Australian continent's easternmost  point, it is the first place on mainland Australia to receive the sun's rays  each day&hellip;</p>
+<p>&hellip;adding to the magic of the location. </p>
+<p>As soon as  you arrive, you&rsquo;ll realise why we selected Byron Bay for the Huna Intensive   Training.</p>
+<p><img src="images/byron.jpg" style="padding-left:10px;float:right;clear:both;margin-right:10px;" />It&rsquo;s an ideal  place to relax, leave the cares of the modern world behind and truly connect  with your true and authentic self in a natural setting.</p>
+<p>And when you  complete the Huna Intensive  Training, you&rsquo;ll be renewed and  re-energised in a way that you&rsquo;ve never experienced before&hellip;</p>
+<p>&hellip;as well as  having a clarity, focus and certainty about your life going forward.</p>
+<p>BUT, please  don&rsquo;t simply accept my word for it&hellip;</p>
+
+<h1 align="center"><strong>Praise  For Dr.  Serge Kahili King<br /> And  His Huna Training</h1>
+<p>  I mentioned before that Serge King has  authored and published the world&rsquo;s largest selection of books and audios about  Huna.</p>
+  <p>Not surprisingly, he is widely  recognised as one of the leading modern-day authorities and practitioners of  the Huna way.</p>
+  <p>Here&rsquo;s what some other leading authors  and experts in personal success have to say about Serge and his work&hellip; </p>
+ 
+ <div id="testimonialouter" style="float:left;margin-bottom:0px;padding-bottom:0px;width:640px;background-color: #FFFDE1;margin-left:60px;">
+ <p> <em>&ldquo;Dr King&rsquo;s traditional Hawaiian approach to healing and his blessing  rituals are especially respectful and worthy of our full attention.&rdquo;</em><br />
+  <strong>- Louise Hay author of &ldquo;You Can Heal Your Life&rdquo;</strong></p>
+</div>
+    <div style="float:left;height:33px;margin-left:60px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/testbottom.jpg"></div>
+    
+
+<div id="testimonialouter" style="float:left;margin-bottom:0px;padding-bottom:0px;width:640px;background-color: #FFFDE1;margin-left:60px;">
+<p><em>&ldquo;This beautiful, useful book reveals profound teachings about our  relationship with the natural world and the universe.&nbsp; I was inspired by these wisdom-principles  that can illuminate our path through life.&rdquo;</em>
+    <strong>- Dan Millman, author of &ldquo;Way Of The Peaceful Warrior&rdquo; </strong></p>
+</div>
+    <div style="float:left;height:33px;margin-left:60px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/testbottom.jpg"></div>
+    
+
+<div id="testimonialouter" style="float:left;margin-bottom:0px;padding-bottom:0px;width:640px;background-color: #FFFDE1;margin-left:60px;">
+<p><em>&ldquo;This &hellip;is the blueprint that unlocks the secrets to everything your  want in life.&rdquo;</em><br />
+    <strong>- Mary Olsen Kelly, author of Path Of The Pearl and Chicken Soup For The Breast Cancer  Survivor&rsquo;s Soul</strong></p>
+  </div>
+    <div style="float:left;height:33px;margin-left:60px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/testbottom.jpg"></div>
+    
+      
+    <div id="testimonialouter" style="float:left;margin-bottom:0px;padding-bottom:0px;width:640px;background-color: #FFFDE1;margin-left:60px;">
+<p><em>&ldquo;Outstanding! Think you whole new world into being as you follow  Serge&rsquo;s simple yet powerful ways to apply the ancient, deep and hidden wisdom  of Huna, offering you the gift to make change happen now.&rdquo;</em><br />
+    <strong>- Yvonne Oswald, PhD, award winner in the field of hypnotherapy and  author of Every Word Has Power</strong></p>
+</div>
+    <div style="float:left;height:33px;margin-left:60px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/testbottom.jpg"></div>
+    
+
+<div id="testimonialouter" style="float:left;margin-bottom:0px;padding-bottom:0px;width:640px;background-color: #FFFDE1;margin-left:60px;"><p><em>&ldquo;Huna is a wealth of knowledge and systems to improve and celebrate one&rsquo;s  life.&nbsp; Framed in the wisdom and meaning  of selected authenticated and personally interpreted Hawaiian words and  proverbs, Serge Kahili King stands  out as a beacon and voice of the contemporary school and movement called Huna.&rdquo;</em><br />
+    <strong>- Patrick Ka&rsquo;ano&rsquo;I author of Kamalamamalama</strong><strong> </strong></p></div>
+    <div style="float:left;height:33px;margin-left:60px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/testbottom.jpg"></div>
+    
+    
+<p style="clear:both;">  Impressive, I think you&rsquo;ll agree.</p>
+<p>Now  you may be wondering about the investment to attend this&nbsp;<strong>UNIQUE</strong>&nbsp;and extraordinary training.&nbsp;<br />
+  </p>
+<p>Well,  here are the details of&hellip;</p>
+<h1 align="center" style="padding-left:40px;">The Surprisingly Small Investment To  <br />
+  Transform Your World At The <br />Huna Intensive  Training</h1>
+<p>What&rsquo;s it worth to you to finally have  the self-confidence and self-esteem to <u>choose</u> your purpose in life? </p>
+<p>To finally  have a sense of certainty&hellip;and the peace of mind that comes with that&hellip;about your  true identity and your purpose&hellip;your DESTINY&hellip;in this life?</p>
+<p>When you  think about it, that&rsquo;s a priceless gift&hellip;</p>
+<p>&hellip;because with  that you&rsquo;ll be unstoppable in life.</p>
+<p>And that&rsquo;s even  without the new vitality and energy you&rsquo;ll have&hellip;</p>
+<p>&hellip;when you put  the natural power of Huna into your daily life.</p>
+<p>Taking all  that into account&hellip;</p>
+<p>&hellip;especially  as this is a <strong>LIVE</strong> 6 Day training&hellip;</p>
+<p>&hellip;you might  expect that the investment would be easily worth $15,000 or even $20,000.</p>
+<p>At QCSeminars we decided that we wanted to make this as affordable for you as we could.</p>
+<p>You see, we  both believe that right now it&rsquo;s very important for the wisdom and power of  Huna to be available to as many people as possible to make a positive  difference in the world.</p>
+<p>The regular,  and very fair, investment is $8,995.</p>
+<p>But we&rsquo;ve  decided to reduce that even further so that&hellip;</p>
+<p>&hellip;your  investment for the complete 6 days is just $2,995&hellip;</p>
+<p>&hellip;and you can  even take advantage of our special payment program <em>(see the Priority  Registration Form for details).</em></p>
+<p>I think  you&rsquo;ll agree that&rsquo;s more than fair.</p>
+<p>And so that  there are absolutely no reasons left for not taking advantage of this  incredible opportunity&hellip;</p>
+<div style="clear:both;width:600px;margin-left:50px;padding:0px 20px 0px 0px;" id="guaranteebox">
+  <h1 align="center">You Are Protected By My 100% Risk  Free, Peace Of Mind Guarantee</h1>
+<p>Before the completion of the first day  you <strong>MUST</strong> be thrilled and  delighted with your decision to attend the Huna Intensive   Training or I insist that you get your money back <strong>IN FULL. </strong></p>
+<p>So join us at the training for the complete first day  and&hellip; </p>
+<p>Discover the secrets of this extraordinary integrated  system of energy work, psychology, spirituality and empowerment that can  transform your life </p>
+<p><strong>Enjoy the boost to your  energy that you&rsquo;ll get just from being at this unique event in such a wonderful  location</strong> </p>
+<p>Experience for yourself the powerful &ldquo;Dynamind&rdquo;  technique based on ancient Hawaiian practices that will help you ease any pain&hellip;and  release some of the burdens that may have weighed on you for years.</p>
+<p><img style="float:right;" alt="" src="http://events.quantumchangeseminars.com/freenlp/report/images/guarantee2.png" class="imgright"> In the unlikely event that you are not convinced that the  Huna Intensive  Training is outstanding value and  that attending is a not-to-be-missed opportunity for you&hellip; </p>
+<p>&hellip;then simply speak to me or one of my team at the event before the end of the first day. Let us know that this  wasn&rsquo;t the right decision for you and you&rsquo;ll receive a courteous  refund <strong>ON THE SPOT. </strong></p>
+<p>You even get to keep any bonuses and course materials you  received on the first day as a <em>&ldquo;Thank You&rdquo;</em> for taking a look at the training. </p>
+<p>I think you&rsquo;ll agree that&rsquo;s a very fair arrangement. </p>
+</div>
+		<div class="events_listing" style="clear:both;padding-left:80px;">
+			<h2><a name="huna" id="huna"></a>HUNA</h2>
+			<p>HUNA is the ancient and traditional system of personal empowerment, healing and enlightenment from the magical islands of Hawaii. With the power of HUNA at your command, you can reconnect with the natural world, revitalise your life...</p>
+			<span tal:omit-tag="" tal:replace="structure python:here.present_calendar(calendar_id=10,template_id=4)" />
+			<p style="clear:both;padding-top: 15px;font-size: 9px"><a href="#top">Back to Top</a></p>
+  </div>  
+<div style="background-image:url(images/payinfull.jpg);width:615px;height:172px;margin-left:60px;">
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=22&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<div style="background-image:url(images/payinpart.jpg);width:615px;height:172px;margin-left:60px;">
+
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=23&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<p>Now&hellip;</p>
+<h1 style="text-align:center;padding-left:90px;padding-right:50px;">Let's Recap Why You'll Want To Be At<br />
+  The Huna Intensive  Training&hellip;</h1>
+<p style="font-size:18px;font-weight:600;">Here  Are 12 Compelling Reasons To Avoid Missing Out&hellip;</p>
+<div style="clear:both;width:600px;margin-left:50px;padding:0px 20px 0px 0px;" id="guaranteebox">
+  <p><strong>REASON #1:</strong> Before now to discover all the Huna secrets revealed in this course, you had to  travel all the way to Hawaii.&nbsp; You get to enjoy this special training right  here in Australia </p>
+  <p><strong>REASON  #2:</strong> Because Huna is  all about the experience, not just learning the theory.&nbsp; The only way to really understand the power  of Huna is to FEEL it flowing through you.&nbsp;  The only way to do that is at this LIVE training</p>
+  <p><strong>REASON #3:</strong> Because this is a live EXPERIENTIAL training,  you'll have the opportunity to get ALL your questions answered.&nbsp; At the end of the program there will be no  doubts, no grey areas and absolutely nothing that is not 100% crystal clear</p>
+  <p><strong>REASON  #4:</strong> You'll enjoy a  new level of ENERGY and VITALITY in your life as you connect with the natural  world and tap into a virtually limitless source of energy</p>
+  <p><strong>REASON  #5:</strong> You're going to  be meeting a very special group of people, individuals who are not prepared to  settle for second best, who want to enjoy life to the fullest and who are prepared  to embark on this unique adventure</p>
+  <p><strong>REASON  #6:</strong>&nbsp; This is going to be a BLAST!&nbsp; Sure, you&rsquo;re going to discover knowledge and  ancient wisdom that few people will ever get to know about.&nbsp; But that doesn&rsquo;t mean it&rsquo;s going to be  serious and uptight.&nbsp; And at the same  time connect to a love of life and happiness. You&rsquo;re going to have a GREAT  time!</p>
+  <p><strong>REASON  #7:</strong> Your investment  is protected with my special 100% SATISFACTION GUARANTEE<strong> </strong></p>
+  <p><strong>REASON  #8:</strong> You can network  with a very special group of people.&nbsp;  Only a handful of Australians have ever discovered the secrets of Huna  before now. You&rsquo;re going  to be part of the very first group to learn this amazing system for successful  living right here in Australia.&nbsp;  Something special happens when like minded people get together, ideas  are shared, breakthroughs happen. It's almost magical how it happens but  there's a connection between everyone. The new friendships you make will last  for years to come.</p>
+  <p><strong>REASON  #9:</strong> The investment  to attend the Huna Intensive  Training is a remarkably low $2,995  for the entire 6 DAY LIVE TRAINING.&nbsp; It  may never be this affordable again</p>
+  <p><strong>REASON  #10:</strong> This is your  chance to be part of a great ADVENTURE to bring the power of Huna more widely  into the world (especially Australia, of course). Rarely has the world needed  this energy more and you can help to make it a better place for everyone</p>
+  <p><strong>REASON  #11:</strong> You get to treat  yourself to a well deserved stay in wonderful Byron Bay.</p>
+  <p><strong>REASON #12:</strong> You  have Dr Serge Kahili King as your  guide and mentor, one of the most inspiring and effective Huna practitioners  and trainers on the planet today </p>
+</div>
+<p>That's 12 <strong>BIG REASONS</strong> to make sure you grab your place at the Huna Intensive   Training.</p>
+<p>And here&rsquo;s  <strong>ONE MORE&hellip;</strong></p>
+<p><strong>&hellip;PLACES ARE  STRICTLY LIMITED! </strong></p>
+<p>Because of  the practical and <em>&ldquo;hands-on&rdquo;</em> nature of this training, the places available are  limited.</p>
+<p>There&rsquo;s  already been a huge amount of interest and 52 places were snapped up almost  instantly when we previewed the Huna Intensive  Training at one of  our NLP events recently.</p>
+<p>I&rsquo;m pretty  sure this will sell out&hellip;and <strong>FAST.</strong></p>
+<p>So&hellip;</p>
+<h1 align="center" style="padding-left:40px;">Here&rsquo;s How To Claim Your Place At The Huna Intensive   Training</h1>
+<div style="clear:both;" id="bluebox"><p>Here are the dates and location once again&hellip;</p>
+<p><strong style="color:#003366;">WHERE:</strong> Byron Community Centre <br />
+    <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;</strong>69 Jonson Street,  Byron Bay</p>
+<p><strong style="color:#003366;">WHEN:</strong>&nbsp; April 23-28, 2012</p>
+<p>It&rsquo;s easy to make sure that you claim your  place as one of the SELECT group at the Huna Intensive  Training.</p>
+<p><strong style="color:#003366;">BY FAX:</strong> + 61 2 9518 4982</p>
+<p><strong style="color:#003366;">BY MAIL:</strong> GPO BOX 1617, Sydney, NSW 2001 &nbsp;&nbsp;&nbsp; ...Or...</p>
+<p>2)  Register by phone&hellip;<strong style="color:#003366;">CALL 1 300 733 642</strong></p>
+</div>
+
+
+<h1 align="center">I&rsquo;d Hate It If You Were&hellip;&ldquo;Hala&rdquo; <br />
+  &ndash; It&rsquo;s Time To Choose</h1>
+<p>In the  Hawaiian language the word &ldquo;Hala&rdquo; means&hellip;</p>
+<p>&hellip;&rdquo;to miss a  path&rdquo;.</p>
+<p>Or to put it  another way&hellip;</p>
+<p>&hellip;when the  world presents you with an opportunity that you know is right for you&hellip;</p>
+<p>&hellip;you fail to  take action.</p>
+<p>Quite  frankly, not everybody is ready to take advantage of all that Huna can offer.</p>
+<p>But if you&rsquo;ve  got to this point, my sense is that deep down you know that the Huna Intensive   Training is right for you.</p>
+<p>Right now you  have a unique opportunity to set out on a new and brighter path in life.</p>
+<p>I&rsquo;m confident  you&rsquo;ll make the choice that&rsquo;s right for you.</p>
+<p>Imagine  waking up every morning and looking forward to the day with a sense of  excitement and anticipation. </p>
+<p>Imagine how much easier everything will be in your  life when you know with a sense of <strong>CERTAINTY</strong> who you really are and what you  are meant to be doing. </p>
+<p>Decisions will come easily, choices will be clear and  you&rsquo;ll be free of nagging doubts. You can confidently step forward every day  into the life of happiness and abundance that you&rsquo;ve always dreamed of. The  Huna Intensive  Training is the key to that future for you. </p>
+<p style="padding:0px 30px 0px 30px;clear:both;">&nbsp;</p>
+
+<img src="http://events.quantumchangeseminars.com/freenlp/report/images/sig.jpg" alt="Roberta Faddoul" title="Roberta Faddoul" style="padding-right: 70px;margin-left:50px;"><img src="http://events.quantumchangeseminars.com/freenlp/report/images/qcbrwlogo.jpg" alt="Roberta Faddoul" title="BRW" class="alignnone size-full wp-image-2324">
+<p>With Love and Success, </p>
+<p>Roberta  Faddoul</p>
+
+<div style="background-image:url(images/payinfull.jpg);width:615px;height:172px;margin-left:60px;">
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=22&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<div style="background-image:url(images/payinpart.jpg);width:615px;height:172px;margin-left:60px;">
+
+
+<p  style="padding-top:80px;padding-left:160px">
+
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=23&co=y"><img style="padding-left:" alt="register now" src="images/registernow.png"></a>
+</p>
+
+</div>
+
+
+<div style="clear:both;" id="bluebox"><p><strong>P.S. </strong>When you attend the unique Huna Intensive  Training, you get a full 6 day <strong>LIVE</strong> experiential training, including a 1 day field trip all for just $2,995.</p>
+<p><strong>P.P.S.</strong> Here's where to reserve your place&hellip;</p>
+<p><strong style="color:#1f497d;">BY FAX:</strong> + 61 2 9518 4982</p>
+<p><strong style="color:#1f497d;">BY MAIL:</strong> GPO BOX 1617, Sydney, NSW 2001<br />
+    <strong style="color:#1f497d;"> <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &hellip;OR&hellip;</strong> </p>
+<p>&nbsp;2) Register by phone&hellip;<strong>CALL 1 300 733 642</strong>
+</p></div>
+<h2 style="color:#1f497d;margin-left:80px;">So ENROL NOW and Make a Quantum Leap to Your Success!</h2>
+</div>
+<div style="width:275px;float:left;">
+
+<div id="testimonialsbox" style="float:left;">
+
+<div class="testimonialbox">
+<p><strong>&ldquo;I see the  application of Huna principles in everything I do&hellip;most of all I am having fun!&rdquo;</strong></p>
+<p>You led us on a journey to the heart of nature.  I rediscovered Magic. The Magic of seeing my world as a dream. The Magic of  touching with my aka body. The Magic of knowing that everything is energy and  that I have the power to influence, to create and to change.<br />
+  <br />
+I've stepped thru a portal and I breathed in Magic and exhaled laughter.<br />
+<br />
+The learning did not stop when the workshop ended. I am constantly reminded to  be aware and pay attention. I see the application of Huna principles in  everything I do. But most of all I am having fun playing with the clouds,  dancing with the wind and talking to the stones and trees.</p>
+<p align="right"><strong>- Lois Stokes</strong></p>
+
+</div>
+
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;good company&hellip;for  some twenty years!&rdquo;</strong></p>
+<p>Dear  Serge, Thank you for your work. Your books and tapes have been good company for  me for some twenty years! </p>
+<p align="right"><strong>- EW</strong></p>
+</div>
+<div class="testimonialbox">
+<p><strong>&ldquo;I loved the  class&hellip;Wonderful!&rdquo;</strong></p>
+<p>Hi  Serge: Thank you again for offering the Shaman Intensive. I loved the class,  especially the breadth of knowledge that you brought, the tools that you shared  with us and the depth of the class. Wonderful! </p>
+<p align="right"><strong>- AM</strong></p>
+</div> 
+<div class="testimonialbox">
+<p><strong>&ldquo;Dynamind&hellip;is one of  the most efficient techniques I have ever found&rdquo;</strong></p>
+<p>Dear  Serge! We were in loose contact in 2009 when I purchased your fantastic training-course  &quot;Dynamind Technique&quot;&hellip;I have implemented Dynamind in my daily work  with my MD wife and there is hardly any patient or client who leaves our  sessions without at least three rounds of Dynamind. It is one of the most  efficient techniques I have ever found and both my wife and myself would like  to thank you for sharing this wonderful technique with us! Mahalo &amp;  ALOHA!!!!! <br />
+    </p>
+<p align="right"><strong>- EK</strong></p>
+</div>
+
+<div class="testimonialbox">
+<p><strong>&ldquo;Instant Healing&hellip;has  been the most helpful and practical system&rdquo;</strong></p>
+<p>I  use Instant Healing for all my medical issues right now&hellip;it has been the most  helpful and practical system. I used it years ago for insomnia successfully,  and now for leg pain after knee surgery. Many thanks!!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />
+    </p>
+<p align="right"><strong>- MJF</strong> </p>
+</div>
+
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;a new level of certainity of the influence I have in  my own life&hellip;&rdquo;</strong></p>
+<p>Deepest  sincere thanks! The most recent Huna book has been of immense help to me  recently while experiencing the fears coming up around my partner's health. I  even left a short 5 star review a couple days ago on Amazon...the first time  I've ever been moved to do that. I awoke this morning with a new level of  certainty of the influence I have in my own life and its circumstances which  surpasses anything experienced before. I am 66 years in this life, so I am  profoundly grateful to Serge and all who are actively supporting this work and  path. </p>
+<p align="right"><strong>- RAL</strong></p>
+</div>
+
+
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;suddenly it seemed  so easy&hellip;I am on the right way of being and living!&rdquo;</strong></p>
+<p>ALOHA: I had the luck to enjoy you and your  family in Vienna  at the &quot;Huna Therapy&quot; seminar. It was a pleasure to me, all three  days, including the self confidence part, to feel the real feelings of harmony,  love, power and understanding. Not one time in my life before had I felt this  experience! The whole time I had the feeling of knowing all this but I never  was able to express this energy! And suddenly it seemed so easy. In those three  days I learned to trust myself again... I thought I did it, because I had a lot  of mountains in my life ( like everybody)...but the trust in myself was maybe  not strong enoughh anymore...even when I checked everything alone!<br />
+  <br />
+Thanks so much for this experience!! It gave me a lot of trust, love and energy  to say to myself: &quot;I am on the right way of being and living!&quot;  Finally I found a philosophy, far away from my country, that matches the same  way like I feel deep in my heart :)) !! Light, love and harmony for you and  your shining woman, Gloria.</p>
+<p align="right"><strong>- CS, Austria</strong></p>
+</div>
+<div class="testimonialbox">
+<p><strong>&ldquo;I truly change my  life around&rdquo;</strong></p>
+<p>Hi  Serge: I wanted to thank you very much for your wonderful books and advice!  With some lines and a chapter out of &quot;Huna: Ancient Hawaiian Secrets For Modern  Living&quot; I truly changed my life around&hellip;</p>
+<p>&hellip;with  the self-confidence and self-esteem exercises and some exercises in focus and  blessing my job suddenly turned everything around: Suddenly I loved my job  again very much and got back my old strength in it&hellip;</p>
+<p>And  now I earned in a shorter time than I even imagined almost out of nowhere! And  I love earning money. Just by loving my job again and loving what I do and  loving to earn money. And a bit of asking for what I am worth was also in there  ;).</p>
+<p>I  am sooooo happy, happy, happy! So I am sharing the love and happiness with you.  You are a wonderful teacher. I had experienced this state before, but I did not  know how to get consciously into it. Now I know. Blessings to Success and the  power of love! &quot;A kind word can melt the hardest heart.&quot; </p>
+
+<p align="right"><strong>- FF (via Facebook</strong></p>
+
+</div>
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;shocked how well  (Dynamind) really worked&rdquo;</strong></p>
+<p>Serge:  I discovered this technique (Dynamind) two days ago at huna.org and after the  very first time doing this (and every time doing this) I was shocked how well  this really worked. I was feeling stress and fear, did this technique exactly  as instructed and I felt kind of &quot;stoned&quot; and felt REALLY relaxed  afterwords. Stress and fear went away. I wasn't even sitting straight when I  did it and probably tapped my neck at the wrong spot, and it worked anyway! </p>
+<p align="right"><strong>- MD</strong></p>
+</div>
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;a fabulous  blueprint for living that literally liberated me from years of weary self  struggle&rdquo;</strong></p>
+<p>Thank  you, Serge. I'm not sure if this method of thanking you is appropriate but I  wanted to write how profoundly influenced I have been by your two books &nbsp;&ldquo;Mastering the Hidden Self&rdquo; and &ldquo;Secrets for  Modern Living&rdquo;. My whole life had seemed such a struggle to delineate a  mind/body/world awareness and your work laid out, in glorious detail, a  fabulous blueprint for living that literally liberated me from years of weary  self struggle. I simply cannot thank you enough.</p>
+<p align="right"><strong>- PY, Canada</strong></p>
+</div>
+<div class="testimonialbox">
+<p><strong>&ldquo;&hellip;haven&rsquo;t felt this  good in a LONG time&rdquo;</strong></p>
+<p>Hi Serge&hellip;I felt really empowered and really good  after the workshop today. Great stuff! I haven't felt this good in a LONG time.  Thank you!</p>
+<p align="right"><strong>- AG</strong></p>
+</div>
+
+
+    </div></div>
+
+</div>
+
+<div style="float:left;width:1011px;clear:both;">
+<img src="images/footerbg.jpg" alt="footer bg" />
+</div>
+
+<div style="margin-left:220px;">
+<img src="images/proudly.png" alt="a" /> <a href="http://www.qcseminars.com"><img src="images/qclogo.png" alt="Quantum Change Seminars NLP Training" /></a> <a href="http://www.quitin60minutes.com"><img src="images/quitin60logo.png" alt="Quit in 60 Minutes" /></a>
+</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Cancel Registration by Phone</title>
+    </span>
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+		<span tal:omit-tag="" tal:define="phone python:here.get_home_domain_phone_sql().dictionaries()[0]['value']">
+
+      <h1>Please Contact Us to Cancel Your Registration</h1>
+
+                  <p>Only introductory courses or courses which you have not had to pay 
+				  for can be cancelled online. Please contact us at <span tal:replace="phone"/> and indicate  
+                   that you wish to cancel <strong>Attendee ID #<span tal:replace="request/aid"/>.</strong></p>
+                  <p>&nbsp;</p>
+
+		</span>
+     </span>
+</html>
+
+ 
+

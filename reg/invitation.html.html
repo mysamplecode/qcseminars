@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Invited Guest Registration Signup Form</title>
+    </span>
+
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+ <h1>Invited Guest Registration Process</h1>
+             <p>You have arrived on this page because someone has sent you 
+              an <strong>Invitation</strong> to attend one of our company's upcoming events. 
+			<strong>This process will confirm your registration and assign the Attendance Record to you.</strong></p>
+                  <p>Please complete the form below by entering either your email 
+                    address, or your username and password if you already have a user account for our site.</p>
+
+               
+                 <span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='4')" />
+                     
+                 
+
+      </span>
+</html>
+ 
+

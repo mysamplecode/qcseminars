@@ -1,0 +1,172 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+<script src="../../../Scripts/AC_ActiveX.js" type="text/javascript"></script>
+<script src="../../../Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Shopping Cart Contents</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<script>
+function go_back()
+    { 
+    var url = document.update_cart.cart_home_page.value;
+    window.location=url;
+    }
+</script>
+	
+ <span tal:omit-tag="" tal:define="cart_home_page 
+python:here.get_home_page_sql(p_url=request['URL0']).dictionaries()[0]['cart_home_page']">
+
+
+<h3>Current Cart</h3>
+
+<span tal:omit-tag="" tal:condition="not:request/cart_id | nothing">
+<form action='update_cart' name='update_cart' method='post'>
+<input type="hidden" name="cart_home_page" tal:attributes='value cart_home_page'/> 
+<p>You have no items in your cart.</p>
+<button onClick="return go_back()" type="button" id="continue_shopping"><span>Continue Shopping</span></button>
+</form>
+</span>
+
+<span tal:omit-tag="" tal:condition="request/cart_id | nothing">
+
+  <span tal:omit-tag="" tal:define="items
+python:here.cart.get_nice_cart_items_sql(cart_id=request['cart_id']);
+       cart_total
+python:here.get_cart_total_sql(cart_id=request['cart_id']).dictionaries()[0]['total']">
+
+<input type="hidden" name="cart_home_page" tal:attributes='value cart_home_page'/>
+
+
+  <span tal:omit-tag="" tal:condition="not:items | nothing">
+  <p>You have no items in your cart.</p>
+  <form action='update_cart' name='update_cart' method='post'>
+  <input type="hidden" name="cart_home_page" tal:attributes='value cart_home_page'/> 
+  <button onClick="return go_back()" type="button" id="continue_shopping"><span>Continue Shopping</span></button>
+  </form>
+  </span>
+
+  <span tal:omit-tag="" tal:condition="items | nothing">
+
+    <span tal:omit-tag="" tal:define="line_types
+python:here.get_offer_line_types_sql().dictionaries()">
+
+
+<div align="center">
+    <object width="425" height="344">
+        <param name="movie" value="http://www.youtube.com/v/zTb16oAGpfc&hl=en&fs=1" />
+        <param name="allowFullScreen" value="true" />
+        <param name="allowscriptaccess" value="always" />
+        <embed src="http://www.youtube.com/v/zTb16oAGpfc&hl=en&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344">
+        </embed>
+    </object>
+    
+	
+<h2 style="margin: 20px; line-height: normal;">If you are unclear on what to
+  do next, please watch this short video explaining your next step or simply
+  call 1300 733 642 or email <a href="mailto:info@qcseminars.com">info@qcseminars.com</a>  and one of our friendly team will be happy to assist you.</h2>
+<p style="color:#FF0000"> This transaction will be processed in <strong>Australian Dollars</strong> <a href="http://qcseminars.com/exchange.html" target="_blank">click here </a>for the current exchange rate </p>
+
+	
+</div>
+
+  <form action='update_cart' name='update_cart' method='post'>
+<input type="hidden" name="cart_home_page" tal:attributes='value cart_home_page'/>
+  <table class="cart">
+    <tr><th>Item</th><th class="number">Qty</th>
+	<th class="number">Price</th><th class="number">Item Total</th>
+	<th>Remove?</th></tr>
+
+    <span tal:omit-tag="" tal:repeat="item items">
+      <tr>
+       <td><input type='hidden' name='lineitems.item_id:records'
+tal:attributes='value item/item_id' /><span
+          tal:replace="item/name" /></td>
+       <td class="number"><input type="text" size='5'
+name="lineitems.quantity:records"
+           tal:attributes="value item/quantity" /></td>
+
+       <td class="number">$ <span
+	tal:replace="python:here.moneyfmt(item['price'])" /></td>
+       <td class="number">$ <span
+	tal:replace="python:here.moneyfmt(item['linetotal'])" /></td>
+
+       <td align='center'><input type='checkbox'
+name='lineitems.deleteme:records'></td>
+      </tr>
+
+      <span tal:omit-tag="" tal:condition="item/offer_id">
+         <tr class='offeritems'><td colspan=5>
+         <span tal:omit-tag="" tal:define="lines
+python:here.get_offer_lines_sql(offer_id=item['offer_id']);">
+
+           <ol>
+           <span tal:omit-tag="" tal:repeat="line lines">
+               <li tal:define="parts
+	       python:here.get_offer_line_parts_sql(line_id=line['offer_line_id']).dictionaries()">
+
+		<span tal:omit-tag="" tal:condition="python:len(parts)==1">
+		    <span tal:replace="python:parts[0]['quantity']" /> -
+		    <span tal:replace="python:parts[0]['name']" /> -
+		    <span tal:replace="python:parts[0]['category']" />
+		</span> <!-- cond -->
+
+		<span tal:omit-tag="" tal:condition="python:len(parts)>1"><div class="or_line">
+		    <span tal:omit-tag="" tal:repeat="part parts">
+			<span tal:replace="part/quantity" /> -
+			<span tal:replace="part/name" /> -
+			<span tal:replace="part/category" />
+			<span tal:omit-tag=""
+			    tal:condition="python:repeat['part'].number()!=len(parts)">
+			    <span class="or">or</span>
+			    </span>
+			<br>
+		    </span>
+		</div></span> <!-- cond -->
+
+	       </li>
+           </span> <!-- repeat -->          
+           </ol>
+         </span><!-- define -->
+         </td></tr>
+      </span> <!-- cond -->
+
+    </span> <!-- repeat -->
+    <tr class='total'>
+        <td class='title number' colspan='3'>Sub Total</td>
+        <td class="number">$ <span
+	    tal:replace='python:here.moneyfmt(cart_total)' /></td>
+		<td>&nbsp;</td>
+    </tr>
+   <tr><td class='title' colspan='5' align='center'>
+
+	<button onClick="return go_back()" type="button" id="continue_shopping"><span>Continue Shopping</span></button>
+
+ 
+
+    <input type='submit' name='action' value='Update' />
+    </td></tr>
+  </table>
+  </form>
+<p>&nbsp;</p>
+  <h1>Begin Checkout</h1>
+  <span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='1')" /> 
+
+  </span ><!-- defines -->
+
+  </span> <!-- cond -->
+
+ </span> <!-- defines -->
+</span>
+
+<!-- </div> -->
+ </span>
+    </span>
+</html>
+
+ 

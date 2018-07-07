@@ -1,0 +1,59 @@
+/*
+Theme Name: Egypt SEXY
+Theme URI: http://wordpress.org/
+Description: The best WordPress theme that graced versions 1.2.x and prior.
+Version: 1.5
+Author: Jimmy
+
+Default WordPress by Jimmy http://www.indestiny.com.au
+*/
+body {background-color:#f3f3f3;margin:0;padding:0;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:14px;}
+.leftcontent p {padding-right:40px;}
+.arrowlist{    list-style: none outside none;
+    margin-left: 0;
+    padding-left: 0;padding-top:20px;}
+img{border:0;}    
+form {margin:0;padding:0;}
+
+.arrowlist li {
+    background-image: url("images/arrow.png");  font-size: 14px;
+    background-repeat: no-repeat;padding-bottom: 23px;margin-left:5px;
+    padding-left: 45px;padding-right:20px;}
+	
+	
+	.leftcontent{    background-image: url("images/limitedspots.jpg");
+    background-position: 377px 0;
+    background-repeat: no-repeat;
+    float: left;
+    min-height: 400px;
+    width: 736px;}	
+	
+.leftcontent2{   
+    float: left;
+    min-height: 400px;
+    width: 736px;}
+.leftcontent2 h2{padding-top:30px;}	
+	
+.leftcontent2 p {padding-left:80px;padding-right:30px;line-height:22px;}
+.leftcontent p {padding-left:40px;}
+li {
+    background-image: url("images/arrow.png");list-style-type:none;padding-bottom:10px;padding-top:5px;
+    background-repeat: no-repeat;
+    padding-left: 55px;
+}
+#launchheaderbottom {
+    background-image: url("http://events.quantumchangeseminars.com/freenlp/report/images/launch1headerbottom.png");
+    height: 16px;
+    width: 977px;  margin-left: 8px;
+}
+div.opt_in_form {
+   /* background-color: #FFFFDD;
+    border: 4px dashed #FF0000;
+    border-radius: 12px 12px 12px 12px;
+    margin-left: 40px;
+    margin-right: auto;
+    padding: 0 10px 10px;width:250px;*/
+}
+.topboxtxt{display:none;}
+.capsred{display:none;}
+.othercapsred{display:none;}

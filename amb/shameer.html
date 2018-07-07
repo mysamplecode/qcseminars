@@ -1,0 +1,499 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+
+
+<span tal:omit-tag="" metal:fill-slot="head">
+	<title>QC Ambassodor Program</title>
+    
+    
+    
+<style type="text/css">
+<!--
+
+<!--
+
+accessories
+body {
+	margin:50px 0px; padding:0px;
+	text-align:center;
+	}
+	
+#Content {
+	width:500px;
+	margin:0px auto;
+	text-align:left;
+	padding:15px;
+	border:1px dashed #333;
+	background-color:#eee;
+	}
+
+
+http://events.quantumchangeseminars.com/amb/images/am_login_btn.png
+
+<!--
+
+<!--
+
+
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+#left_bar{
+padding:0;
+margin:0px;
+margin-right:15px;
+
+border:0;
+
+}
+
+
+#newamb h2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: right;
+	width: 540px;
+	font-size: 20px;
+}
+
+#newamb h2 span{
+	color:#FFFF00;
+}
+
+
+
+#newamb h4 {
+	padding-top:20px;
+padding-bottom:20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 28px;
+	font-weight: bold;
+	color: #0099cc;
+clear:both;
+text-align:center;
+}
+
+#quitsqueezeimagine {
+	background-image: url(images/imagine_photo_background.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 587px;
+	clear:both;
+	font-size:14px;
+}
+#quitlist{
+padding-top:60px;}
+#quitlist li {
+	list-style-position: inside;
+	list-style-image: url(images/arrow_bullet.jpg);
+	padding-left:50px;
+padding-bottom:10px;
+}
+h2 {
+	text-align: center;
+	font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #cc0000;
+	font-size: 36px;
+	background-color:#0099cc;
+}
+#quitsqueezeimagine p {
+	padding-left: 350px;
+	padding-top: 120px;
+	clear:both;
+	
+}
+
+
+
+
+
+.door_page_vopt div.form_body div.submit input{
+    background-image: url(http://events.quantumchangeseminars.com/amb/images/amb_join_btn.png);
+    background-repeat: no-repeat;
+ width: 240px;
+    height: 56px;
+}
+
+div.opt_in_form {
+    width: 500px;
+}
+
+div.form_body span.heading{
+    width: 130px;
+}
+
+.door_page_vopt div.form_body #prov_state_selector {
+	margin-left:130px;
+}
+
+.door_page_vopt div.form_body div.form_row{
+    padding-bottom: 10px;
+    padding-left: 10px;
+	 padding-top: 10px;
+}
+#sideform .opt_in_form div.form_body form#signup {
+
+padding:0;
+
+}
+#sideform{
+
+float:left;
+
+width:280px;
+-moz-border-radius:12px 12px 12px 12px;
+background-color:#FFFFDD;
+border:4px dashed #FF0000;
+
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+margin-left:15px;
+}
+
+#sideform{
+
+float:left;
+
+width:280px;
+}
+
+
+
+#sideform div.form_body span.heading {
+width: 88px !important;
+}
+#sideform div.form_body div.email input {
+width: 143px !important;
+}
+#sideform div.form_body span.instructions {
+padding-left: 0;
+}
+.tiny p {
+	font-size:7px;
+	line-height:10px;
+	color: #aaa;
+}
+#sideform div.form_body div.opt-in_alert {
+line-height: 10px !important;
+padding: 0;
+}
+
+#sideform p{
+text-align:center;
+padding-top:5px; 
+}
+
+
+#newamb li {
+	font-size: 14px;
+}
+.capsred {
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #ff0000;
+	text-align: center;
+	display: block;
+padding:0;
+margin:0;
+}
+
+.othercapsred{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	text-align: center;
+	display: block;
+padding:0;
+
+
+}
+.othercapsred span{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	font-size:10px;
+
+}
+.topboxtxt{
+font-size:16px;
+font-weight:bold;
+color:#cc0000;
+margin:0;
+}
+
+
+#quitsqueezeimagine h2{
+padding-top:80px;
+padding-left:20px;
+
+}
+#testimonials{
+padding:5px;
+}
+
+
+#testimonials h4{ 
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	
+font-size:30px;
+line-height:110%;
+background-color:#ffffff;
+float:left;
+}
+#quote{
+color:#999999;
+width: 270px;
+float:left;
+padding-top: 20px;
+}
+.floatleft{
+float:left;
+}
+.floatright{
+float:right;
+}
+.clearall{
+clear:both;
+}
+#quote p{
+float:left;
+}
+
+.heading_banner {
+left:-45px;
+position:relative;
+}
+
+#sideform  {
+height:355px;
+}
+#sideform h3 {
+color:#0099cc;
+width:230px;
+text-align:center;
+padding-top:10px;
+font-size:18px;
+}
+
+#letter{
+margin-left:15px;
+}
+
+#letter p{
+font-size:14px;
+line-height:150%;
+}
+
+#loginPerson {
+
+	display: none;
+
+}
+
+#sideform #check_email div.form_body div.submit input{
+	 background-image:  url(http://events.quantumchangeseminars.com/amb/images/amb_join_btn.png);
+    background-repeat: no-repeat;
+ width: 240px;
+    height: 56px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor:pointer;
+	color: transparent;
+margin-left:-120px;
+font-size:0em;
+
+}
+.door_page_vopt .opt_in_form{
+margin-top:20px;
+}
+.door_page_vopt .opt_in_form h3{
+padding-top:10px;
+}
+
+
+
+
+#loginPerson div.form_body div.submit input  {
+	 background-image:  url(http://events.quantumchangeseminars.com/amb/images/findpassword.png);
+    background-repeat: no-repeat;
+ width: 239px;
+    height: 42px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor:pointer;
+	color: transparent;
+
+}
+
+.table
+{
+background:#333;
+
+}
+.table ul
+{
+float:left;
+margin:0;
+padding:0;
+border:1px solid #C9C9C9;
+}
+.table ul li
+{
+list-style:none;
+padding:5px 10px;
+}
+.table ul li.title
+{
+font-weight:bold;
+background:#333;
+color:#fff;
+}
+.table ul li.even
+{
+background:#fff
+}
+.table ul li.odd
+{
+background:#FFFFE6
+}
+#sideform{
+height:150px;
+overflow:hidden;
+}
+#loginbtn{
+padding:50px;
+float:left;
+width:240px;
+
+}
+
+-->
+</style>
+    
+    
+    
+  </span>
+
+<span tal:omit-tag="" metal:fill-slot="body">
+
+<div id="newamb">
+
+
+<div id="sideform">
+<span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='3')" />
+
+
+</div>
+
+
+<h1><img class="floatright" src="http://events.quantumchangeseminars.com/amb/images/amb_head.jpg" alt="Make Money With US NLP"></h1>
+
+<div id="loginbtn"><a href="/https/amb/member/"><img src="http://events.quantumchangeseminars.com/amb/images/am_login_btn.png" alt="Ambassador Sign In" width="239" height="49" class="floatleft"></a><p align="center">(<a href="/http/pass/">Forgot your password?</a>)<br>
+</p>
+  <br /><a href="http://events.quantumchangeseminars.com/amb/how_to_become_an_affiliate.pdf"><img src="http://events.quantumchangeseminars.com/amb/images/download_ambassador_manual.png" width="240" height="79" border="0" /></a>
+</div>
+<h2>BEST PART:  You Get Rewarded Mentally, Emotionally, Spiritually and... <span>FINANCIALLY!</span></h2>
+
+<div id="letter">
+<h4>Read on to discover the details and how to get started TODAY. . .</h4>
+
+<div class="heading_banner">
+<img height="78" width="306" alt="Dear Friend," src="http://qcseminars.com/wp-content/themes/SuperQC/images/dearfriend.png">
+</div>
+
+<img class="floatright" height="175" width="146" align="right" alt="Roberta Faddoul" src="http://qcseminars.com/wp-content/themes/SuperQC/images/roberta_photo.png">
+
+<p>
+
+I&#39;d like to invite you to join the special &#34;Quantum Change Ambassador&#34; program and be part of a wave of positive change that&#39;s sweeping Australia and the world&#33;</p>
+
+<p>As an Ambassador you recognize the life&#45;changing impact our programs have on people.  You&#39;ve experienced for yourself just how easily you can take control of your life once you have the right tools and strategies.</p>
+
+<p>It&#39;s only natural that you would want to share your experiences with friends, family and associates. . . indeed pretty much anyone you meet&#33;</p>
+
+<p>And it&#39;s only right, in fact it&#39;s because of the natural &#34;Law Of Reciprocity&#34;, that you&#39;ll be rewarded mentally, emotionally, spiritually and. . . FINANCIALLY for helping to spread the news about our life&#45;changing work.</p>
+
+<p>Our Ambassador program lets you empower and inspire others while increasing your own wealth and prosperity.  The people you refer to the Quantum Change training courses and events will share in the same transformational experiences as you.</p>
+
+<p>As well as knowing that you&#39;ve made a difference and helped someone to a better future, as an active Ambassador you will earn a commission every time someone you refer invests in one of the Quantum Change programs.</p>
+<p>
+And to recognise your contribution even more, when you refer 100 people or more in a calendar year you&#39;ll become a SUPER AMBASSADOR.  That means you&#39;ll enjoy higher commissions and other special privileges.</p>
+
+<p>There&#39;s also an exclusive area for our Ambassadors on the Quantum Change website.  You&#39;ll have full access to a comprehensive set of marketing and referral tools to help you spread the GOOD NEWS about Quantum Change Seminars.
+</p>
+<p>Best of all, it&#39;s completely FREE to join the program.</p>
+
+<p>Here are the details of how you&#39;ll be rewarded as a QC Ambassador. . . </p>
+
+
+<div class="table">
+<ul>
+<li class="title">Ambassador Type</li>
+<li class="even">QC Ambassador</li>
+<li class="odd">Million Dollar Speaker Graduate </li>
+
+</ul>
+<ul>
+<li class="title">NLP Scholarship Sales</li>
+<li class="even">10%</li>
+<li class="odd">50%</li>
+
+</ul>
+<ul>
+<li class="title">Other QC Course + Product Sales </li>
+<li class="even">10% &#40;5% for Speaker programs and Egypt trip&#41; *</li>
+<li class="odd">10% &#40;5% for Speaker programs and Egypt trip&#41; *</li>
+
+</ul>
+
+
+
+
+</div>
+<p style="clear:both; font-size:.8em;">*Terms and conditions may change at any time</p>
+
+<p class="clearall"></p>
+
+<p>It&#39;s easy to get started as an Ambassador helping to create positive change in the world.  <br />
+  <strong>Simply click below on the &#34;Join Now for FREE&#34; button. . . </strong></p>
+
+
+
+<p> Yours in Success, </p>
+
+<div class="heading_banner">
+<img height="79" width="369" alt="Roberta Faddoul" src="http://qcseminars.com/wp-content/themes/SuperQC/images/roberta_sig.png">
+</div>
+
+<p> Roberta Faddoul</p>
+
+<p>Managing Director<br />
+Quantum Change Seminars</p>
+
+</div>
+
+<div class="door_page_vopt">
+
+<span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='3')" /></div>
+<div align="center"><img src="http://quantumchangeseminars.com/programs/wp-content/themes/default/images/qc_privacy+spam.jpg" alt="Privacy" /></div>
+
+
+ </div> 
+  
+</span>
+</html>
+ 
+ 
+ 
+ 

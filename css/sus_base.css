@@ -1,0 +1,147 @@
+@import url("sus01.css");
+@import url("calendar_styles.css");
+@import url("signup_forms.css");
+@import url("shopping_cart.css");
+
+
+/* The styles on this sheet relate to the Standard template implemented for use with the Signup Systems installation for QCS.
+The imported style sheets above relate to styles used by the dynamic code for public website features of Signup Systems. */
+
+
+body {
+	background-image: url(graphics/bg.jpg);
+	background-position: top left;
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	background-color: #d5f1ff;
+	margin: 0;
+	font-family: Verdana,Tahoma,"Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.hilight {
+background-color: #FFFF00;
+}
+
+a:link {
+	color: #003399;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0291d7;
+	text-decoration: underline;
+}
+
+#qclogo {
+	left: 25px;
+	position: absolute;
+	top: 7px;
+	z-index: 2;
+}
+
+#header {
+	width: 929px;
+	height: 123px;
+	background-image: url(graphics/header.png);
+	margin: 0 auto;
+}
+
+#header_bottom {
+	width: 929px;
+	height: 15px;
+	background-image: url(graphics/header_bottom.png);
+	margin: 0 auto;
+}
+
+#content {
+	width: 903px;
+	min-height: 400px;
+	background-image: url(graphics/body-stretcher.png);
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+#left_bar {
+	padding-top: 5px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	margin-left: 11px;
+}
+
+#right_bar {
+	width: 220px;
+	padding: 0px 0px 20px 25px;
+	float: left;
+}
+
+/*navigation*/
+
+#navigation {
+	float: left;
+	width: auto;
+	height: 36px;
+	margin-top: 87px;
+}
+
+#navigation ul{
+	margin-right: 1px;
+}
+
+/*navigation fotter*/
+
+#navigation-bg-footer {
+	background-image: url(graphics/footer-stretcher.png);
+	height: 14px;
+	margin: 0 auto;
+}
+
+#navigation-bg {
+	background-image: url(graphics/nav-bg.png);
+	height: 36px;
+	margin: 0 auto;
+}
+
+#navigation-footer  a {
+	color: #FFFF00;
+	text-decoration: none;
+}
+
+#navigation-footer  a:hover {
+	color: #FFFF00;
+	text-decoration: underline;
+}
+
+#navigation-footer {
+	width: 929px;
+	height: 50px;
+	margin: 0 auto;
+	font-size: 9px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #000000;
+	color: #FFFFFF;
+}
+
+#footer {
+	width: 901px;
+	background-image: url(graphics/footer-stretcher.png);
+	margin: 0 auto;
+	border-left: 1px #000000 solid;
+	border-right: 1px #000000 solid;
+	text-align: center;
+	font-size:10px;
+}
+
+#footer p {
+	padding-top: 20px;
+}
+
+#footer p.links {
+	padding-top: 0;
+}
+
+#footer td {
+	border-bottom: solid 1px #000000;
+}

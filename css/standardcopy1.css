@@ -1,0 +1,183 @@
+@charset "utf-8";
+/* CSS Document */
+
+.standard_copy {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size: 12pt;
+	color:#000;
+	line-height:14pt;
+	text-align: left;
+}
+.standard_copy h1 {
+	font-family: Impact, Helvetica, Arial, sans-serif;
+	color:#012152;
+	text-align:center;
+	font-size: 24pt;
+	line-height: 26pt;
+	font-weight: normal;
+	border: none;
+	letter-spacing: 0;
+	text-indent: 0;
+}
+.standard_copy h2 {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size: 14pt;
+	font-weight:bold;
+	text-align:left;
+	color:#000;
+	line-height: 17pt;
+}
+.standard_copy h3 {
+	font-family:Helvetica, Arial, sans-serif;
+	font-size: 24pt;
+	font-weight:bold;
+	text-align: center;
+	color:#012152;
+	line-height: 26pt;
+}
+.standard_copy p {
+	font-family:Helvetica, Arial, sans-serif;
+	color:#000;
+	font-size:12pt;
+}
+.standard_copy ul li {
+	margin-left: 50px;
+	margin-bottom: 15px;
+	list-style-image: url(images/asterisk2.gif)
+}
+.standard_copy .box ul li {
+	list-style-image: url(images/asterisk_transp.png)
+}
+.standard_copy ol li {
+	margin-left: 50px;
+	margin-bottom: 15px;
+	list-style-type: decimal;
+	list-style-image: none;
+}
+.standard_copy li.even {
+	font-weight:bold;
+}
+.standard_copy .box { 
+	background-color: rgb(255, 255, 221);
+	border: 4px dashed rgb(255, 0, 0); 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	padding-bottom: 10px; 
+	margin: auto; 
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px;	
+}
+.standard_copy .box p {
+	font-style:italic;
+}
+.ss_letter {
+	padding: 10px;
+	border: solid 2px #333;
+}
+.ss_letter_header  {
+	color: #eee;
+	background-color: #555;
+	padding: 10px;
+}
+
+.standard_copy .standard_copy ol li {
+	margin-left: 50px;
+	margin-bottom: 15px;
+	list-style-type: decimal;
+	list-style-image: none;
+}
+.standard_copy .testimonial_new {
+	background-color: rgb(255, 255, 221);
+	border: 4px dashed rgb(255, 0, 0); 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	padding-bottom: 10px; 
+	margin: auto; 
+	margin-bottom: 20px;
+	-moz-border-radius: 12px 12px 12px 12px;	
+	-webkit-border-radius: 12px;
+	width: 480px;
+}
+.standard_copy .testimonial_wrapper {
+	width: 500px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+.standard_copy .test_credit {
+	font-weight: bold;
+	text-align: right;
+	font-size: 14px;
+	clear: both;
+}
+.standard_copy .test_pic {
+float:left; 
+width:120px; 
+padding-top: 10px;
+}
+.standard_copy .test_pic img {
+float:left;
+}
+.standard_copy .test_inner {
+width:320px; 
+float:left; 
+padding-bottom:5px;
+	border-radius: 12px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+padding-left: 10px;
+padding-right: 10px;
+font-style: italic;
+}
+.standard_copy .test_inner p {
+	font-size: 12pt;
+	line-height: 12pt;
+}
+.standard_copy .nopic {
+width:440px; 
+}
+.standard_copy .test_inner img {
+padding: 5px;
+width: 61px;
+height: 47px;
+}
+
+.standard_copy .break {
+	height: 20px;
+	clear:both;
+}
+span.line1 {
+	background-color: transparent;
+	background-image: url('graphics/line1.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	font-weight:bold;
+	padding-bottom: 4px;
+}
+span.line2 {
+	background-color: transparent;
+	background-image: url('graphics/line2.png');
+	background-position: bottom center;
+	background-repeat: no-repeat;
+	font-weight:bold;
+	padding-bottom: 7px;
+}
+.guarantee {
+	background-image: url('graphics/guarantee.jpg');
+	background-repeat: no-repeat;
+	background-position: top center;
+	width: 440px;
+	padding-left: 130px;
+	padding-right: 128px;
+	padding-top: 220px;
+	height: 610px;
+	margin-left: 55px;
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Georgia, "Book Antiqua";
+}
+.guarantee p {
+	font-size: 12px;
+	line-height: 14px;
+	font-family: Georgia, "Book Antiqua";
+}

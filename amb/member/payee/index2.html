@@ -1,0 +1,267 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+  <span tal:omit-tag="" metal:fill-slot="head">
+    <title><span tal:replace="template/title" /></title>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+
+function verify() {
+
+var themessage = "US Residents and Businesses are required to fill out the tax"
+ +" information at the bottom of the form!";
+if (
+    (document.form1.radiobutton[0].checked==true
+	&& document.form1.hiddencountry.value == "US")
+	    ||
+		(document.form1.radiobutton[1].checked==true
+		    && document.form1.country.value == "US")
+		      )
+if (document.form1.tax_id_number.value == "" ||
+    document.form1.tax_reg_name.value == "")
+    { themessage=themessage+"." }
+
+if (themessage == "US Residents and Businesses are required to fill out the tax"
+ +" information at the bottom of the form!")
+ {
+ document.form1.submit();
+ }
+ else {
+   alert(themessage);
+     return false;
+     }
+     }
+
+      //  End -->
+
+          </script>
+	  
+		      
+
+ 
+  
+  </span>
+
+  <span tal:omit-tag="" metal:fill-slot="titleimage"><img
+      src="graphics/titles/payee.gif"
+      width="600" height="65"></span>
+
+  <span tal:omit-tag="" metal:fill-slot="body">
+
+    <span tal:omit-tag="" tal:define="username request/AUTHENTICATED_USER;
+      userdata python:here.get_userdata_sql(username=username)[0];
+      countries python:here.get_countries_sql();
+      states python:here.list_states_provinces_sql(country='US');
+      provinces python:here.list_states_provinces_sql(country='CA');
+	  ambassador python:here.get_ambassador_by_personid_sql(person_id=userdata['person_id']).dictionaries()[0];
+      persondata python:here.get_persondata_sql(person_id=userdata['person_id']).dictionaries()[0]">
+
+      <div class=Section1> 
+        <p class="Title1">Who Should We Pay?</p>
+        <p>To help us pay you promptly and accurately, please indicate 
+          who is the payee for your Internet Ambassdor Commissions.</p>
+        <p>Choose one of the following<span class="Title4"> Payee 
+            Options</span>:</p>
+      </div>
+      <ol>
+        <li> 
+          <div class=Section1>Make the Checks out to me Personally</div>
+        </li>
+        <li>Make the Checks out to my Company</li>
+      </ol>
+      <p>Complete the Form below to indicate who we should pay:</p>
+      <form name="form1" method="post" action="verify_ambassador_info_scr">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+			<span tal:condition="python:ambassador['payee'] == 'Personal'">
+			  <td valign="top"> <input type="radio" name="radiobutton" value="radiobutton_personal" checked=true></td>
+			</span>
+			<span tal:condition="python:ambassador['payee'] == ''">
+			  <td valign="top"> <input type="radio" name="radiobutton" value="radiobutton_personal" checked=true></td>
+			</span>
+			<span tal:condition="python:ambassador['payee'] != 'Personal' and not ambassador['payee'] == ''">
+			  <td valign="top"> <input type="radio" name="radiobutton" value="radiobutton_personal"></td>
+			</span>
+            <td><h3>1. Make the Check out to Me Personally</h3>
+              <p>If you want to be paid personally, please click this radio button. 
+				<br><br>We have your information as follows:</p>
+              <blockquote> 
+				<p>
+				  <strong>
+					<span tal:replace="persondata/firstname | nothing"/> <span tal:replace="persondata/lastname | nothing"/>
+					<br><span tal:replace="persondata/addr1 | nothing"/>
+					<span tal:condition="persondata/addr2"><br></span><span tal:replace="persondata/addr2 | nothing"/>
+					<br><span tal:replace="persondata/city | nothing"/>, <span tal:replace="persondata/stateprov | nothing"/>
+					<br><span tal:omit-tag="" tal:repeat="country countries">
+						<span tal:omit-tag="" tal:condition="python:persondata['country'] == country['code']">
+						  <span tal:replace="country/name"/>
+						</span>
+					  </span>
+					  <br><span tal:replace="persondata/postal | nothing"/>
+				  </strong>
+				</p>
+              </blockquote>
+              <hr> 
+			</td>
+          </tr>
+	  
+          <tr> 
+			<span tal:condition="python:ambassador['payee'] == 'Company'">
+			  <td valign="top"> <input type="radio" name="radiobutton" value="radiobutton_company" checked=true></td>
+			</span>
+			<span tal:condition="python:ambassador['payee'] != 'Company'">
+			  <td valign="top"> <input type="radio" name="radiobutton" value="radiobutton_company"></td>
+			</span>
+	    <input type="hidden" name="hiddencountry" 
+	    tal:attributes="value persondata/country" />
+            <td><h3>2. Make the Check out to My Company</h3>
+              <p>If you want us to pay your Company, please click 
+                this radio Button and then complete the form below:</p>
+              <table width="100%" border="1" cellpadding="2" cellspacing="0">
+                <tr> 
+                  <th colspan="2">Fields in <span class="red-alert">Red</span> 
+                    are Required</th>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr1"> <p class="red-alert">Name</p></td>
+                  <td class="tr1"> <input type="text" size="40" name="name" tal:attributes="value ambassador/company_name | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr0"><p class="red-alert" >Address Line 1</p></td>
+                  <td class="tr0"> <input type="text" size="40" name="addr1"  tal:attributes="value ambassador/company_addr1 | nothing" /></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr1"><p>Address Line 2</p></td>
+                  <td class="tr1"> <input type="text" size="40" name="addr2" tal:attributes="value ambassador/company_addr2 | nothing" /></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr0"><p class="red-alert">City</p></td>
+                  <td class="tr0"> <input type="text" size="40" name="city" tal:attributes="value ambassador/company_city | nothing" /></td>
+                </tr>
+				<tr> 
+				  <td class="tr1"> <div align="right"><font
+						size="2" face="Verdana, Arial, Helvetica,
+						sans-serif"><p><b>Prov/State:</b></p></font></div></td>
+				  <td class="tr1"> <p> 
+					  <select name="stateprov">
+						<option value="">Choose Province</option>
+						<optgroup label="Canada">
+						  <span tal:repeat="province provinces"	tal:omit-tag="">
+							<option tal:attributes="value province/code;
+							  selected python:ambassador['company_stateprov'] == province['code']">
+							  <span tal:replace="province/name" />
+							</option>
+						  </span>
+						</optgroup>
+						<optgroup label="United States">
+						  <span tal:repeat="state states"
+							tal:omit-tag="">
+							<option tal:attributes="value state/code;
+							  selected python:ambassador['company_stateprov'] == state['code']">
+							  <span tal:replace="state/name" />
+							</option>
+						  </span>
+						</optgroup>
+					  </select>
+					</p>
+				  </td>
+				</tr>
+				<tr> 
+				  <td> <div align="right"><font
+						size="2" face="Verdana, Arial, Helvetica,
+						sans-serif"><p class="red-alert"><b>Country:</b></p></font></div></td>
+				  <td> <p> 
+					  <select single="" size="1" name="country">
+						<option value="">Choose</option>
+						<option value="CA" tal:attributes="selected python:ambassador['company_country'] == 'CA'">Canada</option>
+						<option value="US" tal:attributes="selected python:ambassador['company_country'] == 'US'">United States</option>
+						<option value="" disabled>__________________</option>
+						<span tal:omit-tag=""
+						  tal:repeat="country countries">
+						  <span tal:omit-tag=""
+							tal:condition="python:country['code']!='CA' and 	country['code']!='US'">
+							<option tal:attributes="value country/code;
+							  selected python:ambassador['company_country'] == country['code']">
+							  <span tal:replace="country/name" />
+							</option>
+						  </span>
+						</span>
+					  </select>
+					</p>
+				  </td>
+				</tr>
+
+				<tr> 
+                  <td align="right" class="tr1"><p class="red-alert">Postal 
+                      Code</p></td>
+                  <td class="tr1"> <input type="text" size="15" name="postalcode" tal:attributes="value ambassador/company_postal | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr0"><p class="red-alert">Phone:</p></td>
+                  <td class="tr0"> <input type="text" size="20" name="phone" tal:attributes="value ambassador/company_phone | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr1"><p>Fax:</p></td>
+                  <td class="tr1"> <input type="text" size="20" name="fax" tal:attributes="value ambassador/company_fax | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr0"><p>Website</p></td>
+                  <td class="tr0"> <input type="text" size="40" maxlength="1024" name="website"  tal:attributes="value ambassador/company_website | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td align="right" class="tr1"><p>Description</p></td>
+                  <td class="tr1"> <textarea cols="40" rows="10" name="description"><span tal:replace="text ambassador/company_description | nothing"/></textarea></td>
+                </tr>
+			  </table>
+			  <br>
+			  <p class="Title3">U.S Ambassadors please fill this out</p>
+			  <p>(for U.S. citizens, residents and organizations): If you are an individual, please enter your U.S. Social Security number and your name; if you represent an organization, please enter the IRS employer identification number (EIN) and the organization's name. This is critical for us to issue you a commissions payment.</p>
+			  <table width="100%" border="1" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td class="tr0"><p>Tax ID Number</p></td>
+                  <td class="tr0"> <input type="text" size="10" name="tax_id_number" tal:attributes="value ambassador/tax_id_num | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td class="tr1"><p>Tax Registration Name</p></td>
+                  <td class="tr0"> <input type="text" size="10" name="tax_reg_name" tal:attributes="value ambassador/tax_reg_name | nothing"/></td>
+                </tr>
+                <tr> 
+                  <td class="tr0"><p>Tax Class ID</p></td>
+                  <td class="tr0"> 
+					<select name="tax_class_id">
+					  <option value=1>Individual</option>
+					  <option value=2>Corp</option>
+					  <option value=3>Partnership</option>
+					  <option value=4>Gov't Agency</option>
+					  <option value=5>Non Us Individual</option>
+					  <option value=6>Non Us Business</option>
+					  <option value=7>Non Us Partnership</option>
+					</select>
+				  </td>
+
+                </tr>
+              </table>
+              <hr> </td>
+          </tr>
+		  <tr>
+			<td align="center" colspan="2">
+			  <input type="button" name="action" value="Submit"
+			  onClick="verify();" />
+			</td>
+          </tr>
+        </table>
+        <h2 class="Title2">&nbsp;</h2>
+      </form>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+
+
+    </span> 
+  </span> 
+</html>
+
+ 
+ 
+<!-- This arch-tag is automatically generated. Do not remove. -->
+<!--  arch-tag: 2edf4b5c-a44e-4177-ad25-405232f8a75c  -->

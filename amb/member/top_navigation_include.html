@@ -1,0 +1,24 @@
+
+<!-- The following two SPAN TAL statements are required for the Affiliate links which require dynamic code modification -->
+<span tal:omit-tag="" tal:define="username request/AUTHENTICATED_USER; userdata python:here.get_userdata_sql(username=username)[0]; persondata python:here.get_persondata_sql(person_id=userdata['person_id'])[0]">
+	<span tal:define="amb_stuff here/get_amb_wid_phrase">
+	
+	 <ul id="nav" class="dropdown dropdown-horizontal">
+		<li><a href="http://qcseminars.com">Home</a></li>
+		<li><a href="/amb/member/">Ambassadors</a>
+			<ul>
+				<li><a href="/https/amb/member/edit_user.html" target="_blank">Change Your Phrase</a></li>
+				<li><a tal:attributes="href string:http://${here/homedomain}/https/signup/signup_form_html?form_id=3&person_id=${amb_stuff/wid}&email=${persondata/email}">Update Conact Info</a></li>
+				<li><a href="/https/amb/member/payee/index_html" target="_blank">Choose Payee</a></li>
+	  <li><a href="/https/amb/member/stats/index_html" target="_blank">Your Referral List</a></li>
+	  <li><a href="/https/amb/member/stats/click_tracking.html" target="_blank">Click Tracking Stats</a></li>
+	  <li><A HREF="/https/amb/logout?logout=y" onClick="alert('Logging out of this system requires that you intentionally FAIL TO LOGIN correctly. As soon as you click the OK button, a login window will appear. SIMPLY CLICK CANCEL to logout. Also note, the logout page you are being directed to cannot be logged into so hitting CANCEL is your only option--you are effectively already logged out now.')">Logout</A></li>
+			</ul>
+		</li>
+		<li><a href="http://store.qcseminars.com" target="_blank">Store</a></li>
+		<li><a href="http://qcseminars.com/contact">Contact Us</a></li>
+		<li class="navendR"><p><img src="/graphics/telephone.png" alt="Ph." width="16" height="14" /> 1300 733 642</p></li>
+	  </ul>
+	  
+	</span>
+</span>

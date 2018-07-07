@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" />Edit Your Account Information</title>
+       <script language=JavaScript src="/jscripts/amb_msg_check.js" type=text/javascript></script>
+
+    </span>
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+<span tal:omit-tag="" tal:define="username request/AUTHENTICATED_USER;
+   userdata python:here.get_userdata_sql(username=username)[0];
+   ambdata python:here.get_amb_wid_phrase();
+   countries python:here.get_countries_sql();
+   states python:here.list_states_provinces_sql(country='US');
+   provinces python:here.list_states_provinces_sql(country='CA');
+   persondata python:here.get_persondata_sql(person_id=userdata['person_id']).dictionaries()[0]">
+	<span tal:omit-tag="" tal:condition="request/msg | nothing">
+		  <div class="message"><span tal:replace="request/msg" /></div>
+		</span>
+<h1>Change Your Unique Referral Phrase</h1>
+<p>If you would like to change your Unique Referral Phrase enter a new message in the field below and if it is not already being used by another program member you can submit the form. <span class="highlight">Please be aware that any links you have already posted on a website or sent by email using your former Unique Referral Phrase will no longer work.</span></p>
+                                    <p>Your Unique Referral Phrase
+                                      is used to help you refer people using something more memorable than an ID number. Pick a meaningful word or phrase that will be easily remembered and typed. For 
+                                      Instance, &quot;<span class="alert-high">motivate</span>&quot; could be chosen. 
+                                      </p>
+                                    <h2>Suggestions for Unique Referral Phrases</h2>
+                                  
+                                  <ul>
+                                    <li class="bullets"><strong>Choose 
+                                      a single word</strong> such as &quot;<strong>inspire</strong>&quot; 
+                                      or &quot;<strong>empower</strong>&quot; 
+                                      that is easy to remember. The shorter, the better if your referral 
+                                      must type it out.</li>
+                                    <li class="bullets">
+                                      <strong>Use LOWER CASE LETTERS ONLY</strong></li>
+                                    <li class="bullets">Maximum 
+                                      of 20 characters including spaces.</li>
+                                    <li class="bullets">Use 
+                                      only numbers and letters. NO SPACES or
+                                      special characters--<strong>!@#$%^&amp;*</strong>.</li>
+									<li>An underscore character, "_", will be used instead of a space to separate words.</li>
+                                  </ul>
+
+               
+	<div id="referral_phrase">
+                  <a name="message"></a>
+				  
+							<form method="post" action="update_phrase" name="phrase_form">
+                          <input type="hidden" name="person_id" tal:attributes="value persondata/id" />
+						<table class="edit_left">
+                            <tr class="first_row"> 
+                              <td colspan="2">Change Your Unique Referral Phrase</td>
+                            </tr>
+ 					  <tr> 
+						<th>Unique Referral Phrase:
+						</th>
+						<td> 
+						<input name="phrase" type="text" size="25" maxlength="20"
+							onKeyUp="verifyKeyAndLoadDoc(this, event);"
+							tal:attributes="value ambdata/am" /> 
+						i.e. &quot;motivate&quot;</td>
+					  </tr>
+					  <tr>
+					  	<th>This message is:
+						</th>
+					  	<td><input readonly='true' id='yea_or_nay' value='' />
+						</td>
+					   </tr>
+                             <tr class="last_row">
+								 <td colspan="2"><input type="submit" name="action" value="Update Message" />
+								 </td>
+							</tr>
+                          </table>
+						  </form>
+						  
+			</div>
+						  
+                 
+</span> <!-- defs -->
+    </span>
+
+
+</html>
+ 

@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Page Error</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+      <h1><span tal:replace="template/title" /></h1>
+
+       <p>We're sorry, there seems to be a problem with the page you were
+       attempting to reach.</p>
+
+    </span>
+</html>
+

@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" />Simple Listing of Your Referrals</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+
+                                      <h1>List of Your Referrals</h1>
+                    
+                  
+<p>The following is a list of the people in this system's database which have 
+  your Referral ID (<span tal:replace="amb_stuff/wid" />) associated with their 
+  contact record. This list does not indicate that your referrals have purchased 
+  anything, only that they are in the database as your referrals. The information 
+  below is intentionally minimal in order to protect the privacy of your referrals.</p>
+                    
+<div id="results">
+<span tal:omit-tag="" tal:replace="structure here/get_amb_stats" />
+</div>                    
+<p>*Please note that a <span class="alert-low">CPID</span> is an internal system Campaign Part ID stored with your referral's contact record and can typically be ignored.</p>
+
+    </span>
+
+
+</html>
+ 
+ 

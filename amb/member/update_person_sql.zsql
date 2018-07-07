@@ -1,0 +1,30 @@
+
+    <dtml-comment>
+    connection_id:Psycopg_database_connection
+    arguments:person_id firstname lastname email website addr1 addr2 city stateprov country postal home_phone cell_phone work_phone fax
+    max_cache:100
+    max_rows:1000
+    </dtml-comment>
+    update people
+    set firstname = <dtml-sqlvar firstname type="string">,
+        lastname = <dtml-sqlvar lastname type="string">,
+        email = <dtml-sqlvar email type="string">,
+        website = <dtml-sqlvar website type="string">,
+        addr1 = <dtml-sqlvar addr1 type="string">,
+        addr2 = <dtml-sqlvar addr2 type="string">,
+        city = <dtml-sqlvar city type="string">,
+        stateprov = <dtml-sqlvar stateprov type="string">,
+        country = <dtml-sqlvar country type="string">,
+        postal = <dtml-sqlvar postal type="string">,
+        home_phone = <dtml-sqlvar home_phone type="string">,
+        work_phone = <dtml-sqlvar work_phone type="string">,
+        cell_phone = <dtml-sqlvar cell_phone type="string">,
+        fax = <dtml-sqlvar fax type="string">,
+        date_modified = CURRENT_TIMESTAMP
+    where
+        id = <dtml-sqlvar person_id type="int">
+
+ 
+ 
+-- This arch-tag is automatically generated. Do not remove.
+--  arch-tag: 5d1d3d5c-51d4-4e93-8308-09d7603d3e37 

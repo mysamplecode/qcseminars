@@ -1,0 +1,231 @@
+div.opt_in_form {
+    float:left;
+}
+.input input{text-align:left;width:250px;}
+div.opt_in_form div{
+font-size:11px;
+}
+.input select { width:200px;}
+div.opt_in_form div.form_header{
+    
+   
+}
+
+div.opt_in_form div.form_body{
+  
+   
+}
+
+div.opt_in_form div.form_footer{
+   
+    
+}
+
+div.form_body form{
+    padding: 0 20px;
+    font-family: Verdana,Arial,Helvetical,sans-serif;
+    color: #494949;
+}
+
+div.form_body input,
+div.form_body select {
+    background-color: white;
+}
+
+div.form_body div.form_row{
+    padding-bottom: 5px;
+}
+
+div.form_body span.heading{
+    display:block;
+    width: 140px;
+    float: left;
+    clear: left;
+    text-align: right;
+    padding:3px 3px 0;
+}
+
+div.form_body .required span.heading,
+div.form_body div.required_notice {
+    font-weight: bold;
+    text-transform:capitalize;
+    color: red;
+}
+
+div.form_body div.email input,
+div.form_body div.addr1 input,
+div.form_body div.addr2 input {
+    width: 250px;
+}
+
+div.form_body #prov_state_selector {
+    margin-left: 140px;
+    padding: 5px 0 0 6px;
+    display: block;
+}
+
+div.form_body span.instructions {
+    display: block;
+    padding-left: 145px;
+    font-weight: bold;
+    font-size: .85em;
+}
+
+
+div.form_body div.required input,
+div.form_body div.required select {
+    color: red;
+}
+
+
+div.form_body div.country select,
+div.form_body div.stateprov select {
+    font-size: 12px;
+}
+
+div.form_body div.required_notice {
+    text-align:right;
+}
+
+div.form_body div.submit {
+    padding:0 0 0 125px;
+	background-color: transparent;
+}
+
+div.form_body div.submit input{
+    padding:2px 10px;
+	background-color: transparent;
+}
+
+div.form_body div.opt-in_alert {
+    font-size: 10px;
+    padding: 20px 20px 0 20px;
+}
+
+#verified_user span.not_verified_user {
+	color: #000;
+	font-size: .65em;
+	display: block;
+}
+
+#signup span.not_verified_user {
+	display: inline;
+}
+
+
+
+/* --------- door_page_vopt Signup Form Styles ----------------- */
+
+.door_page_vopt div.opt_in_form {
+    -moz-border-radius:12px 12px 12px 12px;
+    background-color:#FFFFDD;
+    border:4px dashed #FF0000;
+    padding: 0 10px 10px 10px;
+    margin-left: auto;
+    margin-right: auto;
+	float:left;
+	font-size:12px;
+}
+
+.door_page_vopt div.opt_in_form h3  {
+    color:#CC0000;
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:24pt;
+    font-weight:bold;
+    line-height:26pt;
+    text-align:center;
+}
+
+.door_page_vopt div.opt_in_form div.form_header,
+.door_page_vopt div.opt_in_form div.form_footer,
+.door_page_vopt div.opt_in_form div.form_body {
+    width: 100%;
+    margin: auto;
+    height:auto;
+    background-image:none;
+	
+}
+
+.door_page_vopt div.form_body form{
+    padding: 0 20px;
+    font-family: inherit;
+}
+
+
+.door_page_vopt div.form_body div.form_row{
+    padding-bottom: 10px;
+    padding-left: 50px;
+}
+
+.door_page_vopt div.form_body .required span.heading,
+.door_page_vopt div.form_body div.required_notice,
+.door_page_vopt div.form_body div.required input,
+.door_page_vopt div.form_body div.required select {
+    color: #CC0000;
+}
+
+.door_page_vopt div.form_body #prov_state_selector {
+    margin-left: 160px;
+}
+
+.door_page_vopt div.form_body div.submit {
+    padding: ;
+}
+
+.door_page_vopt div.form_body div.submit input{
+    padding: ;
+}
+
+.door_page_vopt div.form_body div.submit input{
+    font-size: 0em;
+    background-image: url(graphics/signup_forms/free_report_dvd_button.jpeg);
+    background-repeat: no-repeat;
+    width: 239px;
+    height: 69px;
+    border: 0;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.door_page_vopt div.form_body div.opt-in_alert {
+    display:none;
+}
+
+.door_page_vopt div.form_body .home_phone .instructions {
+    display: none;
+}
+
+#sideform .opt_in_form .form_body form#signup {
+width: 300px;
+}
+
+#sideform .opt_in_form .form_body form#signup .form_body span.heading {
+width: 88px;
+}
+
+
+
+/* --------- /door_page_vopt Signup Form Styles ----------------- */
+
+
+/* ------ CIDX Signup Forms Styling ------- */
+#verified_user input {
+    background-color: #0291d7;
+    padding: 10px;
+    margin: inherit;
+    color: white;
+    font-size: 1.25em;
+    border-radius: 14px;
+}
+
+#verified_user input:hover {
+    background-color: #003399;
+}
+
+#verified_user div.submit {
+    padding: 0 0 0 0px;
+}
+
+/* ------ CIDX Signup Forms Styling ------- */

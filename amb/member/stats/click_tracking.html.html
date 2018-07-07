@@ -1,0 +1,86 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" />Tracking Your Referrals from Click to Lead</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+
+<h1>Click Through (CT) Tracking</h1>
+                  <p>The table below supplies some statistics which you can use to help determine if your referral efforts are producing results. See below the table for definitions of the terms and suggestions for how to use these statistics to improve your marketing.</p>
+                  
+                    <!--CT table between this tag and the next. -->
+                    <span tal:omit-tag="" tal:replace="structure here/displayClickStats" /> 
+                    <!--CT table between this tag and the previous. -->
+                    <br>
+                    <p> <span class="alert-high">*Only Unique visitors are tracked.</span>
+      A &quot;cookie&quot; is planted and a Click is counted when a person clicks 
+      on your referral link so long as there was not already a referral cookie 
+      stored with that person's web browser. If that person already had a cookie 
+      from clicking on your link or on someone else's referral link, then no Click 
+      would be tracked.</p>
+	  <p>**If the Click Tracking Table has no statistics, copy and paste the following link in a new window to begin tracking CTs. You may need to delete your "ct" cookie first:<br>
+	  http://www.domain.com/a/<span tal:replace="amb_stuff/am" /></p>
+	  
+	  <p>&nbsp;</p>
+                  
+  <h2>Definitions</h2>
+  <h3>Domain</h3>
+  <p>This is the main website you are referring people to.</p>
+  <h3>Since last reset</h3>
+  <p>Clicks &amp; Leads are recorded from the time a domain is being click tracked; 
+    however, it's possible to &quot;Reset&quot; the counter at any time so that 
+    you can see how many new clicks and leads are generated as of a certain date. 
+    This is useful if you are just beginning a new marketing effort.</p>
+  <h3>To Date</h3>
+  <p>This section keeps track of all the Clicks &amp; Leads from the beginning 
+    of your referring to a given domain. However, if you &quot;Delete&quot; a 
+    domain in order to start entirely over again, the To Date section will reference 
+    all the clicks from the time you Delete the domain.</p>
+  <h3>Reset Date</h3>
+  <p>The date the given domain counter was Reset.</p>
+  <h3>Clicks</h3>
+  <p>A click is counted as a Unique visitor to the domain. Once a person has clicked 
+    on your referral link and directed to this website, a &quot;cookie&quot; is 
+    planted so that if that person clicks again, we will not count their click 
+    a second time.</p>
+  <h3>Leads</h3>
+  <p>A lead is any person who enters this website's database after clicking on 
+    your referral link and then filling in some kind of form. They may have signed 
+    up for a mailing list, a course, or purchased something using the web shopping 
+    cart.</p>
+  <h3>Lead to Click Ratio</h3>
+  <p>You may generate many click throughs to this site, but the effectiveness 
+    of your marketing is best measured by your conversion of Clicks to Leads. 
+    If you refer 100 people to this domain and 1 person signs up, your Ratio will 
+    be 1%. If you only referred 10 people and one of them became a Lead, your 
+    Ratio would be 10%.</p>
+  
+<p>There are many resources on the Internet which suggest that the best Affiliates 
+  do an excellent job of &quot;preselling&quot; their referral. This means they 
+  create enough strong interest in a person they refer them that when the referral 
+  arrives on the target website, they are much more likely to &quot;convert&quot; 
+  or become a Lead.</p>
+  <h3>Reset Selected &amp; Delete Selected Buttons</h3>
+  <p>Select the checkbox beside the Domain you want to Reset or Delete and then 
+    click a button. The Reset button zeroes the Counter but keeps track of all 
+    the clicks to date. Deleting deletes all track of your referral clicks to 
+    this domain. <span class="alert-high">Deleting a domain does not delete your 
+    actual Leads from the database, nor does it disable your referral link from 
+    working. The next time someone clicks your referral link, a domain record 
+    for your click tracking will be created and your click tracking statistic 
+    will be compiled again from that point.</span></p>
+	
+                 
+
+
+    </span>
+
+
+</html>
+ 

@@ -1,0 +1,856 @@
+/* CSS Document */
+
+/* The following Styles for the Event Calendar Display code provide many 
+of the class declarations you should need to style the calendars to suit
+your web site visually.
+
+You should look at the source HTML for your calendars
+so that you can perform considerably more innovative styling than we could
+use here for this generic calendar display. For instance, you could use a class 
+called "sku_XXX" (where XXX is the actual SKU ID from your database) for 
+Grouping by SKUs and for each "event_instance" so that you can use graphics
+or other forms of customization for your individual course types.
+
+Finally, all colors used in this style sheet begin with "#" so you can easy 
+perform a search and replace to quickly color the default template for your needs.
+
+*/
+
+
+
+
+
+
+
+
+
+
+/* calendar global setting 
+
+The width of the register DIV is not set here so that it automatically 
+expands to fit the remaining space. This allows calendars with fewer 
+columns to display correctly. For instance, if you're building a multi-SKU
+calendar and using a Display Template to sort by SKU, you don't need an 
+"Event Name" DIV since the Grouping will already display the Event Name
+above each set of events scheduled for that event. The same can be done 
+with Grouping by Location.
+
+*/
+
+.event_calendar {
+	clear: both;
+}
+
+.event_calendar div{
+	padding: 0;
+	margin: 0;
+	font-size: 10px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.event_calendar div a{
+	font-weight: normal;
+	text-decoration: underline;
+	color: blue;
+}
+
+.event_calendar div a:hover {
+}
+
+.event_calendar p {
+	line-height: normal;
+}
+
+
+.event_calendar {
+	width: 99%;
+	border: solid #000000 2px;
+
+}
+
+.event_calendar div.description {
+	width: 12%;
+}
+
+.event_calendar div.date {
+	width: 31%;
+}
+
+.event_calendar div.location{
+	width: 11%;
+}
+
+.event_calendar div.venue{
+	width: 15%;
+}
+
+.event_calendar div.availability{
+	width: 15%;
+}
+
+.event_calendar div.register{
+}
+
+.event_calendar div.odd div.description,
+.event_calendar div.odd div.date,
+.event_calendar div.odd div.location,
+.event_calendar div.odd div.venue,
+.event_calendar div.odd div.availability,
+.event_calendar div.odd div.register {
+	background-color: #DDDDDD;
+}
+
+.event_calendar div.even div.description,
+.event_calendar div.even div.date,
+.event_calendar div.even div.location,
+.event_calendar div.even div.venue,
+.event_calendar div.even div.availability,
+.event_calendar div.even div.register {
+	background-color: #FFFFFF;
+}
+
+/* /calendar global setting */
+
+
+
+
+
+/*  header */
+
+.event_calendar div.header {
+	background-color: #444444;
+	border-bottom: solid #000000 1px;
+}
+
+.event_calendar div.header div{
+	float: left;
+	color: #FFFFFF;
+	background-color: inherit;
+	border-right: solid #000000 1px;
+}
+
+.event_calendar div.header p {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin:0;
+}
+
+.event_calendar div.header div.register{
+	float: none;
+	border-right: none;
+}
+
+
+/*  /header */
+
+
+
+
+
+/*  footer */
+
+.event_calendar div.footer {
+	background-color: #444444;
+	border-top: solid #000000 1px;
+}
+
+.event_calendar div.footer div{
+	float: left;
+	color: #FFFFFF;
+	background-color: inherit;
+	border-right: solid #000000 1px;
+}
+
+.event_calendar div.footer p {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0;
+	margin:0;
+}
+
+.event_calendar div.footer div.register{
+	float: none;
+	border-right: none;
+}
+
+
+/*  /footer */
+
+
+
+
+
+/* event_instance  */
+
+.event_calendar div.event_instance{
+	clear: both;
+	border-bottom: solid #000000 1px;
+}
+
+.event_calendar div.event_instance div{
+	float: left;
+	border-right: solid #000000 1px;
+}
+
+.event_calendar div.event_instance div.register{
+	float: none;
+	border-right: none;
+}
+
+.event_calendar div.event_instance p {
+	padding: 0 5px;
+	margin:0;
+	font-size: 1em;
+}
+
+
+/* /event_instance  */
+
+
+
+
+
+/* description - "Event Name"  */
+
+
+.event_calendar div.event_instance div.description p{
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.description a{
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.description span.event_id{
+	display: none;
+}
+
+/* /description - "Event Name"  */
+
+
+
+
+
+/* date  */
+
+
+div.date span.vague_date {
+	display:block;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.event_calendar div.date span.single_day {
+	font-weight:bold;
+}
+
+.event_calendar div.date span.single_day span.time{
+	display:block;
+}
+
+.event_calendar div.date span.multi_day span.end {
+	display:block;
+}
+
+.event_calendar div.date span.multi_day {
+	font-weight:normal;
+}
+
+.event_calendar div.date span.multi_day span.start_day,
+.event_calendar div.date span.multi_day span.start_time,
+.event_calendar div.date span.multi_day span.end_day,
+.event_calendar div.date span.multi_day span.end_time {
+	font-weight:bold;
+}
+
+.event_calendar div.date span.multi_day span.start_time,
+.event_calendar div.date span.multi_day span.end_time {
+	padding-left: 4px;
+	font-weight:normal;
+}
+
+.event_calendar div.date span.registration {
+	display:block;
+	margin-top: 10px;
+	font-style:italic;
+}
+
+.event_calendar div.date span.registration > span.single_day{
+}
+
+.event_calendar div.date span.registration span.instructions {
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_time span.instructions,
+.event_calendar div.date span.registration span.single_day span.reg_time + span.instructions {
+	padding-left: 4px;
+}
+
+.event_calendar div.date span.registration span.multi_day,
+.event_calendar div.date span.registration span.single_day {
+	font-weight:normal;
+
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_end {
+	display: block;
+}
+
+.event_calendar div.date span.registration span.multi_day span.reg_date {
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.single_day span.reg_time {
+	display: block;
+	float: left;
+	padding-right: 4px;
+}
+
+.event_calendar div.date span.registration span.single_day span.reg_time + span.instructions {
+	float: left;
+	display: block;
+}
+
+
+
+/* /date  */
+
+
+
+
+
+/* location  */
+
+.event_calendar div.event_instance div.location p{
+	font-weight: bold;
+	text-align: center;
+}
+
+
+/* /location  */
+
+
+
+
+
+/* venue  */
+
+.event_calendar div.event_instance div.venue p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance div.venue span.venue_address {
+	display: block;
+}
+
+.event_calendar div.event_instance div.venue span.venue_name {
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance div.venue span.web_map{
+	display: block;
+	text-align: left;
+	float: left;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance div.venue span.booking_info {
+	display: block;
+	text-align: left;
+	float: right;
+	margin-top: 10px;
+}
+
+/* /venue  */
+
+
+
+
+
+/* availability  */
+
+.event_calendar div.event_instance div.availability p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance span.seating_available {
+	font-weight: bold;
+}
+
+.event_calendar div.event_instance span.sold_out {
+	font-weight: bold;
+	color: #FF0000;
+}
+
+.event_calendar div.event_instance span.wait_list {
+	display: block;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance span.no_wait_list {
+	display: block;
+	margin-top: 10px;
+}
+
+.event_calendar div.event_instance span.null_capacity {
+	color: #FF0000;
+}
+/* /availability  */
+
+
+
+
+
+/* register  */
+
+.event_calendar div.event_instance div.register p{
+	text-align: center;
+}
+
+.event_calendar div.event_instance div.register span.free{
+}
+
+.event_calendar div.event_instance div.register span.web_display {
+	display: block;
+}
+
+.event_calendar div.event_instance div.register span.web_display span.price{
+	text-decoration: line-through;
+}
+
+.event_calendar div.event_instance div.register span.selling_price {
+	display: block;
+	font-size: 1.25em;
+}
+
+.event_calendar div.event_instance div.register span.web_display + span.selling_price {
+	
+}
+
+.event_calendar div.event_instance div.register span.selling_price span.price {
+	display: block;
+	text-decoration: underline;
+}
+
+.event_calendar div.event_instance div.register span.selling_price span.price_description {
+	display: block;
+	margin-top: 10px;
+}
+
+/* /register  */
+
+
+
+
+
+/* Display Template Grouping Styles
+
+The following styles are used when your "Calendar Display Template"
+Groups by Sku, Program or Location. 
+
+*/
+
+div.sort_by_sku .event_calendar div.header div.register{
+	float: none;
+}
+
+div.sort_by_sku .event_calendar div.venue{
+	width: 15%;
+}
+
+div.sort_by_sku div.description_divider div,
+div.sort_by_program div.program_divider div,
+div.sort_by_location div.location_divider div {
+	background-color: #AAAAAA;
+	padding: 0;
+	margin:0;
+}
+
+div.sort_by_sku div.description_divider div.left,
+div.sort_by_program div.program_divider div.left,
+div.sort_by_location div.location_divider div.left {
+	display: none;
+}
+
+div.sort_by_sku div.description_divider div.right,
+div.sort_by_program div.program_divider div.right,
+div.sort_by_location div.location_divider div.right {
+	display: none;
+}
+
+div.sort_by_sku div.description_divider div.center,
+div.sort_by_program div.program_divider div.center,
+div.sort_by_location div.location_divider div.center {
+border-bottom: solid 1px #000000;
+}
+
+div.sort_by_sku div.description_divider div.center p,
+div.sort_by_program div.program_divider div.center p,
+div.sort_by_location div.location_divider div.center p {
+	padding: 0 0 0 15px;
+	margin: 0;
+	line-height: 2em;
+	font-size: 1.5em;
+	color: #000000;
+}
+
+
+
+/* /Display Template Grouping Styles  */
+
+
+
+
+
+/* Calendars without scheduled events  */
+
+.event_calendar div.no_events {
+	background-color: #DDDDDD;
+	padding: 0;
+	margin:0;
+}
+
+.event_calendar div.no_events p{
+	padding: 0;
+	margin: 0;
+	line-height: 4em;
+	font-size: 1.5em;
+	color: #000000;
+	text-align: center;
+}
+
+
+/* /Calendars without scheduled events  */
+
+
+
+/* Free NLP Styles */
+
+
+.free_nlp .event_calendar {
+	-moz-border-radius:12px 12px 12px 12px;
+	background-color:#FFFFDD;
+	border:4px dashed #FF0000;
+}
+
+.free_nlp .event_calendar div.event_instance p {
+	font-size:1.25em;
+}
+
+.free_nlp .event_calendar div.header div,
+.free_nlp .event_calendar div.footer div {
+	border: none;
+}
+
+.free_nlp .event_calendar .header,
+.free_nlp .event_calendar .footer {
+	width: auto;
+	height: 30px;
+	background-color: red;
+	border: none;
+	float: none;
+	text-shadow: 1px 1px 0 #000000;
+	padding-top: 5px;
+}
+
+
+.free_nlp .event_calendar div.date {
+	width: 40%;
+}
+
+.free_nlp .event_calendar div.venue {
+	width: 30%;
+}
+
+
+
+.free_nlp .event_calendar div.event_instance div  {
+	height: 124px;
+}
+
+.free_nlp .event_calendar .description,
+.free_nlp .event_calendar div.header .location,
+.free_nlp .event_calendar div.footer .location,
+.free_nlp .event_calendar .event_instance .location {
+	display: none;
+}
+
+.free_nlp .event_calendar .location_divider {
+	width: 100%;
+	float: none;
+	border-bottom: 1px solid black;
+}
+
+
+.free_nlp .event_calendar .location_divider + .event_instance {
+	clear: right;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld div,
+.free_nlp .event_calendar .location_divider .melbourne_vic div,
+.free_nlp .event_calendar .location_divider .perth_wa div,
+.free_nlp .event_calendar .location_divider .sydney_nsw div {
+	background-color: transparent;
+	border-bottom: none;
+	height: 120px;
+}
+
+.free_nlp .event_calendar .location_divider span.location {
+	font-size: 2.5em;
+	padding: 50px 0 0 100px;
+	display: block;
+	height: 120px;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld,
+.free_nlp .event_calendar .location_divider .melbourne_vic,
+.free_nlp .event_calendar .location_divider .perth_wa,
+.free_nlp .event_calendar .location_divider .sydney_nsw {
+	background-repeat: no-repeat;
+	height: 124px;
+	width: 100%;
+	background-color: white;
+	background-position: 600px;
+}
+
+.free_nlp .event_calendar .location_divider .brisbane_qld{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_bris.png);
+}
+
+.free_nlp .event_calendar .location_divider .melbourne_vic{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_melb.png);
+}
+
+.free_nlp .event_calendar .location_divider .perth_wa{
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_perth.png);
+}
+
+.free_nlp .event_calendar .location_divider .sydney_nsw  {
+	background-image: url(http://programs.qcseminars.com/files/2009/08/ticket_syd.png);
+}
+
+.free_nlp .event_calendar .event_instance .date p,
+.free_nlp .event_calendar .event_instance .venue p,
+.free_nlp .event_calendar .event_instance .register p {
+	padding: 20px 0 0 0;
+}
+
+.free_nlp .event_calendar .event_instance .date p {
+	padding: 20px 0 0 20px;
+}
+
+.free_nlp .event_calendar .event_instance .register span.price_category > a {
+	padding-top: 15px;
+	display: block;
+}
+
+.free_nlp .event_calendar .event_instance .register span.selling_price span.price {
+	display:inline;
+	font-size: 1.25em;
+}
+
+/* /Free NLP Styles */
+
+
+/* Main Calendar Page styles */
+
+.main_cal_venue .event_calendar {
+	width: 585px;
+	border: none;
+	border-bottom: 1px dotted rgb(153, 204, 255);
+}
+
+.main_cal_venue .event_calendar div.event_instance {
+	border: none;	
+	border-top: 1px dotted rgb(153, 204, 255);
+	padding: 10px 0;
+	height: 80px;
+}
+
+.main_cal_venue .event_calendar div.event_instance div  {
+	border-right: none;
+	height: 4em;
+}
+
+.main_cal_venue .event_calendar .header,
+.main_cal_venue .event_calendar .footer,
+.main_cal_venue div.event_instance div.register span.web_display,
+.main_cal_venue div.event_instance div.register span.price_category > a,
+.main_cal_venue div.event_instance div.date span.registration {
+	display: none;
+}
+
+
+.main_cal_venue .event_calendar div.location{
+	width: 130px;
+}
+
+.main_cal_venue .event_calendar div.venue{
+	width: 150px;
+}
+
+
+.main_cal_venue .event_calendar div.event_instance div.location p{
+	font-size: 12px;
+	text-align: left;
+}
+
+.main_cal_venue .event_calendar div.date {
+	width: 200px;
+}
+
+.main_cal_venue .event_calendar div.date p {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+
+.main_cal_venue div.date span.vague_date {
+	display: block;
+	font-size: 1em;
+	font-weight:normal;
+	text-align:left;
+}
+
+.main_cal_venue .event_calendar div.register span {
+	text-align: right;
+}
+
+.main_cal_venue .event_calendar div.odd div.description,
+.main_cal_venue .event_calendar div.odd div.date,
+.main_cal_venue .event_calendar div.odd div.location,
+.main_cal_venue .event_calendar div.odd div.venue,
+.main_cal_venue .event_calendar div.odd div.availability,
+.main_cal_venue .event_calendar div.odd div.register {
+	background-color: transparent;
+}
+
+.main_cal_venue .event_calendar div.event_instance div.register span.selling_price span.price_description {
+	margin:0;
+	font-size: .8em;
+}
+
+.main_cal_venue .event_calendar div.no_events p {
+	line-height: 3em;
+}
+
+.main_cal_venue .event_calendar div.no_events {
+	background-color: #F6F6F6;
+	border-top: 1px dotted rgb(153, 204, 255);
+}
+
+.main_cal_venue .event_calendar div.event_instance div.venue span.web_map {
+    display: block;
+    float: none;
+    margin-top: 0px;
+    text-align: center;
+}
+
+.main_cal_venue .event_calendar div.event_instance div.venue span.venue_name {
+    white-space: nowrap;
+}
+
+/* /Main Calendar Page styles */
+
+/* Side Bar iFrame event calendar styles */
+
+.side_bar_iframe .event_calendar {
+	width: 211px;
+	border: none;
+	border:none;
+	height: 300px;
+}
+
+.side_bar_iframe .event_calendar div.event_instance {
+	border: none;	
+	border-bottom: 1px dotted rgb(153, 204, 255);
+	padding: 5px 0;
+	/*height: 75px;*/
+}
+
+.side_bar_iframe .event_calendar div.event_instance div  {
+	border-right: none;
+	float: none;
+	height: auto;
+}
+
+.side_bar_iframe .event_calendar div.description,
+.side_bar_iframe .event_calendar div.location,
+.side_bar_iframe .event_calendar div.date,
+.side_bar_iframe .event_calendar div.register {
+	width: 100%;
+}
+
+.side_bar_iframe .event_calendar .header,
+.side_bar_iframe .event_calendar .footer,
+.side_bar_iframe div.event_instance div.register span.web_display,
+.side_bar_iframe div.event_instance div.register span.price_category > a,
+.side_bar_iframe div.event_instance div.date span.registration {
+	display: none;
+}
+
+.side_bar_iframe .event_calendar div.odd div.description,
+.side_bar_iframe .event_calendar div.odd div.date,
+.side_bar_iframe .event_calendar div.odd div.location,
+.side_bar_iframe .event_calendar div.odd div.venue,
+.side_bar_iframe .event_calendar div.odd div.availability,
+.side_bar_iframe .event_calendar div.odd div.register {
+	background-color: transparent;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.description p {
+	color:#0066CC;
+	font-weight:bold;
+	text-align:left;
+	font-size: 12px;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.location p,
+.side_bar_iframe .event_calendar div.event_instance div.date p,
+.side_bar_iframe .event_calendar div.event_instance div.register p,
+.side_bar_iframe div.event_instance div.register span.selling_price,
+.side_bar_iframe div.date span.vague_date {
+	font-size: 1em;
+	text-align: left;
+}
+
+.side_bar_iframe .event_calendar div.event_instance div.register span.selling_price span.price_description {
+	margin:0
+}
+
+.side_bar_iframe div.event_instance div.register span.selling_price a {
+	color:#003399;
+	text-decoration:none;
+}
+
+.side_bar_iframe div.event_instance div.register span.selling_price a:hover {
+	color:#003399;
+	text-decoration: underline;
+}
+
+.side_bar_iframe div.event_instance .date span.start span.instructions,
+.side_bar_iframe div.event_instance .date span.start_time,
+.side_bar_iframe div.event_instance .date span.end_time {
+	display: none;
+}
+
+.side_bar_iframe .event_calendar div.date span.multi_day span.end {
+	display:inline;
+}
+
+.side_bar_iframe .event_calendar div.date span.multi_day span.start_day,
+.side_bar_iframe .event_calendar div.date span.multi_day span.start_time,
+.side_bar_iframe .event_calendar div.date span.multi_day span.end_day,
+.side_bar_iframe .event_calendar div.date span.multi_day span.end_time {
+	font-weight: normal;
+}
+
+
+/* /Side Bar iFrame event calendar styles */

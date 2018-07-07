@@ -1,0 +1,474 @@
+/* ----------- Cart Styles Top-------------- */
+
+
+#current_cart_one_line ul.dropdown {
+	width: auto;
+}
+
+#current_cart_one_line .cart_info {
+	float: left;
+	line-height: 36px;
+	font-size: 12px;
+	margin-left: 50px;
+	width: 420px;
+	text-align: center;
+}
+
+#current_cart_one_line ul.dropdown li.checkout a:link,
+#current_cart_one_line ul.dropdown li.checkout a:visited {
+	color:#FF0000;
+}
+
+	
+.cart {
+    font-size: 10px;
+    font-weight: normal;
+	 }
+
+table.cart {
+    border: 2px solid #59075e;
+    border-collapse: collapse;
+    width:100%;
+	 }
+
+table.shipping_address th {
+    text-align: right;
+    color: #59075e;
+    font-size: 12px;
+	 }
+	
+.cart th {
+    border-bottom: thin solid black;
+    background-color: #FFEBFF;
+    font-size: 14px;
+    font-weight: bolder;
+	 }
+	
+.cart tr {
+    border-top: thin solid black;
+    font-size: 10px;
+    font-weight: normal;
+	 }
+	
+.cart td {
+    font-weight: bold;
+    color: #59075E;   
+    font-size: 12px;
+	 }
+
+table.cart .number {
+    text-align:right;
+	 }
+
+table.cart .number input {
+    text-align:right;
+    padding-right:5px;
+	 }
+	
+.cart tr.offeritems {
+    border-top: none;
+    font-size: 10px;
+    font-weight: normal;
+	 }
+	
+.cart td.title {
+	border: none;
+	font-size: 14px;
+	font-weight: bolder;
+	color: #000000;
+	 }
+	
+.cart tr.total {
+    border-top: double black;
+	 }
+	
+.cart li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #223768;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 3px 0 ;
+	 }
+
+table.order {
+    border: 2px solid #59075e;
+    border-collapse: collapse;
+	 }
+	
+.order th {
+    border-bottom: thin solid black;
+    background-color: #FFEBFF;
+    font-size: 14px;
+    font-weight: bolder;
+	 }
+	
+.order tr {
+    border-top: thin solid black;
+    font-size: 10px;
+    font-weight: normal;
+	 }
+	
+.order td {
+    border-left: 1px solid black;
+    font-weight: normal;
+    color: black;   
+    font-size: 10px;
+	 }
+	
+.order td.title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #59075E;
+	 }
+
+table#choose_events,
+table#choose_products {
+    width: 100%;
+}
+
+
+span.asterix {
+    display: block;
+    font-size: 12px;
+    padding: 10px 5px;
+}
+
+table#choose_events tr.asterix td,
+table#choose_products  tr.asterix td{
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+
+table#choose_events tr.option th,
+table#choose_products tr.option th {
+    font-size: 12px;
+    font-weight: bold;
+    color: #59075E;
+    text-align: right;
+    padding: 0px 5px;
+    width: 35%;
+}
+
+table#choose_events td option,
+table#choose_products td option {
+    width: 430px;
+}
+
+.cart tr.offeritems div.or_line {
+	line-height: 1.25em;
+}
+
+
+.cart tr.offeritems div.or_line span.or{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#choose_mop table#mops {
+	border-collapse: collapse;
+}
+
+
+#choose_mop table#mops tr{
+	border: none;
+}
+
+
+#choose_mop table#mops td {
+	height: 45px;
+}
+
+#choose_mop table#mops td:first-child {
+	text-align: right;
+	width: 70px;
+}
+
+#choose_mop table#mops td:first-child {
+	background-position:  left;
+	background-repeat: no-repeat;
+}
+
+#choose_mop table#mops tr.PayPal td:first-child {
+	background-image: url(/graphics/paypal_47x30.gif);
+}
+
+#choose_mop table#mops tr.Amex td:first-child {
+	background-image: url(/graphics/amex_47x30.gif);
+}
+
+#choose_mop table#mops tr.Discover td:first-child {
+	background-image: url(/graphics/discover_47x30.gif);
+}
+
+#choose_mop table#mops tr.MasterCard td:first-child {
+	background-image: url(/graphics/mastercard_47x30.gif);
+}
+
+#choose_mop table#mops tr.Visa td:first-child {
+	background-image: url(/graphics/visa_47x30.gif);
+}
+
+tr.payment_summary p.PayPal,
+tr.payment_summary p.Amex,
+tr.payment_summary p.Discover,
+tr.payment_summary p.MasterCard,
+tr.payment_summary p.Visa {
+	padding-left: 55px;
+	background-position:  left top;
+	background-repeat: no-repeat;
+	min-height: 30px;
+}
+
+tr.payment_summary p.PayPal {
+	background-image: url(/graphics/paypal_47x30.gif);
+}
+
+tr.payment_summary p.Amex {
+	background-image: url(/graphics/amex_47x30.gif);
+}
+
+tr.payment_summary p.Discover {
+	background-image: url(/graphics/discover_47x30.gif);
+}
+
+tr.payment_summary p.MasterCard {
+	background-image: url(/graphics/mastercard_47x30.gif);
+}
+
+tr.payment_summary p.Visa {
+	background-image: url(/graphics/visa_47x30.gif);
+}
+
+
+
+/* --------- Product Catalog Top ----------------- */
+
+
+
+div.sku_container {
+	width:100%;
+	text-align: right;
+	clear: left;
+	border-top:#948004 double 3px;
+	padding: 15px 0 5px 0;
+	border-bottom:#948004 dashed 1px;
+	}
+
+div.sku_container span.sku_name {
+	font:normal 22px/23px Georgia, "Times New Roman", Times, serif;
+	color:#948004;
+	padding-right:25%
+	}
+	
+div.sku_container div.sku_description {
+	margin: 20px 0;
+	width:70%;
+	float: left;
+	text-align:left;
+	}
+	
+div.sku_container div.sku_pricing {
+	width:30%;
+	text-align:left;
+	vertical-align:top;
+	float: right;
+	}
+
+div.sku_container div.sku_pricing ul {
+	margin: 10px 0 0 0;
+	padding: 0;	
+	}
+
+
+div.sku_container div.sku_pricing ul li {
+	list-style: none;
+	}
+
+div.sku_container div.sku_pricing li.sku_option {
+	float: left;
+
+	font-size: .9em;
+	margin:0;
+	clear:left;
+	}
+
+div.sku_container div.sku_pricing li.add_to_cart {
+	font-size: .9em;
+	margin:0;
+
+	}
+
+div.sku_container div.sku_pricing li.add_to_cart a{
+	color:red;
+	padding:0px 0 0 10px;
+	font-weight: bolder;
+	margin:0;
+	}
+
+div.sku_container div.sku_pricing li.add_to_cart a:hover{
+	color:blue;
+	}
+
+div.sku_container div.sku_pricing li.web_display{
+	text-decoration: line-through;
+	white-space:nowrap;
+	}
+
+div.sku_container div.sku_pricing li.selling_price{
+	font-weight: bolder;
+	color: #948004;
+	white-space:nowrap;
+	font-size: 1.25em;
+	}
+
+	
+/* --------- Product Catalog Top ----------------- */
+
+
+/* --------- Offer Display Top ----------------- */
+
+
+
+.offer {
+	font-size: 50%;
+	font-weight: normal;
+	margin: 20px 0;
+	}
+	
+table.offer_container {
+	border: medium double #59075e;
+	width: 100%;
+	 }
+	 
+table.offer {
+	border: 2px solid #59075e;
+	border-collapse: collapse;
+	width: 100%;
+	}
+
+table.offer_container td h2{
+	text-align:center;
+	}
+
+.offer span.offer_price {
+	display:block;
+	color:red;
+	font-weight:bold;
+	}
+
+.offer th {
+	border-bottom: thin solid black;
+	background-color: #FFEBFF;
+	font-size: 14px;
+	font-weight: bolder;
+	}
+	
+.offer tr {
+	border-top: thin solid black;
+	font-size: 10px;
+	font-weight: normal;
+	}
+	
+.offer td {
+	font-weight: bold;
+	color: #59075E;   
+	font-size: 10px;
+	}
+	
+.offer tr.offeritems {
+	border-top: none;
+	font-size: 10px;
+	font-weight: normal;
+	}
+	
+.offer td.title {
+	border: none;
+	font-size: 10px;
+	font-weight: normal;
+	}
+	
+.offer tr.total {
+	border-top: double black;
+	font-size: 12px;
+	font-weight: bold;
+	}
+	
+.offer td.total {
+	border-top: double black;
+	font-size: 12px;
+	font-weight: bold;
+	}
+	
+.offer li {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #223768;
+	list-style-position: outside;
+	list-style-type: lower-roman;
+	}
+
+.offer div.offer_pitch {
+	text-align:center;
+	}
+
+.offer div.offer_pitch p {
+	font-size: 1.5em;
+	}
+
+.offer div.offer_pitch p.offer_price {
+	color:red;
+	background-color: #FFFFCC;
+	font-weight:bold;
+	}
+
+.offer div.offer_pitch a {
+	color:red;
+	font-weight:bold;
+	}
+
+.offer div.offer_pitch a:hover {
+	color:blue;
+	font-weight:bold;
+	}
+	
+.smalltext {
+	font-size: 10px;
+	color: #223768;
+	 }
+	 
+	 
+	 /* --------- CSS selector to change the Commit Your Order button on the final page of the shopping cart into a graphic of some sort ----------------- */
+table.cart input[value="Commit Order Form"] {
+	width:212px;
+height:32px;
+font-size: 0em;
+border:0;
+margin:0;
+	background-image: url(https://events.quantumchangeseminars.com/cart/secureplace_sm.png);
+background-repeat: no-repeat;
+}
+
+table.cart input[value="Update"] {
+	width:94px;
+height:32px;
+font-size: 0em;
+border:0;
+margin:0;
+	background-image: url(https://events.quantumchangeseminars.com/cart/update_sm.png);
+background-repeat: no-repeat;
+}
+
+button#continue_shopping {
+width:231px;
+height:32px;
+font-size: 0em;
+border:0;
+margin:0;
+	background-image: url(https://events.quantumchangeseminars.com/cart/contshopping_sm.png);
+background-repeat: no-repeat;
+}
+	 
+/* --------- Offer Display Bottom ----------------- */

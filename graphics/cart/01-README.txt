@@ -1,0 +1,1 @@
+These two graphics are used by the shopping cart system and can be replaced by your own graphics so long as you maintain the same filenames. It would also be preferable for you to try to match the size.

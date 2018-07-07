@@ -1,0 +1,802 @@
+/*
+Theme Name: Super QC Seminars Theme
+Theme URI: http://qcseminars.com
+Description: A theme designed and implenented by Natalie Kirk.
+Version: 1.0
+Author: Natalie Kirk
+Author URI: http://www.nataliekirk.com/
+Tags: QC Seminars, NLP, blue, dropdown menu, fixed width, two columns, widgets, 
+
+	Super QC Seminars Theme
+
+	This theme was designed and built by Natalie.
+	Honk if you love the site design!
+
+*/
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin:0;
+	padding: 0;
+	border: none;
+	letter-spacing: 0;
+	text-indent: 0;
+}
+h1 {
+	font-size: 20px;	
+	line-height: 22px;
+	margin-bottom: 16px;
+}
+h2 {
+	font-size: 18px;	
+	line-height: 20px;
+	margin-bottom: 16px;
+}
+h3 {
+	font-size: 16px;	
+	line-height: 18px;
+	margin-bottom: 16px;
+}
+h4 {
+	font-size: 14px;	
+	line-height: 16px;
+	margin-bottom: 16px;
+}
+h5 {
+	font-size: 12px;	
+	color: #FFF;
+	text-shadow: 1px 1px 0px #000;
+	line-height: 30px;
+}
+h6 {
+	font-size: 10px;
+	margin-bottom: 12px;
+}
+body.variant {
+	background-image: url(images/mainbackground2.jpg);
+	background-position: top;
+}
+body.variant2 {
+	background-image: url(images/mainbackground3.jpg);
+	background-repeat: repeat-y;	
+}
+.transp_bg {
+	width: 100%;
+	position: relative;
+	background-attachment: scroll;
+	background-image: url(images/squigglies.png);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+
+a:link {
+	color:#039;
+	text-decoration:none;
+}
+a:visited {
+	color: #039;
+	text-decoration:none;
+}
+a:hover, a:active {
+	color:#0291D7;
+	text-decoration:underline;
+}
+.bigwrapper {
+	width: 930px;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+.header {
+	width: 900px;
+	height: 87px;
+	background-image: url(images/header_sunburst_background.png);
+	margin-right: auto;
+	margin-left: auto;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #003;
+	border-left-color: #000;
+}
+#qclogo {
+	position: absolute;
+	left: 25px;
+	top: 7px;
+	z-index: 2;
+}
+#siteheader {
+	position: absolute;
+	top: 20px;
+	right: 95px;
+}
+.navigation {
+	width: 930px;
+	height: 50px;
+	position: absolute;
+	top: 87px;
+	left: 0;
+	z-index: 1;
+}
+.smallwrapper {
+	background-color: #FFF;
+	width: 900px;
+	margin-left: 13px;
+	position: relative;
+	z-index: 0;
+	bottom: 0px;
+}
+.promo1 {
+	float: left;
+	height: 215px;
+	width: 290px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	z-index: -1;
+}
+.main .post_area {
+	float: left;
+	width: 640px;
+	padding-left: 10px;
+}
+.main .post_area p {
+    line-height: 16px;
+    margin-bottom: 16px;
+}
+.post_text {
+	float: left;
+	width: 560px;
+	padding-top: 5px;
+	padding-right: 50px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+}
+
+.post {
+	float: left;
+	width: 560px;
+	padding-top: 5px;
+	padding-right: 30px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+}
+
+.main {
+	width: 900px;
+	background-color: #FFF;
+	background-image: url(images/sidebar_bg.gif);
+	background-repeat: repeat-y;
+	background-position: right top;
+	padding-top: 38px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #003;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #003;
+}
+
+.promo2 {
+	float: left;
+	height: 215px;
+	width: 306px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.sidebar {
+	float: right;
+	width: 230px;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+.testi_vid {
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	width: 275px;
+}
+
+.nav_bar {
+	float: right;
+	height: 36px;
+	width: 716px;
+	margin-left: 200px;
+	background-image: url(graphics/nav-bg.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 12px;
+	text-shadow: 1px 1px 0px #000;
+	z-index: 10;
+	font-weight: bold;
+}
+
+img {
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+ul.dropdown li.navendR {
+	padding-left: 8px;
+	border-right-style: none;
+	border-left: solid 1px #09F;
+	height: 36px;
+	line-height: 36px;
+}
+
+ul.dropdown li.navendR:hover {
+	background: none;
+}
+
+.navend_L {
+	float: left;
+}
+.navend_R {
+	float: left;
+}
+.window {
+	width: 600px;
+	margin-left: 20px;
+	float: left;
+}
+.window_head {
+	background-image: url(images/top_box_background.png);
+	background-color: #009;
+	background-repeat: repeat-x;
+	height: 30px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	padding-left: 20px;
+}
+.window_head2 {
+	background-color:#999;
+	height: 35px;
+	font-weight: lighter;
+	padding-left: 20px;
+	letter-spacing: 1px;
+	line-height: 35px;
+	color: #FFF;
+	font-size: 35px;
+	font-family:"HelveticaNeue LT 35 Thin", Arial, Helvetica, sans-serif;
+}
+.social {
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	text-align: center;
+}
+.social img {
+	padding-right: 5px;
+}
+
+
+.window_body {
+	padding: 15px;
+	border: solid 1px #CCC;
+	border-top: none;
+	background-color: #FFF;
+	float: left;
+	width: 568px;
+}
+.side {
+	width: 220px;
+}
+.side_hed {
+	margin: 0;
+	width: 200px;
+}
+.side_hed2 {
+	font-size:23px;
+	padding-left: 0px;
+	text-align:center;
+	margin: 0;
+	width: 220px;
+}
+.side_extra {
+	margin: 0;
+	padding: 0;
+	margin-top: 8px;
+}
+.side_bod {
+	padding: 4px;
+	width: 211px;
+}
+
+.float_break {
+	clear: both;
+	height: 3px;
+}
+.proimg_side {
+	clear: both;
+	float: none;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 8px;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+.divider {
+	float: left;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+#qcinnercircle h3 {
+color:#FFFFFF;
+font-family:Geneva,Helvetica,Arial,sans-serif;
+font-size:16px;
+font-weight:bold;
+padding:5px;
+text-align:center;
+}
+#qcinnercircle p {
+color:#FFFFFF;
+font-family:Tahoma,"Trebuchet MS",Arial,Helvetica,sans-serif;
+font-size:13px;
+line-height:130%;
+padding:10px;
+text-align:center;
+}
+#qcinnercircle {
+	-moz-border-radius:12px 12px 12px 12px;
+	-webkit-border-radius:12px 12px 12px 12px;
+	background-color:#0076BD;
+	background-image:url(images/inner_circle_background.png);
+	background-repeat:repeat-x;
+	padding-bottom:3px;
+	text-shadow:1px 1px 2px #333333;
+	width:220px;
+}
+#qcinnercircle form {
+color:#FFFFFF;
+padding-left:5px;
+}
+#qcinnercircle input {
+color:#990000;
+font-weight:bold;
+width:110px;
+}
+
+
+#comingevents li{
+line-height:18px;
+font-size:12px;
+text-indent: 0;
+list-style:none;
+display: block;
+font-size:11px;
+}
+#comingevents ul {
+border-bottom: 1px dotted #99CCFF;
+margin: 0;
+padding: 0px 0px 3px 0px;
+text-align: left;
+text-indent: 0;
+list-style:none;
+}
+
+#comingevents span{
+	text-align: left !important;
+	color: #0066CC !important;
+	font-size: 12px;
+	font-weight: bold;
+	padding:2px 0px 2px 0px;
+	line-height:20px;
+	margin:5px 0px 5px 0px;
+}
+.heading_banner {
+	position: relative;
+	left: -66px;
+}
+.footer_wrapper {
+	position: absolute;
+	width: 931px;
+	bottom: 60px;
+}
+.subfooter {
+	padding-top: 45px;
+	text-align: center;
+	font-size: 10px;
+	background-color: #EEE;
+	height: 60px;
+	margin-top: 10px;
+}
+
+.footer {
+	height: 36px;
+	width: 900px;
+	background-image: url(images/nav_bar_background.png);
+	background-color: #0075C0;
+	background-repeat: repeat-x;
+	color: #FFF;
+	text-align: center;
+	float: left;
+	font-size: 9px;
+	line-height: 36px;
+	text-shadow: 1px 1px 0px #000;
+}
+
+.footer a {
+	color:#FF0;	
+}
+
+.sidebar ul {
+margin: 0;
+padding: 0;
+list-style:none;
+}
+.sidebar ul li {
+margin: 0;
+padding: 0;
+list-style:none;
+display: block;
+}
+
+.event_location {
+	width: 200px;
+	display: block;
+	float: left;
+	font-weight: bold;
+}
+.event_date {
+	display: block;
+	float: left;
+	width: 200px;
+}
+.event_moreinfo {
+	display: block;
+	float: left;
+	width: 150px;
+	text-align: right;
+}
+.events_listing {
+margin-top: 10px;
+border-bottom: dotted 1px #99CCFF; 
+padding-bottom: 10px; 
+text-align:justify; 
+float:left; 
+clear:both;
+width: 555px;
+}
+.events_listing ul {
+float: left;
+}
+.events_listing li {
+float: left;
+display: block;
+list-style-type: none;
+clear:both;
+width: 550px;
+border-top: dotted 1px #99CCFF; 
+padding-bottom: 5px;
+padding-top:5px;
+	line-height: 18px;
+}
+.events_listing h2 {
+font-size: 20px;
+line-height: 26px;
+font-family: "Book Antiqua", Georgia, Times, serif;
+font-weight: bold;
+color: #0066cc !important;
+}
+.alignleft {
+float:left;
+}
+.alignright {
+float:right;
+}
+.aligncenter {
+display:block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+.break {
+clear:both;
+padding-top: 3px;
+}
+
+
+/*----------------- Other Stuff --------------------*/
+
+@charset "UTF-8";
+
+/** 
+ * Default Ultimate Linear CSS Drop-Down Menu Theme
+ *
+ * @file		default.ultimate.css
+ * @name		Default
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera7+, Firefox1+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2008 Live Web Institute. All Rights Reserved.
+ *
+ */
+
+@charset "UTF-8";
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		Default
+ * @version		0.1.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera7+, Firefox1+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2008 Live Web Institute. All Rights Reserved.
+ *
+ * Module Classes: *.dir {} *.on {} *.open {} li.hover {} li.first {} li.last {}
+ * Expected directory tag - li
+ *
+ */
+
+
+/*-------------------------------------------------/
+ * @section		Base Drop-Down Styling
+ * @structure	ul (unordered list)
+ *				ul li (list item)
+ *				ul li a (links)
+ *				/*\.class|(li|a):hover/
+ * @level sep	ul
+ */
+
+
+ul.dropdown {
+ font-weight: bold;
+ float:right;
+ width: 710px;
+ height: 36px;
+ border-left: solid 1px #036;
+}
+
+	ul.dropdown li {
+	padding: 0;
+	height: 36px;
+	 padding-left:8px; padding-right: 8px;
+	  height: 36px;
+ line-height: 36px;
+	 color: #FFF;
+	}
+
+
+	ul.dropdown li.hover,
+	ul.dropdown li:hover {
+	 color: #FFF;
+	 background-image: url(graphics/nav-bg-hover.png); 
+	 background-repeat: repeat-x;
+	}
+
+	ul.dropdown a:link,
+	ul.dropdown a:visited	{ padding-left:8px; padding-right: 8px; color: #FFF; text-decoration: none; }
+	ul.dropdown a:hover		{ color: #FFF; }
+	ul.dropdown a:active	{ color: #fff; }
+
+
+
+	/* -- level mark -- */
+
+	ul.dropdown ul {
+	width: 210px;
+	margin-top: 1px;
+	background-color: #028CCE;
+	background-image: url(../../../../images/dropdown_background.png);
+	background-repeat: repeat-x;
+	border: solid 1px #000066;
+	 
+	}
+
+		ul.dropdown ul li {
+		 font-weight: bold;
+		}
+
+
+
+/*-------------------------------------------------/
+ * @section		Support Class `dir`
+ * @level sep	ul, .class
+ */
+
+
+ul.dropdown *.dir {
+
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir {
+ padding-right: 15px;
+ background-image: url(images/nav-arrow-right.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+ background-image: url(images/nav-arrow-top.png);
+}
+
+ul.dropdown-vertical *.dir,
+ul.dropdown-upward ul *.dir {
+ background-image: url(images/nav-arrow-right.png);
+}
+
+ul.dropdown-vertical-rtl *.dir {
+ padding-right: 10px;
+ padding-left: 15px;
+ background-image: url(images/nav-arrow-left.png);
+ background-position: 0 50%;
+}
+
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Extension
+ */
+
+ul.dropdown a,
+ul.dropdown span {
+ display: block;
+ padding-left 8px; padding-right: 8px;
+}
+
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Override
+ */
+
+ul.dropdown li {
+ padding: 0;
+ border: none;
+}
+
+ul.dropdown ul a,
+ul.dropdown ul span {
+ padding-left 8px; padding-right: 8px;	
+}
+
+
+
+/*-------------------------------------------------/
+ * @section		Base Style Reinitiate: post-override activities
+ */
+
+
+
+
+
+/*-------------------------------------------------/
+ *	@section	Custom Styles
+ */
+
+ul.dropdown li {
+}
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+ color: #FFF;
+}
+
+ul.dropdown li a:active {
+ background: url(../../../../../images/nav_bar_background_hover.png) repeat-x;
+}
+
+
+/* Non-first level */
+
+ul.dropdown ul {
+ margin-top: 0;
+}
+
+	ul.dropdown ul li {
+		height: 24px;
+		line-height: 24px;
+	}
+
+	ul.dropdown ul li.hover,
+	ul.dropdown ul li:hover {
+	}
+
+
+
+/* Mixed */
+ul.dropdown li p
+{
+font-weight: bold;
+}
+ul.dropdown li a,
+ul.dropdown *.dir {
+		 border-left: solid 1px #09F;
+	 border-right: solid 1px #036;
+font-weight: bold;
+}
+ul.dropdown ul li a,
+ul.dropdown ul *.dir {
+		 border-left: none;
+	 border-right: none;
+
+}
+
+
+
+/*-------------------------------------------------/
+ * @section		Support Class `open` Usage
+ * @source		js, artificial
+ *
+ */
+
+ul.dropdown li.hover *.open {
+
+}
+
+ul.dropdown ul li.hover *.open,
+ul.dropdown-vertical li.hover *.open {
+ padding-left: 15px;
+
+}
+
+ul.dropdown-vertical-rtl li.hover *.open {
+ padding-right: 15px;
+
+}
+
+ul.dropdown-upward li.hover *.open {
+
+}
+
+ul.dropdown-upward ul li.hover *.open {
+
+}
+
+
+	/* CSS2 clone */
+
+	ul.dropdown li:hover > *.dir {
+
+	}
+
+	ul.dropdown ul li:hover > *.dir,
+	ul.dropdown-vertical li:hover > *.dir {
+	 padding-left: 15px;
+
+	}
+
+	ul.dropdown-vertical-rtl li:hover > *.dir {
+	 padding-right: 15px;
+
+	}
+
+	ul.dropdown-upward li:hover > *.dir {
+
+	}
+
+	ul.dropdown-upward ul li:hover > *.dir {
+
+	}

@@ -1,0 +1,17 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+  <span tal:omit-tag="" metal:fill-slot="head">
+     <title>Signup Form</title>
+  </span>
+
+
+  <span tal:omit-tag="" metal:fill-slot="body">
+	<div id="vopt_time_check">   
+		<span tal:omit-tag="" tal:replace="structure python:here.time_limit_check(request)" />
+	</div>
+  </span>
+</html>
+
+ 

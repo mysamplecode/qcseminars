@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Product Description</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	    <span tal:omit-tag="" tal:define="desc_id request/desc_id; descs python:here.get_description_sql(desc_id=desc_id)">
+		<span tal:omit-tag="" tal:repeat="desc descs">
+		
+			<div class="product_description">
+				<div class="name_price">
+					<span class="product_name"><span tal:replace="desc/name">n</span></span>
+				</div>
+				<div class="description">
+					<span tal:replace="structure desc/description">desc</span>
+				</div>
+			</div>
+		
+		
+		
+		
+
+				
+		</span>
+	</span>    
+ 
+    </span>
+</html> 

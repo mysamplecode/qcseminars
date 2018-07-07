@@ -1,0 +1,17 @@
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="display.css"
+	    media='screen'/>
+	<link rel="stylesheet" type="text/css" href="print.css"
+	    media='print'/>
+	<title>Order Receipt</title>
+    </head>
+
+    <span tal:replace="structure python:here.receipt_body()" />
+
+</html>
+

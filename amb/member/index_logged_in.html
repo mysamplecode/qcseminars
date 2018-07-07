@@ -1,0 +1,93 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+
+<span tal:omit-tag="" metal:fill-slot="head">
+<title>Referral Program Member Home Page</title>
+
+<style type="text/css">
+<!--
+
+ul {
+	list-style-type: none;
+}
+li {
+
+	list-style-type: none;
+}
+
+#ambpage h2{
+
+border-bottom:1px solid #D9D9D9;
+font-size:160%;
+font-weight:normal;
+margin-top:20px;
+
+}
+-->
+</style>
+</span>
+<span tal:omit-tag="" metal:fill-slot="body">
+<div id="ambpage">
+<h1><span tal:replace="persondata/firstname" /> <span tal:replace="persondata/lastname" /> Ambassador Program Member Home Page</h1>
+<p>Hi <span tal:replace="persondata/firstname" /> <span tal:replace="persondata/lastname" />, this page contains a lot of essential information you'll need to start earning money as a QC Seminars Ambassador</p>
+<h2> Your Contact Information</h2>
+<p>Here are your details that on file with us, if any are incorrect please <a tal:attributes="href string:http://${here/homedomain}/https/signup/signup_form_html?form_id=3&person_id=${amb_stuff/wid}&email=${persondata/email}">Update your Contact Info.</a> </p>
+<ul>
+<li>First Name - <span tal:replace="persondata/firstname" />  </li>
+<li>Last Name - <span tal:replace="persondata/lastname" />  </li>
+<li>Email - <span tal:replace="persondata/email" />  </li>
+<li>Address 1 - <span tal:replace="persondata/addr1" />  </li>
+<li>Address 2 - <span tal:replace="persondata/addr2" />  </li>
+<li>City - <span tal:replace="persondata/city" />  </li>
+<li>Region - <span tal:replace="persondata/iso_region_name" />  </li>
+<li>Country - <span tal:replace="persondata/country_name" />  </li>
+<li>Postal Code - <span tal:replace="persondata/postal" />  </li>
+<li>Home Phone - <span tal:replace="persondata/home_phone" />  </li>
+<li>Gender - <span tal:replace="persondata/gender" />  </li>
+</ul>
+
+
+<h2>Email Copy </h2>
+<ul><li><a href="https/amb/member/emailcopy_nlp.html" target="_blank">NLP</a></li></ul>
+<a href="https/amb/member/emailcopy_nlp.html"><img src="https/amb/member/nlp_amb_copy_btn.png" alt="nlp copy here!"></a>
+
+<h2>Your Ambassador Links </h2>
+<ul>
+  <li><strong>NLP CERTIFICATION</strong> - <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/freenlp/amb/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/freenlp/amb/</a></li>
+  <li><strong>NLP TRAINERS TRAINING</strong> - <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/trainers-training/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/trainers-training/</a></li>
+  <li><strong>NLP MASTER PRACTITIONER </strong><a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/master-prac/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/master-prac/</a></li>
+  <li><strong>MILLION DOLLAR SPEAKER SYSTEM </strong>- <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/million-dollar/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/million-dollar/</a></li>
+  <li><strong>QUIT </strong>-<a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/make-1000-a-day/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/make-1000-a-day/</a></li> 
+  <li><strong>SUCCESS SUMMIT </strong>- <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/success-summit/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/success-summit/</a></li>
+  <li><strong>BIGGER BITE WEEKEND </strong>- <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/biggerbiteweekend/" target="_blank">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/biggerbiteweekend/</a></li>  
+</ul>
+
+<h2>Ambassador Advertising Banners </h2>
+<p>For advertising FREE Get A Bigger Bite Out Of Life Book for expressing interest in NLP <a href="http://events.quantumchangeseminars.com/amb/member/affiliate">click here</a> for all banners</p>
+<a href="https://events.quantumchangeseminars.com/amb/member/affiliate"><img src="https://events.quantumchangeseminars.com/amb/member/affiliate/images/125x125.png" alt="free bb banners"></a>
+
+<h2>Ambassador Navigation</h2>
+<ul>
+  <li><a href="http://events.quantumchangeseminars.com/amb/member/edit_user.html" target="_blank">Change Your Unique Referral Phrase</a></li>
+  
+  
+  <li><a tal:attributes="href string:http://${here/homedomain}/https/signup/signup_form_html?form_id=3&person_id=${amb_stuff/wid}&email=${persondata/email}">Update Your Contact Information &amp; Change Password</a>
+
+  </li>
+  
+  
+  <li><a href="/https/amb/member/payee/index_html" target="_blank">Choose Payee</a></li>
+  <li><a href="/https/amb/member/stats/index_html" target="_blank">Simple Referral List</a></li>
+  <li><a href="/https/amb/member/stats/click_tracking.html" target="_blank">Click Tracking Statistics</a></li>
+  <li><A HREF="/https/amb/logout?logout=y" onClick="alert('Logging out of this system requires that you intentionally FAIL TO LOGIN correctly. As soon as you click the OK button, a login window will appear. SIMPLY CLICK CANCEL to logout. Also note, the logout page you are being directed to cannot be logged into so hitting CANCEL is your only option--you are effectively already logged out now.')">Logout</a>
+  
+  <br />
+
+</div>
+
+</span></html>
+ 
+ 
+ 
+ 

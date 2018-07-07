@@ -1,0 +1,49 @@
+/*
+Theme Name: Egypt SEXY
+Theme URI: http://wordpress.org/
+Description: The best WordPress theme that graced versions 1.2.x and prior.
+Version: 1.5
+Author: Jimmy
+
+Default WordPress by Jimmy http://www.indestiny.com.au
+*/
+body {background-color:#f3f3f3;margin:0;padding:0;font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;}
+
+.arrowlist{    list-style: none outside none;
+    margin-left: 0;
+    padding-left: 0;padding-top:20px;}
+img{border:0;}    
+form {margin:0;padding:0;}
+.earnt{padding-right:50px;}
+.earnt p {padding-left:15px !important;}
+
+.arrowlist li {
+    background-image: url("images/arrow.png");  font-size: 12px;
+    background-repeat: no-repeat;padding-bottom: 23px;margin-left:5px;
+    padding-left: 65px;padding-right:20px;}
+	
+		
+.leftcontent{float:left;width:985px;background-repeat:no-repeat;}
+.leftcontent p {padding-left:40px;}
+.topboxtxt{color:white !important;width:150px;display:none;}
+.capsred{display:none;}
+.othercapsred{display:none !important;}
+
+ul li {
+    background-image: url("http://events.quantumchangeseminars.com/freenlp/report/images/redarrow.png");list-style-type:none;padding-bottom:10px;padding-top:5px;
+    background-repeat: no-repeat;
+    padding-left: 55px;
+}
+#launchheaderbottom {
+    background-image: url("http://events.quantumchangeseminars.com/freenlp/report/images/launch1headerbottom.png");
+    height: 16px;
+    width: 977px;  margin-left: 8px;
+}
+div.opt_in_form {
+   
+    border-radius: 12px 12px 12px 12px;
+    margin-left: 0px;
+    margin-right: auto;
+    padding: 0 0px 10px;width:210px;
+}
+div.opt_in_form  p {padding-left:0px;}

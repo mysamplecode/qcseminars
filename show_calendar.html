@@ -1,0 +1,12 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Event Calendar</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<span tal:replace="structure python:here.present_calendar(calendar_id=int(request['calendar_id']))" />
+    </span>
+</html> 

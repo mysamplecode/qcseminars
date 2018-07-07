@@ -1,0 +1,139 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+    <!-- $Id: index.html,v 1.1 2004/10/06 00:55:32 rogerp Exp $ -->
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" /></title>
+    </span>
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<span tal:omit-tag="" tal:condition="python:here.has_role(person_id=request['wid'], role='Staff')">
+	  <h1>Staff Cannot Unsubscribe Themselves</h1>
+	  <p class="Alert-1">As a Staff you are not allowed to unsubscribing yourself
+	  from the automated email system.
+	  </p>
+	</span>
+	
+	<form action='unsub_scr' method='post' tal:condition="python:not here.has_role(person_id=request['wid'], role='Staff')" 
+	  tal:define="sub_lists python:here.zunsub.list_subscribed_lists_sql(person_id=request['wid']).dictionaries();
+	     unsub_status python:here.zunsub.get_current_unsub_status_sql(person_id=request['wid'])">
+	<input type="hidden" name="wid" tal:attributes="value request/wid">
+	
+	<h1>Unsubscribe From Our Mailings</h1>
+			
+		      <p>Due to the complex needs we have when communicating with 
+			our students, we have 3 levels of communication available 
+			for you to manage:</p>
+			<p>You can Unsubscribe from:</p>
+		     
+		      <ul>
+			<li>Individual Mailing Lists</li>
+			<li>General Mailings</li>
+			<li>All email communications</li>
+		      </ul>
+
+
+		      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+			  <td align="center" valign="middle"><form name="form1" method="post" action="">
+
+		 <span tal:omit-tag="" tal:condition="not:unsub_status | nothing">
+
+			      <table class="unsubscribe_table">
+				<tr> 
+				  <th>Unsubscribe From Individual 
+				    Mailing Lists</th>
+				  <th>Unsub</th>
+				</tr>
+
+
+				<span tal:omit-tag="" tal:repeat="sub_list sub_lists">
+				<span tal:define="theclass python:('','red-alert')[ str(sub_list['list_id'])==str(request.get('lid','')) ]">
+				<tr tal:attributes="class string:tr${repeat/sub_list/odd}"> 
+				  <td> 
+				  	 <p tal:attributes="class theclass"><span tal:replace="sub_list/name" /></p></td>
+				  <td align="center">
+				    <input type="hidden" name="subs.id:records"
+				       tal:attributes="value string:${sub_list/list_id}">
+				    <input type="checkbox" name="subs.checkbox:records" value='unsub'></td>
+				</tr>
+				</span> <!-- def -->
+				</span> <!-- repeat -->
+
+			     <span tal:condition="request/lid | nothing">
+				<tr> 
+				  <td colspan="2"> 
+    <p align="center">*If the email you 
+				      just received was from a mailing list, the actual list will be marked 
+				      in <span style="color:red;">Red</span> above.</p>
+				    </td>
+				</tr>
+			       </span>
+
+			      <tr><td colspan="2">
+				    <p align="center"> 
+				      <input type="submit" name="action" value="Unsubscribe Me From The Selected Lists Only"><br>
+					  If there no Lists names displayed above you can ignore this option.
+				    </p>
+			      </td></tr>
+
+			      </table>
+
+
+			      <p>&nbsp;</p>
+			      <table class="unsubscribe_table">
+				<tr> 
+				  <th>Unsubscribe From Our General Mailings</th>
+				</tr>
+				<tr> 
+				  <td> 
+				    <p align="left">By choosing this 
+				      Unsubscribe Option, you will not get any general 
+				      purposed mass emails. This includes any email 
+				      from Mailing Lists like those listed above. 
+				      However, <strong>you will continue to receive 
+				      essential mailings related to programs you have 
+				      signed up for</strong>, or receipts for products 
+				      you purchased online.</p>
+				    <p align="center"> 
+				      <input type="submit" name="action" value="Unsubscribe Me From General Mailings">
+				    </p></td>
+				</tr>
+			      </table>
+
+		      <!-- general unsub -->
+		      </span>
+
+
+		 <span tal:omit-tag="" tal:condition="python:not unsub_status or unsub_status[0]['unsub_level'] < 2">
+
+			      <p>&nbsp;</p>
+			      <table class="unsubscribe_table">
+				<tr> 
+				  <th>Unsubscribe From All Email Communications</th>
+				</tr>
+				<tr> 
+				  <td> 
+				    <p align="left">This is the highest 
+				      level of Unsubscribing. By choosing this option you will receive no further automated email.</p>
+				    <p align="center"> 
+				      <input type="submit" name="action" value="Permanently Unsubscribe Me">
+				    </p></td>
+				</tr>
+			      </table>
+		     <!-- full unsub -->
+		     </span>
+
+			      </form></td>
+			</tr>
+		      </table>
+		   
+		     
+	</form>
+    </span>
+
+
+</html>
+ 
+ 

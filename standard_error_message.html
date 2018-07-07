@@ -1,0 +1,149 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+  <!-- metal:use-macro="container/standard_template.pt/macros/page"> -->
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+
+
+	
+<!--                        Specific Error Handling routines                                    -->	
+           <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='Unauthorized'">
+	   <!-- if the person is not authorized to access a page display the following -->
+           	<span tal:replace="structure here/auth_error_body" />
+           </span>
+
+
+
+           <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='TypeError'">
+	   <!-- if the person has pushed the back button on the shopping cart to get an error, display the following -->
+		   <span tal:omit-tag="" tal:condition="python:str(options['error_value'])=='format requires a mapping'">
+			   <h1>Shopping Cart Error</h1>
+			   <p>An error has occurred that is most likely caused by pushing the "back" button in your web browser on a page which can no longer be displayed because the choices made previously cannot be "unmade".</p><p><strong>Please do one of the following:</strong></p>
+			   <ul>
+				<li><A HREF="javascript:history.go(1)">Go forward</A> to continue Checking out.</li>
+				<li><a href="/cart/">Restart your checkout</a> process from the beginning.</li>
+			   </ul>
+		   </span>	   </span> 
+		   
+		   
+		   
+		   
+          <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='IntegrityError'">
+	   <!-- on a UASF, if a person edits their own email address and change it to an address that already exists in the database  -->
+		   <span tal:omit-tag="" tal:condition="python:str(options['error_value']).find('email_idx') >= 0">
+			   <h1>Email Address Already Exists</h1>
+			   <p>You are attempting to change your email address but the address you've chosen is already in the database. Please <A HREF="javascript:history.go(-1)">go back</A> and choose another email address.</p>
+
+		   </span>
+		   
+		   <!-- if integrity error but not duplicate email -->
+		   <span tal:omit-tag="" tal:condition="python:str(options['error_value']).find('email_idx') == -1">
+		   	<h1>An Uncommon Error Has Occurred</h1>
+<p>If this is the first time you've encountered this error please point your mouse at the "See Full Message" text below. This will provide a full error description which might help explain why it is occurring and also provide a way for you to send a one-click report to the creators of this software so that we can investigate the cause of the error.</p>
+		   </span>
+	   </span> 
+   
+          
+	  
+	  
+	  <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='NotFound'">
+	  <!-- if the URL requested does not point to an existing page display the following -->
+		   <h1>Page Not Found</h1>
+		   <p>The page you are looking for does not appear to exist. Please check the address or <a href="/http/">go to the homepage</a>.</p>
+	   </span>
+	   
+	   <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='IndexError'">
+		   <span tal:omit-tag="" tal:condition="python:str(options['error_value'])=='list index out of range'">
+			   <h1>ID Error</h1>
+			   <p>The page you are linked to cannot be displayed because an ID in the URL does not exist in the database.</p>
+		   </span>	   </span>
+
+	   <span tal:omit-tag="" tal:condition="python:str(options['error_type'])=='ValueError'">
+
+		<span tal:omit-tag=""
+		tal:condition="python:str(options['error_value']).startswith('Your confirmation does not match')">
+
+		    <h1>"Password" and "Password Confirm" Don't Match</h1>
+		    <div class="general_message">Please go back and ensure the Password and
+		    Password Confirm fields contain the same value.</div>
+		</span>
+
+		<span tal:omit-tag=""
+		tal:condition="python:not str(options['error_value']).startswith('Your confirmation does not match')">
+
+		   <h1>A Mismatched "Value" Error Has Occurred</h1>
+		   <p>This error was most likely caused by the wrong type of value being entered into a form field. For instance, if a form field requires a NUMBER, but TEXT is entered accidentally, this error will occur. Please <A HREF="javascript:history.go(-1)">go back</A> and check all your form entries.</p>
+		</span>
+	   </span>
+
+
+<!--                        /Specific Error Handling routines                                    -->		   
+
+
+	   
+<!--                        Unknown Error Handling routine                                    -->
+<!-- Add a conditional statement below for each specific error routine handled above -->
+<span tal:omit-tag="" tal:condition="python:not( 	options['error_type']=='Unauthorized' or  
+							options['error_type']=='TypeError' or 
+							options['error_type']=='NotFound' or
+							options['error_type']=='IntegrityError' or
+							options['error_type']=='IndexError' or 
+							options['error_type']=='ValueError' ) ">
+<h1>An Uncommon Error Has Occurred</h1>
+<p>If this is the first time you've encountered this error please point your mouse at the "See Full Message" text below. This will provide a full error description which might help explain why it is occurring and also provide a way for you to send a one-click report to the creators of this software so that we can investigate the cause of the error.</p>
+</span>
+
+<!--                        /Unknown Error Handling routine                                    -->
+	   
+	   
+
+	<!-- ALways display this DIV which uses CSS rolloever to display the full error message for programmers -->
+	<div id="full_error_message">
+	<p id="see_full">See Full Message</p>
+		<span id="message">
+		
+		
+		    <div align="left" style="border:solid; background-color:ivory; padding:20px;">
+		    <h3>Send Us A One-Click Error Report</h3>
+		    <p>If the cause of this error is not obvious from the error message described on this page, please click the form button below and a report will immediately be mailed to <a href="http://www.signupsystems.com" target="_blank">Signup Systems</a>. Thanks for your help making this software as easy to use and as error-free as possible.</p>
+		    		<form name="form1" method="post" action="email_form">
+						 <input type="hidden" name="person_id" value="1" />
+						 <input type="hidden" name="email_id:list" value="35" /><!-- office email -->
+
+						 <input name="exit_url" value="error_submit_thankyou.html" type="hidden" />
+						 
+						 <textarea name="full_error" cols="80" rows="40" style="display:none;"><h2><span style="color:red;">Error Type:</span> <span tal:replace="options/error_type" /></h2>
+		      
+		      <h2><span style="color:red;">Error Message:</span> <span tal:replace="structure options/error_message" /></h2>
+		      
+		      <h2><span style="color:red;">URL:</span> <span tal:replace="request/URL0" /></h2>
+		      
+		      <h2><span style="color:red;">Error Value:</span> <span tal:replace="structure options/error_value" /></h2>
+		      
+	<span tal:replace="structure options/error_tb" /></textarea>
+						 
+						 <input name="Submit2" type="submit" value="Send One-Click Error Report"/>
+                      </form>
+		    
+		    
+		      <h2><span style="color:red;">Error Type:</span> <span tal:replace="options/error_type" /></h2>
+
+		      <h2><span style="color:red;">Error Message:</span> <span tal:replace="structure options/error_message" /></h2>
+		      
+		      <h2><span style="color:red;">URL:</span> <span tal:replace="request/URL0" /></h2>
+		      
+		      <h2><span style="color:red;">Error Value:</span> <span tal:replace="structure options/error_value" /></h2>
+		      
+	<span tal:replace="structure options/error_tb" />
+		    </div>
+		</span>	</div>
+
+
+
+    </span>
+
+
+</html>

@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+<span tal:omit-tag="" metal:fill-slot="head">
+		<title>QC STORE - NLP</title>
+		
+	<style>
+		#storeindex li{
+		display: inline;
+		padding: 10px;
+		}
+		</style>
+
+</span>
+	
+<span tal:omit-tag="" metal:fill-slot="body">
+<div id="storeindex">
+  <ul>
+    <li>  <a href="http://events.quantumchangeseminars.com/qcstore/nlp_html">>NLP</a></li>
+    <li><a href="http://events.quantumchangeseminars.com/qcstore/seminars_html">>Seminars</a></li>
+    <li><a href="http://events.quantumchangeseminars.com/qcstore/wealth_html">>Wealth </a></li>
+    <li><a href="http://events.quantumchangeseminars.com/qcstore/books_html">>Books</a></li>
+    
+    </ul>
+</div>
+
+<span tal:replace="structure python:here.showproducts(sku_id=63)" />
+
+
+<span tal:replace="structure python:here.showproducts(sku_id=55)" />
+
+<span tal:replace="structure python:here.showproducts(sku_id=57)" />
+
+
+<span tal:replace="structure python:here.showproducts(sku_id=17)" />
+
+
+
+
+
+
+
+
+
+
+
+</span>
+    
+	
+	
+	
+</html>

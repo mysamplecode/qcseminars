@@ -1,0 +1,83 @@
+<span tal:omit-tag="" metal:define-macro="page">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<base />
+<head>
+ 
+  
+   <link rel="shortcut icon" tal:attributes="href string:graphics/favicon.ico" type="image/x-icon"/>
+   
+<!-- The following Style Sheet contains styles which are used by the programming and should be kept. -->
+<link href="/css/sus01.css" rel="stylesheet" type="text/css" />
+
+	<!-- call to RoboHelp js file that enables contextual help linking from SUS to help docs -->
+	<script type="text/javascript" src="RoboHelp_CSH.js"></script>
+	<script type="text/javascript" src="/susjs/MochiKit.js"></script>
+
+   <metal:block define-slot="head">
+       <title>   
+<span tal:replace="template/title" /> 
+	   </title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+</metal:block>
+  </head>
+
+
+<body>
+<div id="page">
+<!--nav start -->
+<ul id="nav" class="dropdown dropdown-horizontal">
+    
+    	
+    <li class="navendR"><p><img src="/graphics/contact.png" alt="Ph." width="117" height="36" /></p></li>
+
+
+
+</ul>
+</div>
+
+
+<!--nav end -->
+<!--header start -->
+<div id="header-main">
+    <div id="header"> 
+      <div id="logo"> <img src="images/sus_logo.gif" alt="effective look" /> 
+        <h2>SUS 1.0</h2>
+      </div>
+    </div>
+</div>
+<!--header end -->
+
+  <div id="body"> 
+    <!--left panel start -->
+    <!--left panel end -->
+    <div id="content"> <span tal:omit-tag="" tal:replace='structure here/cart/current_cart_one_line' /> 
+
+	  <div metal:define-slot="body"> </div>
+    </div>
+  </div>
+
+
+<!--footer start -->
+<div id="footer-main">
+    <div id="footer"> 
+      <ul>
+        <li class="home"><a href="/http/">Home</a></li>
+        <li><a href="/http/demo/">Demo</a></li>
+        <li><a href="/http/amb/">Referrals</a></li>
+        <li><a href="/http/grads/">Graduates</a></li>
+        <li><a href="/http/code/unlock_offer_html">Offers</a></li>
+        <li class="nobdr"><a href="/contact/">Contact</a></li>
+      </ul>
+      <p class="copyright">&copy; Copyright 2008 Signup Systems Ltd. </p>
+    </div>
+</div>
+<!--footer end -->		
+
+	
+</body>
+</html>
+</span>

@@ -1,0 +1,202 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+<span tal:omit-tag="" metal:fill-slot="head">
+<title>Referral Program Member Home Page</title></span>
+
+
+<span tal:omit-tag="" metal:fill-slot="body">
+
+<h1>Referral Program Member Home Page</h1>
+<p>Hi <span tal:replace="persondata/firstname" /> <span tal:replace="persondata/lastname" />, this page contains a lot of essential information you'll need to create your Referral Program content pages. <span class="alert-high">Be sure to make a duplicate of this file before replacing the content of this page so you have a permanent reference.</span></p>
+
+<p>For instance, here's the code to display the name and other contact data of the person logged in:</p>
+<ul>
+<li>firstname - <span tal:replace="persondata/firstname" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/firstname&quot; /&gt;"></li>
+<li>lastname - <span tal:replace="persondata/lastname" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/lastname&quot; /&gt;"></li>
+<li>email - <span tal:replace="persondata/email" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/email&quot; /&gt;"></li>
+<li>Address1 - <span tal:replace="persondata/addr1" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/addr1&quot; /&gt;"></li>
+<li>Address2 - <span tal:replace="persondata/addr2" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/addr2&quot; /&gt;"></li>
+<li>City - <span tal:replace="persondata/city" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/city&quot; /&gt;"></li>
+<li>Region - <span tal:replace="persondata/iso_region_name" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/iso_region_name&quot; /&gt;"></li>
+<li>Country - <span tal:replace="persondata/country_name" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/country_name&quot; /&gt;"></li>
+<li>Postal Code - <span tal:replace="persondata/postal" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/postal&quot; /&gt;"></li>
+<li>Home Phone - <span tal:replace="persondata/home_phone" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/home_phone&quot; /&gt;"></li>
+<li>Gender - <span tal:replace="persondata/gender" />: 
+    <input class="code_sample" value="&lt;span tal:replace=&quot;persondata/gender&quot; /&gt;"></li>
+</ul>
+
+<p>This page should be used as the home page for your Referral Program members;
+  however the "<strong>index_html</strong>" (actually named &quot;index_html.py&quot;)
+  file located in the member folder should be the target page of any Log In link
+  you provide elsewhere in your site: &quot;<a href="/https/amb/member/">/https/amb/member/</a>&quot;.
+  This script performs several essential operations each time a person invokes
+  it:</p>
+<ul>
+  <li>requires the person to authenticate themselves with a username and password </li>
+  <li>assuming your installation includes a secure certificate, the &quot;/https/&quot;
+    part of the URL tells our servers to change the URL to use &quot;https://&quot; so
+    that your customers login with a secure tunnel to protect their username
+    and password. Simply add &quot;/http/&quot; or &quot;/https/&quot; to any URL to cause your customers
+    to move between unencrypted pages and secure pages. If you do not have an
+    SSL certificate, your server will be configured to strip &quot;https/&quot; references
+    so your customers won't get errors. Please note that if people log into this
+    page using &quot;https&quot; they must log out using it also. </li>
+  <li>increases the &quot;Number of Logins&quot;
+    counter which is displayed on the person specific Admin Memberships page:
+      People &gt;
+      [person name] &gt;Memberships : Referral program. </li>
+  <li>plants the default &quot;cpid&quot; cookie for the referral account which can be
+    updated in the Admin site: System Tools &gt; General Properties Editor</li>
+  <li>plants the referral program member's own person ID as their &quot;wid&quot; cookie
+    so that anyone else using their computer to signup on your public site will
+    be marked as referred by the member</li>
+  <li>checks to see if the referral program member has selected a payee and if
+    not redirects the person to the select payee page located in &quot;/amb/members/payee/index_html&quot;.
+    Otherwise it directs the member to this page. </li>
+</ul>
+<h2>Security &amp; the Standard Template</h2>
+<p>To ensure that only people who are already members see these pages, this section
+  of the site must use its own "<strong>standard_template_amb.pt.html</strong>" and "<strong>standard_template_amb.pt.html.metadata</strong>".
+  The Metadata file contains the security requirements for this template and
+  ensures that a person has the "Ambassador" role to see any page contained in
+  this folder or any sub-folders which use the standard template: [security]
+  View=0:Ambassador, Manager. The "Manager" reference should be ignored and left
+  in place as it's part of the Zope development system's requirements.</p>
+<p>Further, the standard template for your Referral members contains special "span" tag sets which need to surround the "body" parts
+  of the template so that any content in your members pages can display the member's
+contact information and Unique Referral Phrase or Web ID (wid). </p>
+<h2>How We Track Referrals</h2>
+<p>In order for your members to refer prospects to this site so that those prospects 
+  can make purchases and have the original reference tracked back to your member, 
+  we have created a special script that plants "cookies" on the prospect's web 
+  browser with the ID number of your member. Then if the prospect signs up for 
+  something on this site using an automated form, that cookie is used and your 
+  member's contact ID number is added to the contact information for the prospect 
+  in your database.</p>
+<p>The script we've created is located at the root level of this site has the simple filename of "a". This script does many important things related to the tracking of your prospects for your Referral Program and your marketing team. The way your Referral members refer people to your site using the "a" script is shown below and will depend on whether they refer people using their ID or their Unique Referral Phrase. Either method can be used an functions identically, although the phrase is a more "print friendly" choice.</p>
+<p>There are two basic structures for the URL your members will use to refer people: using their Web ID (wid) or their Unique Referral Phrase:</p>
+<ul>
+	<li>http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" /></li>
+	<li>http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" /></li>
+</ul>
+<h3>How to Build Referral Links</h3>
+<p>Since each member logging into this section of your site will have different Unique Referral Phrase and Web ID, you will need to use the code below and examples provided when creating content for your Referral site.</p>
+<p>However, there are two different code examples needed for each URL type. 1 - One for the simple display of the URL in the body of your copy for your members to read, such as the links displayed above which is not turned into a clickable hyperlink. 2 - The other is for when you need to make a link clickable on your own website. Since the dynamic code appears within an "href=" attribute set of the anchor tag which requires commas for it's syntax, the structure of the code for making hypertext links on your site using your Referral's wid or phrase is different. The examples below show what to do when you want to create each different result:</p>
+<h3>Example 1 - Displaying the Referral URL as text on YOUR web pages.</h3>
+<p>To display this:<br>
+  <strong>http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" /></strong><br>
+  Use this in your HTML:<br>
+  <textarea rows="3" class="code_sample">http://&lt;span tal:replace="structure here/homedomain" /&gt;/a/?wid=&lt;span tal:replace="amb_stuff/wid" /&gt;</textarea>
+</p>
+<p>To display this:<br>
+  <strong>http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" /></strong><br>
+  Use this in your HTML:<br>
+  <textarea rows="3" class="code_sample">http://&lt;span tal:replace="structure here/homedomain" /&gt;/a/&lt;span tal:replace="amb_stuff/am" /&gt;</textarea>
+</p>
+<h3>Example 2 - Displaying the Referral URL as a hyperlink on YOUR web pages.</h3>
+<p>To display this:<br>
+  <a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}"><strong>http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" /></strong></a><br>
+  Use this in your HTML:<br>
+  <textarea rows="5" class="code_sample">&lt;a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}"&gt;http://&lt;span tal:replace="structure here/homedomain" /&gt;/a/?wid=&lt;span tal:replace="amb_stuff/wid" /&gt;&lt;/a&gt;</textarea>
+</p>
+<p>To display this:<br>
+  <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}"><strong>http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" /></strong></a><br>
+  Use this in your HTML:<br>
+  <textarea rows="5" class="code_sample">&lt;a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}"&gt;http://&lt;span tal:replace="structure here/homedomain" /&gt;/a/&lt;span tal:replace="amb_stuff/am" /&gt;&lt;/a&gt;</textarea>
+</p>
+<h3>Example 3 - Displaying the Referral URL as Code for your members to display on THEIR web pages.</h3>
+<p>To display this:<br>
+  <a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}"><strong>http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" /></strong></a><br>
+  Use this in your HTML:<br>
+  <textarea rows="3" class="code_sample">&lt;a href=&quot;http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" />&quot;&gt; http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" />&lt;/a&gt;</textarea>
+</p>
+<p>To display this:<br>
+  <a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}"><strong>http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" /></strong></a><br>
+  Use this in your HTML:<br>
+  <textarea rows="3" class="code_sample">&lt;a href=&quot;http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />&quot;&gt; http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />&lt;/a&gt;</textarea>
+</p>
+<h2>Additional Parameters for use with Referral URLs</h2>
+<p>All of the examples so far have one thing in common, they all drop you on the 
+  main domain home page. However, more often than not, you will actually want 
+  your Referral Program members to direct prospects to specific pages. Also, the 
+  use of Campaigns and Campaign Parts which are created in the Admin section of 
+  Signup Systems software will become an essential part of your marketing team's 
+  management strategy. When that happens, you may want all your Referral members 
+  to use a special Campaign Part ID (cpid) so that you can track the effectiveness 
+  of specific marketing efforts. Both of these things can be done using the following 
+  Referral URL parameters either individually or in combination.</p>
+<h3>Parameters</h3>
+<ul>
+  <li>"<strong>page</strong>" - <a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}&page=/amb/member/">http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" />&amp;page=/amb/member/</a></li>
+  <li>"<strong>cpid</strong>" - <a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}&cpid=1">http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" />&amp;cpid=1</a></li>
+</ul>
+<h3>Examples</h3>
+<p>You can use these parameters in combinations with either the wid or the Referral phrase.</p>
+<ul>
+  <li><a tal:attributes="href string:http://${here/homedomain}/a/?wid=${amb_stuff/wid}&page=/amb/member/&cpid=1">http://<span tal:replace="structure here/homedomain" />/a/?wid=<span tal:replace="amb_stuff/wid" />&amp;page=/amb/member/&amp;cpid=1</a></li>
+  <li><a tal:attributes="href string:http://${here/homedomain}/a/${amb_stuff/am}?page=/amb/member/&&cpid=1">http://<span tal:replace="structure here/homedomain" />/a/<span tal:replace="amb_stuff/am" />?page=/amb/member/&amp;cpid=1</a></li>
+</ul>
+<h2>Existing Referral Program Pages</h2>
+<p>There are a few pages available providing some tools and support for your
+  Referral Program. You may choose to use any of them but be careful to not
+  to break the code embedded in those pages when modifying them to suit your
+needs.</p>
+<ul>
+  <li><a href="/https/amb/member/edit_user.html" target="_blank">Change Your Unique Referral Phrase</a></li>
+  
+  
+  <li><a tal:attributes="href string:http://${here/homedomain}/https/signup/signup_form_html?form_id=3&person_id=${amb_stuff/wid}&email=${persondata/email}">Update Your Conact Information &amp; Change Password</a>
+  <ul>
+  	<li><strong>ATTENTION</strong> - the link above is generated dynamically for
+  	  each unique users and brings them back to Signup Form ID 3 but also contains
+  	  their person ID and email address in the URL so that the form will be pre-filled
+  	  with their information. To display this link on your Referral Program Pages,
+  	  copy and paste the code from the line below this into any page using the
+  	  standard_template_amb.pt which should ensure they are logged in so the
+  	  programming can get the email and person ID for the logged in person from
+  	  the database. Because they are already Referral Program Members,  they
+  	  will be directed immediately to this member's home page after updating
+  	  their contact information:</li>
+	<li><input class="code_sample" value="&lt;a tal:attributes=&quot;href string:http://${here/homedomain}/https/signup/signup_form_html?form_id=3&amp;person_id=${amb_stuff/wid}&amp;email=${persondata/email}&quot;&gt;Update
+Your Conact Information &amp;amp; Change Password&lt;/a&gt;"></li>
+  </ul>
+  </li>
+  
+  
+  <li><a href="/https/amb/member/payee/index_html" target="_blank">Choose Payee</a></li>
+  <li><a href="/https/amb/member/stats/index_html" target="_blank">Simple Referral List</a></li>
+  <li><a href="/https/amb/member/stats/click_tracking.html" target="_blank">Click Tracking Statistics</a></li>
+  <li><A HREF="/https/amb/logout?logout=y" onClick="alert('Logging out of this system requires that you intentionally FAIL TO LOGIN correctly. As soon as you click the OK button, a login window will appear. SIMPLY CLICK CANCEL to logout. Also note, the logout page you are being directed to cannot be logged into so hitting CANCEL is your only option--you are effectively already logged out now.')">Logout</A>
+  <ul>
+  	<li><strong>ATTENTION</strong> - the user authentication model used throughout Signup Systems is call HTTP Authentication and while it is an older technology it works whether cookies are enabled or not. One of it's drawbacks is that the only way to logout is to actually have a failed login attempt. The link above uses javascript to inform your Referral Program Members that they must hit the Cancel button on the login prompt in order to successfully logout. The code for the link above is in the box below. Feel free to tailor the javascript alert message to your needs.<br>
+<br>
+One final note regarding login and logout. The special URL "switches" "/https/" &amp; "/http/" should be used to bring people into and out of your secure SSL pages. All pages leading to logging in and out should go through "/https/" so that the username and password are encrypted when passed to the server. Further, if this does not happen, then to log a person out must be done using the same protocol. For instance, if you do not have an SSL cert yet for any reason and a person logs into your Referral Program pages using a "http://" uRL then they must also log out using a URL that starts the same. The system considers "https://" &amp; "http://" to be two separate systems so if you log in with "http" and log out using "https" you will still be logged in to this site if all the urls use "http://" at the front of them. In practice, you should have an SSL cert installed and always cause customers to log into secure pages and log out in the same way. The Logout links presume the person has logged in using "https"</li>
+	<li>
+		<textarea class="code_sample"><A HREF="/https/amb/logout?logout=y" onClick="alert('Logging out of this system requires that you intentionally FAIL TO LOGIN correctly. As soon as you click the OK button, a login window will appear. SIMPLY CLICK CANCEL to logout. Also note, the logout page you are being directed to cannot be logged into so hitting CANCEL is your only option--you are effectively already logged out now.')">Logout</A></textarea>
+	</li>
+  </ul>
+  </li>
+  
+  
+</ul>
+
+</span>
+
+
+
+</html>
+ 
+ 
+ 
+ 

@@ -1,0 +1,213 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title><span tal:replace="template/title" />Shopping Cart</title>
+    </span>
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+    <span tal:omit-tag=""
+	tal:define="person_id python:here.get_encrypted_cookie('pid');
+	persondata
+	python:here.get_persondata_sql(person_id=person_id).dictionaries()[0];
+	backurl  python:request.get('back','');
+	countries python:here.get_nonrestrict_countries_sql();
+	states python:here.list_nonrestrict_states_provinces_sql(country='US', BASE0 = container.REQUEST['BASE0']);
+	provinces python:here.list_nonrestrict_states_provinces_sql(country='CA', BASE0 = container.REQUEST['BASE0']);
+	">
+
+<script language=JavaScript>
+
+function ChangeShipReceiver()
+    {
+    val = document.ship_form.ship_to_me.checked;
+    if(val == true)
+	{
+	document.ship_form.firstname.value =
+	    document.ship_form.h_firstname.value;
+	document.ship_form.lastname.value =
+	    document.ship_form.h_lastname.value;
+	document.ship_form.address.value = document.ship_form.h_address.value;
+	document.ship_form.address2.value = document.ship_form.h_address2.value;
+	document.ship_form.city.value = document.ship_form.h_city.value;
+	document.ship_form.iso_region.value =
+	    document.ship_form.h_iso_region.value;
+	document.ship_form.country.value = document.ship_form.h_country.value;
+	document.ship_form.postal_zip.value =
+	    document.ship_form.h_postal.value;
+	}
+    else
+	{
+	document.ship_form.firstname.value = '';
+	document.ship_form.lastname.value = '';
+	document.ship_form.address.value = '';
+	document.ship_form.address2.value = '';
+	document.ship_form.city.value = ''; 
+	document.ship_form.iso_region.value = '';
+	document.ship_form.country.value='';
+	document.ship_form.postal_zip.value='';
+	}
+    return true;
+    }
+	
+	window.onload=function(){
+	ChangeShipReceiver()
+	}
+</script>
+
+
+	<h1>What Is Your Shipping Address?</h1>
+    <p>If you are purchasing something which requires shipping, please confirm your shipping adress below.</p>
+
+
+    <form method="post" action="set_shipping_parms" name="ship_form">
+    <input type="hidden" name="backurl"
+	tal:attributes="value backurl" />
+    <input type="hidden" name="person_id"
+	tal:attributes="value persondata/id" />
+    <input type="hidden" name="h_firstname"
+	tal:attributes="value persondata/firstname | nothing" />
+    <input type="hidden" name="h_lastname"
+	tal:attributes="value persondata/lastname | nothing" />
+
+    <input type="hidden" name="h_address"
+	tal:attributes="value persondata/addr1 | nothing" />
+    <input type="hidden" name="h_address2"
+	tal:attributes="value persondata/addr2 | nothing" />
+
+    <input type="hidden" name="h_city"
+	tal:attributes="value persondata/city | nothing" />
+    <input type="hidden" name="h_iso_region"
+	tal:attributes="value persondata/iso_region | nothing" />
+    <input type="hidden" name="h_country"
+	tal:attributes="value persondata/country | nothing" />
+    <input type="hidden" name="h_postal"
+	tal:attributes="value persondata/postal | nothing" />
+
+    <table class='cart shipping_address'>
+    <tr>
+	<th>Ship this order to me:</th> 
+        <td><input name="ship_to_me" type="checkbox"
+	    checked onClick="return ChangeShipReceiver()"
+	    value="Customer" >(uncheck to ship to another address)</td>
+        </tr>
+	<tr>
+	    <th>First Name:</th>
+	    <td><input type="text" name="firstname"
+		tal:attributes="value persondata/firstname | nothing" /></td>
+	</tr>
+	<tr>
+	    <th>Last Name:</th>
+	    <td><input name="lastname"
+		tal:attributes="value persondata/lastname | nothing"
+		type="text" ></td>
+	</tr>
+	<tr>
+	    <th>Address:</th>
+	    <td><input name="address" type="text"
+		tal:attributes="value persondata/addr1 | nothing"
+	       size="40" ></td>
+	</tr>
+	<tr>
+	    <th>Address2:</th>
+	    <td><input name="address2" type="text"
+		tal:attributes="value persondata/addr2 | nothing"
+	       size="40" ></td>
+	</tr>
+	<tr>
+	    <th>City:</th>
+	    <td><input name="city" type="text"
+		tal:attributes="value persondata/city | nothing"
+		size="40" ></td>
+	</tr>
+
+
+<!--
+	<tr> 
+	    <th>Prov/State:</th>
+	    <td>
+		<select name="state_prov">
+		<option value="" selected>Choose</option>
+            
+		    <optgroup label="United States">
+			<span tal:repeat="state states" tal:omit-tag="">
+			    <option tal:attributes="value state/code;
+			    disabled python:state['is_restricted'] == 'y'">
+			    <span tal:replace="state/name" />
+			    </option>
+			</span>
+		    </optgroup>
+		    <optgroup label="Canada">
+			<span tal:repeat="province provinces" tal:omit-tag="">
+			    <option tal:attributes="value province/code;
+			    disabled python:province['is_restricted'] == 'y'">
+			    <span tal:replace="province/name" />
+			    </option>
+			</span>
+		    </optgroup>
+            <optgroup label="All other countries">
+
+			    <option value ="">
+			    Other 
+			    </option>
+
+		    </optgroup>
+		</select>
+	    </td>
+	</tr>
+	<tr> 
+	    <th>*Country:</th>
+	    <td>
+		<select single="" size="1" name="country">
+		    <option value="" selected>Choose</option>
+
+		    <span tal:omit-tag=""
+			tal:repeat="country countries">
+			    <option tal:attributes="value country/code">
+				<span tal:replace="country/name" />
+			    </option>
+			</span>
+		    
+                </select>
+            </td>
+        </tr>
+-->
+
+	<tr> 
+        <th>Country:
+          <script type="text/javascript"
+          src="jscripts/select_countries2.js"></script>
+	</th>
+	<td>
+          <span tal:omit-tag=""
+          tal:define="myCountry persondata/country | nothing;
+            iso_region persondata/iso_region | nothing">
+
+                <script type="text/javascript"
+                    tal:content='string:display_country_options("${myCountry}","country",
+"${iso_region}")'>
+                </script>
+
+          </span> <!-- definitions -->
+	</td>
+        </tr>
+
+	<tr>
+	    <th>Postal/Zip Code:</th>
+	    <td><input name="postal_zip" type="text"
+		tal:attributes="value persondata/postal | nothing" size="10">
+		</td>
+	</tr>
+	<tr><td colspan='2' align='center'><input type='submit'
+	    name='action' value='Proceed' /></td></tr>
+    </table>
+    </form>
+    <p>&nbsp;</p>
+    </span> <!-- def -->
+    </span> <!-- body -->
+</html>
+
+ 

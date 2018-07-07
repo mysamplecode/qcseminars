@@ -1,0 +1,33 @@
+<div class='cart'>
+	<span tal:omit-tag="" tal:condition="not:request/cart_id | nothing">
+		<!--  HTML displayed when a shopping cart cookie does not exist. -->
+		<span tal:omit-tag="" tal:replace='structure here/top_navigation_include' />
+	</span>
+
+	<span tal:omit-tag="" tal:condition="request/cart_id | nothing">
+	
+			<span tal:omit-tag="" tal:define="items python:here.cart.get_nice_cart_items_sql(cart_id=request['cart_id']);
+				   cart_total python:here.get_cart_total_sql(cart_id=request['cart_id']).dictionaries()[0]['total']">
+				<span tal:omit-tag="" tal:define="phone python:here.get_home_domain_phone_sql().dictionaries()[0]['value']">
+						  <span tal:omit-tag="" tal:condition="not:items | nothing">
+							  <!--  HTML displayed when a shopping cart cookie does exist but has been emptied by the customer. -->
+							  <span tal:omit-tag="" tal:replace='structure here/top_navigation_include_squeeze' />
+						  </span>
+			
+						 <span tal:omit-tag="" tal:define="refnum python:request.get('cpid','0')+'-'+request.get('wid','0')">
+							 <span tal:omit-tag="" tal:condition="items | nothing">
+									<!--  HTML displayed when a shopping cart cookie does exist and the cart contains one or more items -->
+									<div id="current_cart_one_line">
+										<div class="cart_info"><span class="alert-low">Cart Contains: <span class="alert-high"><span tal:replace="python:reduce( lambda x,y: x+y, [x['quantity'] for x in items])" /></span> 
+												item(s): $ <span tal:replace='python:here.moneyfmt(cart_total)' /></span>
+												<span tal:omit-tag="" tal:condition="python:refnum != '0-0'"> --
+												Ref# cpid<span tal:replace="refnum" /></span>
+										</div>
+										<span tal:omit-tag="" tal:replace='structure here/top_navigation_cart_include' />
+									</div>
+							 </span>
+						</span>
+					</span>
+			</span>
+	</span>
+</div>

@@ -1,0 +1,15 @@
+var re = /^\w+[\w.-]*@([\w-]+\.)+\w+$/;  // format of an email.  ex. blah@blue.com
+                                                                                
+function testEmail( field )
+    {
+        var email = field.value.toLowerCase();
+        field.value = email;
+        var ok = re.exec(email);
+        if( !ok )
+            { window.alert("\"" + email + "\" is not a valid email address.  Please re-enter."); return false; }
+        else
+            { return true; }
+    }
+ 
+ 
+

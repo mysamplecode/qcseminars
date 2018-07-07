@@ -1,0 +1,390 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+<span tal:omit-tag="" metal:fill-slot="head">
+
+<title>
+
+
+</title>
+
+
+<style type="text/css">
+<!--
+
+<!--
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+#left_bar{
+padding:0;
+margin:1px;
+margin-top:0;
+}
+
+
+#quitsqueezeimagine {
+	background-image: url(images/imagine_photo_background.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 587px;
+	clear:both;
+	font-size:14px;
+}
+#quitlist{
+padding-top:60px;}
+#quitlist li {
+	list-style-position: inside;
+	list-style-image: url(images/arrow_bullet.jpg);
+	padding-left:50px;
+padding-bottom:10px;
+}
+h2 {
+	 border: medium none;
+    color: #CC0000;
+    font-family: Impact,Helvetica,Arial,sans-serif;
+    font-size: 24pt;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 30pt;
+    text-align: center;
+    text-indent: 0;
+}
+
+
+
+
+#quitsqueezeimagine p {
+	padding-left: 350px;
+	padding-top: 120px;
+	clear:both;
+	
+}
+
+
+#sideform div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 272px;
+    height: 56px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor:pointer;
+	color: transparent;
+margin-left:-120px;
+}
+
+
+.door_page_vopt div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 270px;
+    height: 56px;
+}
+
+div.opt_in_form {
+    width: 500px;
+}
+
+div.form_body span.heading{
+    width: 130px;
+}
+
+.door_page_vopt div.form_body #prov_state_selector {
+	margin-left:130px;
+}
+
+.door_page_vopt div.form_body div.form_row{
+    padding-bottom: 10px;
+    padding-left: 10px;
+	 padding-top: 10px;
+}
+#sideform .opt_in_form div.form_body form#signup {
+
+padding:0;
+
+}
+#sideform{
+
+float:left;
+
+width:280px;
+-moz-border-radius:12px 12px 12px 12px;
+background-color:#FFFFDD;
+border:4px dashed #FF0000;
+
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+margin-left:15px;
+}
+
+
+#sideform div.form_body span.heading {
+width: 88px !important;
+}
+#sideform div.form_body div.email input {
+width: 143px !important;
+}
+#sideform div.form_body span.instructions {
+padding-left: 0;
+}
+.tiny p {
+	font-size:7px;
+	line-height:10px;
+	color: #aaa;
+}
+#sideform div.form_body div.opt-in_alert {
+line-height: 10px !important;
+padding: 0;
+}
+
+#sideform p{
+text-align:center;
+padding-top:5px; 
+}
+
+
+#newquit li {
+	font-size: 14px;
+}
+.capsred {
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #ff0000;
+	text-align: center;
+	display: block;
+padding:0;
+margin:0;
+}
+
+.othercapsred{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	text-align: center;
+	display: block;
+padding:0;
+
+
+}
+.othercapsred span{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	font-size:10px;
+
+}
+.topboxtxt{
+font-size:16px;
+font-weight:bold;
+color:#cc0000;
+margin:0;
+}
+
+
+#quitsqueezeimagine h2{
+padding-top:80px;
+padding-left:20px;
+
+}
+#testimonials{
+padding:5px;
+}
+
+
+#testimonials h4{ 
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	
+font-size:30px;
+line-height:110%;
+background-color:#ffffff;
+float:left;
+}
+#quote{
+color:#999999;
+width: 270px;
+float:left;
+padding-top: 20px;
+}
+.floatleft{
+float:left;
+}
+.floatright{
+float:right;
+}
+.clearall{
+clear:both;
+}
+#quote p{
+float:left;
+}
+.door_page_vopt div.opt_in_form {
+color:red;
+font-size:18px;
+font-weight:bold;
+
+}
+#quotetwo{
+color:#999999;
+width: 500px;
+float:left;
+padding-top: 20px;
+padding-left:45px;
+
+}
+
+
+#testimonials object{
+padding-bottom:10px;
+
+}
+
+
+h2 span{
+
+      background-color: transparent;
+    background-image: url("http://events.quantumchangeseminars.com/million-dollar/report/graphics/line1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 56px;
+    padding-bottom: 4px;
+
+}
+
+h3 span{
+
+     
+    background-image: url("http://events.quantumchangeseminars.com/million-dollar/report/graphics/line1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    font-weight: bold;
+    
+    padding-bottom: 2px;
+
+}
+.ss_letter_header {
+    background-color: #555555;
+    color: #EEEEEE;
+    padding: 10px;
+	clear:both;
+	width: 800px;
+	 margin: auto;
+}
+.ss_letter {
+    border: 2px solid #333333;
+    padding: 10px;
+	margin: auto;
+	width:796px;
+}
+
+.ss_letter p{
+color: #000000;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12pt;
+    line-height: 14pt;
+    text-align: left;
+	}
+	
+	.ss_letter ul{
+color:#FF0000;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12pt;
+    line-height: 14pt;
+  
+	font-weight:bold;
+	}
+		.ss_letter li{
+list-style-type:none;
+	}
+
+-->
+</style>
+</span>
+<span tal:omit-tag="" metal:fill-slot="body">
+<div id="newquit">
+<div id="sideimage">
+
+<img class="floatleft" src="http://events.quantumchangeseminars.com/make-1000-a-day/images/thelifethatcouldbeyours.jpg" alt="The Lifestyle" />
+
+</div>
+<h3><em>Exciting NEWS...</em></h3>
+
+
+<h2> &#34;Announcing... <br /> 
+<span>The QUIT CONVENTION 2013</span><br />
+For &#39;Quit Cigarettes In <br/>60 Minutes&#39; Specialists... <br />A Special Event To Help You Achieve Greater Success In 2013 And Beyond&#33; &#34;</h2>
+<h3 style="padding-right: 8px;">BEST PART:  As A "Quit Cigarettes In 60 Minutes" Specialist You Get To Attend <span>For Just $69...</span> Including A Fantastic Catered Lunch But Places Are Limited So <span>REGISTER NOW</span> To Secure Your Place</h3>
+
+<div style="text-align:center">
+<div class="ss_letter_header">
+<p style="text-align:left">From The Desk Of <strong>Roberta Faddoul:</strong></p>
+
+</div>
+<div class="ss_letter">
+<br />
+
+<img class="floatright" src="http://events.quantumchangeseminars.com/make-1000-a-day/images/roberta_faddoul.jpg" alt="Roberta Foddoul" />
+
+<img src="http://events.quantumchangeseminars.com/make-1000-a-day/images/dearspecialist.png" alt="Dear Friend" /> <br/><br/>
+
+<p>I'm excited to announce the 2013  Quit Convention for our valued graduates of our highly acclaimed "Quit Cigarettes In 60 Minutes" business training program.  </p>
+
+<p>Even though you already have everything you need to be making $1,000 a day (or more) with your own business, here at QC Seminars we're committed to continually improving the program and helping you to be even more successful.</p>
+
+<p>So, we're holding a special 1 day combined business training and success convention where you'll...</p>
+
+<p><strong>Get the latest marketing strategies and tactics to attract eager, high-paying clients even faster and more easily</strong></p>
+
+<p>Discover how to run your practice more effectively to save time and money</p>
+
+<p><strong>Hear from some of the most successful Quit Specialists and get their tips for getting the most out of your business</strong></p>
+
+
+
+<p>...PLUS much more...such as have the opportunity to catch up and network with other successful graduates and make new friends in this very EXCLUSIVE group...at the Quit Convention.</p>
+<ul>
+<li>WHEN: Saturday, June 29, 2013</li>
+<li>Registration 8 am for a 9 am start</li>
+<li>WHERE: Mecure Hotel Sydney Airport</li>
+</ul><br />
+<p>It's ONLY $69 Including A Fantastic Catered Lunch but places are limited.  So to reserve your place, simply click on the "YES! I'll Be At The Quit Convention 2013" button...</p>
+<div style="text-align:center">
+<a href="add_to_cart?e=245&amp;co=y"><img src="http://events.quantumchangeseminars.com/make-1000-a-day/images/quitconvent_btn.png"  border="0" alt="Book Your Place" ></a>
+</div>
+<br />
+<p>I look forward to seeing you at the convention!</p>
+
+<p>With love and success,</p>
+<div style="text-align:left">
+<img  src="http://qcseminars.com/wp-content/themes/SuperQC/images/roberta_sig.png" alt="Roberta Foddoul" />
+</div>
+<p>Roberta Faddoul</p>
+
+
+</div>
+
+
+
+
+
+<div align="center"><img src="http://quantumchangeseminars.com/programs/wp-content/themes/default/images/qc_privacy+spam.jpg" alt="Privacy" /></div>
+
+
+</div>
+</div>
+
+
+
+</span>
+
+
+</html>

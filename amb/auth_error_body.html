@@ -1,0 +1,41 @@
+
+<span tal:condition="request/logout | nothing"> 
+
+<h1>You Have Succesfully Logged Out - <a href="/https/amb/member/">Log Back In</a></h1>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</span>
+
+<span tal:condition="not:request/logout | nothing">
+
+
+ <h1>You Appear to be Having Trouble!</h1>
+<p style="text-align:center;"><a href="/pass/">Did you Forget 
+                    your Username or Password?</a></p>
+                  <p style="font-weight:bold; color:red;">Your efforts to 
+                    reach a private Referral Program Member's only page have failed 
+                    due to one of the following reasons:</p>
+                  <ul>
+                    <li class="bullets">You <span style="color:red;">mistyped your 
+                      password or username</span> (remember that both fields are 
+                      Case Sensitive, meaning they must be entered in UPPER and 
+                      lower case based on how you originally created your user 
+                      account).</li>
+                    <li class="bullets">You <span style="color:red;">forgot</span> 
+                      your Username and/or Password.</li>
+                    <li class="bullets">You pushed the <span style="color:red;">Cancel</span> 
+                      button.</li>
+                    </ul>
+                  
+                  <p><a href="/">Return to home page</a></p>
+
+</span>

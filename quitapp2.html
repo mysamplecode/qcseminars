@@ -1,0 +1,407 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+<span tal:omit-tag="" metal:fill-slot="head">
+
+<title>
+
+
+</title>
+
+
+<style type="text/css">
+.add_to{
+	background-color: #FFFFDD;
+	border: 4px dashed #FF0000;
+	border-radius: 12px 12px 12px 12px;
+	margin: 0 auto;
+	padding: 30px 0 30px 0;
+	width: 650px;
+}
+<!--
+
+<!--
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+#left_bar{
+padding:0;
+margin:1px;
+margin-top:0;
+}
+
+
+#quitsqueezeimagine {
+	background-image: url(images/imagine_photo_background.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 587px;
+	clear:both;
+	font-size:14px;
+}
+#quitlist{
+padding-top:60px;}
+#quitlist li {
+	list-style-position: inside;
+	list-style-image: url(images/arrow_bullet.jpg);
+	padding-left:50px;
+padding-bottom:10px;
+}
+h2 {
+	 border: medium none;
+    color: #CC0000;
+    font-family: Impact,Helvetica,Arial,sans-serif;
+    font-size: 24pt;
+    font-weight: normal;
+    letter-spacing: 0;
+    line-height: 30pt;
+    text-align: center;
+    text-indent: 0;
+}
+
+
+
+
+#quitsqueezeimagine p {
+	padding-left: 350px;
+	padding-top: 120px;
+	clear:both;
+	
+}
+
+
+#sideform div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 272px;
+    height: 56px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor:pointer;
+	color: transparent;
+margin-left:-120px;
+}
+
+
+.door_page_vopt div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 270px;
+    height: 56px;
+}
+
+div.opt_in_form {
+    width: 500px;
+}
+
+div.form_body span.heading{
+    width: 130px;
+}
+
+.door_page_vopt div.form_body #prov_state_selector {
+	margin-left:130px;
+}
+
+.door_page_vopt div.form_body div.form_row{
+    padding-bottom: 10px;
+    padding-left: 10px;
+	 padding-top: 10px;
+}
+#sideform .opt_in_form div.form_body form#signup {
+
+padding:0;
+
+}
+#sideform{
+
+float:left;
+
+width:280px;
+-moz-border-radius:12px 12px 12px 12px;
+background-color:#FFFFDD;
+border:4px dashed #FF0000;
+
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+margin-left:15px;
+}
+
+
+#sideform div.form_body span.heading {
+width: 88px !important;
+}
+#sideform div.form_body div.email input {
+width: 143px !important;
+}
+#sideform div.form_body span.instructions {
+padding-left: 0;
+}
+.tiny p {
+	font-size:7px;
+	line-height:10px;
+	color: #aaa;
+}
+#sideform div.form_body div.opt-in_alert {
+line-height: 10px !important;
+padding: 0;
+}
+
+#sideform p{
+text-align:center;
+padding-top:5px; 
+}
+
+
+#newquit li {
+	font-size: 14px;
+}
+.capsred {
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #ff0000;
+	text-align: center;
+	display: block;
+padding:0;
+margin:0;
+}
+
+.othercapsred{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	text-align: center;
+	display: block;
+padding:0;
+
+
+}
+.othercapsred span{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	font-size:10px;
+
+}
+.topboxtxt{
+font-size:16px;
+font-weight:bold;
+color:#cc0000;
+margin:0;
+}
+
+
+#quitsqueezeimagine h2{
+padding-top:80px;
+padding-left:20px;
+
+}
+#testimonials{
+padding:5px;
+}
+
+
+#testimonials h4{ 
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	
+font-size:30px;
+line-height:110%;
+background-color:#ffffff;
+float:left;
+}
+#quote{
+color:#999999;
+width: 270px;
+float:left;
+padding-top: 20px;
+}
+.floatleft{
+float:left;
+}
+.floatright{
+float:right;
+}
+.clearall{
+clear:both;
+}
+#quote p{
+float:left;
+}
+.door_page_vopt div.opt_in_form {
+color:red;
+font-size:18px;
+font-weight:bold;
+
+}
+#quotetwo{
+color:#999999;
+width: 500px;
+float:left;
+padding-top: 20px;
+padding-left:45px;
+
+}
+
+
+#testimonials object{
+padding-bottom:10px;
+
+}
+
+
+h2 span{
+
+      background-color: transparent;
+    background-image: url("http://events.quantumchangeseminars.com/million-dollar/report/graphics/line1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 56px;
+    padding-bottom: 4px;
+
+}
+
+h3 span{
+
+     
+    background-image: url("http://events.quantumchangeseminars.com/million-dollar/report/graphics/line1.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    
+    font-weight: bold;
+    
+    padding-bottom: 2px;
+
+}
+.ss_letter_header {
+    background-color: #555555;
+    color: #EEEEEE;
+    padding: 10px;
+	clear:both;
+	width: 800px;
+	 margin: auto;
+}
+.ss_letter {
+    border: 2px solid #333333;
+    padding: 10px;
+	margin: auto;
+	width:796px;
+}
+
+.ss_letter p{
+color: #000000;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12pt;
+    line-height: 14pt;
+    text-align: left;
+	}
+	
+	.ss_letter ul{
+color:#FF0000;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12pt;
+    line-height: 14pt;
+  
+	font-weight:bold;
+	}
+		.ss_letter li{
+list-style-type:none;
+	}
+
+-->
+</style>
+</span>
+<span tal:omit-tag="" metal:fill-slot="body">
+<div id="newquit">
+<div id="sideimage">
+
+<img class="floatleft" src="http://events.quantumchangeseminars.com/make-1000-a-day/images/app.png" width="300" height="307"alt="The Lifestyle" />
+
+</div>
+<h3 style="font-size:20px;"><em>Exciting NEWS...</em></h3>
+
+
+<h2 style="position:relative;"><strong style="font-weight:normal;font-size:40px;"> Announcing...</strong> <br /> 
+Special Andriod App just for YOU
+<br/>
+<span style="font-size:29px;margin-right:11px;">Now only for $497</span></h2>
+
+
+
+
+<div style="text-align:center;margin-top:162px;">
+<div class="ss_letter_header">
+<p style="text-align:left">From The Desk Of <strong>Roberta Faddoul:</strong></p>
+
+</div>
+<div class="ss_letter">
+<br />
+
+<img class="floatright" src="http://events.quantumchangeseminars.com/make-1000-a-day/images/roberta_faddoul.jpg" alt="Roberta Foddoul" />
+
+<img src="http://events.quantumchangeseminars.com/make-1000-a-day/images/dearspecialist.png" alt="Dear Friend" style="display:block;" /> <br/><br/>
+
+<p>I'm excited to announce a Brand New Andriod App on amazing rate for our valued graduates of our highly acclaimed "Quit Cigarettes In 60 Minutes" business training program.  </p>
+
+<p>Even though you already have everything you need to be making $1,000 a day (or more) with your own business, here at QC Seminars we're committed to continually improving the program and helping you to be even more successful.</p>
+
+
+
+
+<p>So, with this Andriod App you will have Quit Manual with you at all times...</p>
+<p style="display:table;background:#ccc;margin-top:56px;margin-left: 68px;">
+<iframe width="670" height="380" style="" src="http://www.youtube.com/embed/dbbEPa2huQI" frameborder="0" allowfullscreen></iframe>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="text-align:center" class="add_to">
+<a href="http://events.quantumchangeseminars.com/add_to_cart?o=36&co=y"><img src="http://events.quantumchangeseminars.com/trainerstraining/images/add_to_cart.png"  border="0" alt="Book Your Place" ></a>
+<h3 style="color:red;font-size:18px;margin-top:21px;">Normally $997 Now Only $497</h3>
+</div>
+<br />
+<p>I look forward to seeing you at the convention!</p>
+
+<p>With love and success,</p>
+<div style="text-align:left">
+<img  src="http://qcseminars.com/wp-content/themes/SuperQC/images/roberta_sig.png" alt="Roberta Foddoul" />
+</div>
+<p>Roberta Faddoul</p>
+
+
+</div>
+
+
+
+
+
+<div align="center"> </div>
+
+
+</div>
+</div>
+
+
+
+</span>
+
+
+</html>

@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Payment Processing Error</title>
+    </span>
+
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<span tal:omit-tag="" tal:define="phone python:here.get_home_domain_phone_sql().dictionaries()[0]['value']">
+        
+ <h1>An Error Has Occurred</h1>
+                  <p>An error has occurred while processing your transaction. 
+                    Please contact us at <span tal:replace="phone"/> so that we 
+                    can complete your transaction in person. Sorry for the inconvenience. 
+                    We look forward to helping you.</p>
+                 
+
+    </span>
+	</span>
+
+</html>
+ 
+

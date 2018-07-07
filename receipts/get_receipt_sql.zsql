@@ -1,0 +1,25 @@
+
+    <dtml-comment>
+    connection_id:Psycopg_database_connection
+    arguments:receipt_id
+    max_cache:100
+    max_rows:-1
+    </dtml-comment>
+select
+    id as receipt_id,
+    order_id,
+    receipt_type,
+    is_archived,
+    was_emailed,
+    creation_date,
+    creator_id,
+    body,
+    notes
+from
+    orders.receipts
+where
+    id = <dtml-sqlvar receipt_id type="int">
+;
+-- arch-tag: a0f60991-fe3a-46d0-89ec-16ae3c7d9f1a
+
+

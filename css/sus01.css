@@ -1,0 +1,487 @@
+/*Critical CSS for Signup Systems Public website features. All of these styles are used by Signup Systems' scripts
+so it is best to modify these styles to suit your organization's needs rather than delete them.  */
+
+.tr1 {
+	background-color:#FFFFDD;
+	padding: 3px;
+	 }
+	
+.tr0 {
+	padding: 3px;
+	background-color:white;
+	 }
+	
+.border, .sidebar {
+	background-color: ;
+	 }
+	
+.td-background {
+	background-color: #59075E;
+	border: #59075E;
+	 }
+	
+.red-alert {
+	font-weight: bolder;
+	color: #FF0000;
+	 }
+	
+.alert-low {
+	font-weight: bold;
+	 }
+	
+.alert-medium {
+	color:red;
+	 }
+	
+.alert-high {
+	color:red;
+	font-weight: bolder;
+	 }
+	
+.note {
+	font-weight: bolder;
+	color: #FF0000;
+	 }
+	
+.samplebox {
+	border-style: solid;
+	border-width: thin;
+	border-color: black;
+	padding: 3px 3px 3px 3px;
+	color: #000000;
+	font-family: "Courier New", Courier, mono;
+	 }
+	
+.helptext {
+    text-align: center;
+    background-color: #FFFFCC;
+    padding: 5px;
+    margin: 0 10px;
+	 }
+	
+.message {
+	text-align:center;
+	color: red;
+	font-size: 1.25em;
+	padding: 5px;
+	margin: 10px;
+	border-top: black dotted 1px;
+	border-bottom: black dotted 1px;
+	 }
+
+span#country_selector #prov_state_selector {
+	display: block;
+}
+
+input.code_sample,
+textarea.code_sample {
+	width: 100%;
+	border: #494949 dotted 1px;
+	padding: 5px;
+	background-color:#FFFFE5;
+	 }
+
+table.unsubscribe_table {
+	width:80%;
+	border-collapse: collapse;
+	border: 1px black solid;
+	}
+
+table.unsubscribe_table th{
+	background-color:yellow;
+	border: 1px black solid;
+	}
+
+table.unsubscribe_table td{
+	border: 1px black solid;
+	}
+
+table.unsubscribe_table input{
+	background-color: #323289;
+	color: white;
+	font-weight: bold;
+	padding: 2px 10px;
+	 }
+
+
+#guest_transfer_complete {
+	margin: 20px 0 40px 0;
+	border: double #948004 5px;
+	padding: 0 10px 20px 10px;
+}
+
+#guest_transfer_complete h1{
+	color: red;
+}
+
+#full_error_message p#see_full{
+	margin-top: 40px;
+	font-size: .8em;
+	text-align:right;
+	text-decoration: underline;
+	float: right;
+}
+
+#full_error_message span#message{
+	display:none;
+}
+
+#full_error_message:hover span#message{
+	display:block;
+}
+
+#full_error_message:hover p#see_full{
+	float: none;
+}
+
+
+/* ----------- Click Track Table Start-------------- */
+
+td.tr-heading {
+	background-color: #999900;
+	font-weight: bold;
+	color:white;
+	padding: 2px;
+	text-align:center;
+	vertical-align:bottom;
+	 }
+
+table.click_track_table {
+	border: solid black 1px;
+	width: 100%;
+	 }
+
+table.click_track_table td{
+	border-bottom: solid black 1px;
+	border-right: solid black 1px;
+	 }
+
+table.click_track_table td.tr1-bold {
+	text-align: center;
+	font-weight: bold;
+	background-color:yellow;
+	 }
+
+table.click_track_table tr.last_row td {
+	text-align: center;
+	border-bottom: none;
+	 }
+
+table.click_track_table tr.last_row td input{
+	background-color: #323289;
+	color: white;
+	font-weight: bold;
+	padding: 2px 10px;
+	 }
+
+table.click_track_table tr.tr1 {
+	font-size: 1em;
+	 }
+
+table.click_track_table tr.tr0 {
+	font-size: 1em;
+	 }
+
+
+/* ----------- /Click Track Table End-------------- */
+
+
+
+/* ----------- Registration Options -------------- */
+
+#reg_options {
+}
+
+#reg_options ul.bullets{
+}
+
+#reg_options li#transfer_reg {
+}
+
+#reg_options li#cancel_reg {
+}
+
+#reg_options li#confirm_reg {
+}
+
+#reg_options li#reconfirm_reg {
+}
+
+#reg_options li#family_reg {
+}
+
+#guest_reg_options {
+}
+
+#guest_reg_options #guest_invite_email{
+}
+
+#guest_reg_options #guest_invite_no_email{
+}
+
+
+/* ----------- /Registration Options -------------- */
+
+
+
+/* ----------- Results Start-------------- */
+
+#results table {
+	width:100%;
+	border-top: solid black 1px;
+	border-left: solid black 1px;
+	 }
+
+#results table td{
+	border-bottom: solid black 1px;
+	border-right: solid black 1px;
+	padding: 2px;
+	 }
+
+#results table th{
+	border-bottom: solid black 1px;
+	background-color:yellow;
+	border-right: solid black 1px;
+	 }
+
+
+/* ----------- /Results End-------------- */
+
+/* ----------- Edit Tables Top-------------- */
+
+table.edit_left {
+	border: solid black 1px;
+	width:100%;
+	padding: 0px;
+	margin: 0px;
+	border-collapse:collapse;
+	 }
+
+table.edit_left td{
+	padding: 4px;
+	border-bottom: solid black 1px;
+	 }
+
+table.edit_left tr.first_row td{
+	background-color: yellow;
+	text-align: center;
+	font-weight: bold;
+	 }
+
+table.edit_left tr.last_row td {
+	text-align: center;
+	border-bottom: none;
+	 }
+
+table.edit_left th{
+	text-align: right;
+	font-weight: bold;
+	border-bottom: solid black 1px;
+	border-right: solid black 1px;
+	width: 33%;
+	 }
+
+table.edit_left tr.last_row td input{
+	background-color: #323289;
+	color: white;
+	font-weight: bold;
+	padding: 2px 10px;
+	 }
+
+
+table.edit_left tr.last_row td input#submit_button[disabled="disabled"] {
+	background-color: red;
+	 }
+
+table.edit_left tr.required th{
+	color:red;
+	 }
+
+table.edit_left tr.required input{
+	background-color:#FFDDDD;
+	 }
+
+/* ----------- /Edit Tables bottom-------------- */
+
+
+/* -----------  SKU Specific Event Calendars ------------ */
+.sku_event_calendar table{
+	border-collapse: collapse;
+	border: solid 1px #000000;
+}
+
+.sku_event_calendar table td,
+.sku_event_calendar table th {
+	border: solid 1px #000000;
+	padding: 3px 5px;
+	vertical-align: top;
+}
+
+.sku_event_calendar th {
+	font-weight:bold;
+	color: black;
+	background-color: #FFFF00;
+}
+
+.sku_event_calendar th.date{
+	width:50%;
+}
+
+.sku_event_calendar th.location{
+	width:20%;
+}
+
+.sku_event_calendar th.venue{
+	width:30%;
+}
+
+.sku_event_calendar .event_location {
+}
+	
+.sku_event_calendar .event_date {
+    white-space: nowrap;
+}
+	
+.sku_event_calendar .event_venue {
+}
+	
+.sku_event_calendar .booking {
+    font-size: 50%;
+    font-weight: normal;
+}
+
+.sku_event_calendar div {
+	margin: 0px;
+	padding: 0px;
+}
+
+.sku_event_calendar span {
+	margin: 0px;
+	padding: 0px;
+}
+
+.sku_event_calendar tr.tr0 td {
+	background-color: ;
+}
+
+.sku_event_calendar tr.tr1 td {
+	background-color: ;
+}
+
+.sku_event_calendar td.date div.date{
+}
+
+.sku_event_calendar td.date div.multi_day{
+	margin: 0px 0 7px 0;
+}
+
+.sku_event_calendar td.date p{
+	margin: 0px;
+	padding: 0px;
+	line-height:1.25em;
+}
+
+.sku_event_calendar td.date span.from,
+.sku_event_calendar td.date span.to{
+	font-weight: bold;
+}
+
+.sku_event_calendar td.date span.from {
+	padding-left: 1em;	
+}
+
+.sku_event_calendar td.date span.to{
+	padding-left: 1.85em;	
+}
+
+.sku_event_calendar td.date span.day,
+.sku_event_calendar td.date span.time{
+	font-weight: bold;	
+}
+
+.sku_event_calendar td.date span.time{
+	color: #000000;	
+}
+
+.sku_event_calendar td.date div.registration{
+	font-size: .8em;	
+}
+
+
+.sku_event_calendar td.location div.location{
+	font-size: 1.25em;
+	text-align: center;	
+}
+
+.sku_event_calendar td.location div.sold_out{
+	font-size: 14px;
+	margin-top: 7px;
+}
+
+
+.sku_event_calendar td.location span.sold_out{
+	font-weight: bold;
+	color: #FF0000;
+	display: block;
+}
+
+.sku_event_calendar td.location span.wait_list,
+.sku_event_calendar td.location span.no_wait_list {
+}
+
+.sku_event_calendar td.location span.no_wait_list {
+	color: #FF0000;
+}
+
+.sku_event_calendar td.location span.wait_list {
+}
+
+.sku_event_calendar td.venue div.venue{
+	line-height:1.25em;	
+}
+
+.sku_event_calendar td.venue div.venue_name_address{
+	margin: 0px 0 7px 0;	
+}
+
+.sku_event_calendar td.venue span.venue_name {
+	font-weight: bold;
+	display: block;	
+}
+
+.sku_event_calendar td.venue span.venue_address {
+}
+
+.sku_event_calendar td.venue span.web_map{
+	text-align: left;
+	display: block;
+	height: 24px;
+	margin: 0px;
+	float: left;
+}
+
+.sku_.event_calendar td.venue span.web_map a{
+	padding: 6px 0 0 30px;
+	display: block;
+}
+
+
+.sku_event_calendar td.venue span.booking_info{
+	text-align: left;
+	display: block;
+	margin: 0 0 0 20px;
+	float: right;
+}
+
+.sku_event_calendar td.venue span.booking_info a{
+	padding: 6px 0 0 30px;
+	display: block;
+}
+
+/* -----------  /SKU Specific Event Calendars ------------ */
+
+
+
+
+
+

@@ -1,0 +1,193 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template_amb.pt/macros/page">
+
+  <span tal:omit-tag="" metal:fill-slot="head">
+    <title><span tal:replace="template/title" /></title>
+  </span>
+
+
+  <span tal:omit-tag="" metal:fill-slot="body">
+
+    <h1>Verify Payee Choice</h1>
+    <span tal:omit-tag="" tal:define="countries python:here.get_countries_sql()">
+
+      <span tal:omit-tag="" tal:condition="python:request['radiobutton'] == 'incomplete'">
+        <p>You have to fill out all of the required <font color="red">red</font> fields</p>
+<form>
+	 <input type="button" value="Go Back" onclick="history.back();">
+</form>
+	 
+<!--	 
+	    <form name="form1" method="post" action="select_payee_scr">
+          <input type="submit" name="action" value="Back"/>
+        </form>
+-->
+      </span>
+
+      <span tal:omit-tag="" tal:condition="python:request['radiobutton'] == 'radiobutton_personal'">
+
+        <p class="Title3">You have chosen <span class="alert-low">yourself</span> to be the payee.</p>
+        <p>Please confirm the Information as follows and then click the Confirm button or push back on your browser to make changes:</p>
+
+        <form name="form1" method="post" action="select_payee_scr">
+          
+          <table width="100%">
+            <tr>
+              <td align="center">
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span tal:omit-tag="" tal:replace="request/firstname | nothing"/> <span tal:omit-tag="" tal:replace="request/lastname | nothing"/></td>
+                  </tr>
+                  <tr>
+                    <td><span tal:replace="request/addr1 | nothing"/></td>
+                  </tr>
+                  <tr>
+                    <td><span tal:replace="request/addr2 | nothing"/></td>
+                  </tr>
+                  <tr>
+                    <td><span tal:replace="request/city | nothing"/><span tal condition="request/iso_region | nothing">,
+		    <span tal:omit-tag=""
+		    tal:replace="python:here.get_region_name_sql(iso_region=request['iso_region'])[0]['name']">
+		    </span>
+		    </span>
+
+
+		    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span tal:omit-tag="" tal:repeat="country countries">
+                        <span tal:omit-tag="" tal:condition="python:request['country'] == country['code']">
+                          <span tal:replace="country/name"/>
+                        </span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="hidden" name="radiobutton" tal:attributes="value request/radiobutton | nothing"/>
+                      <input type="hidden" name="firstname" tal:attributes="value request/firstname | nothing"/>
+                      <input type="hidden" name="lastname" tal:attributes="value request/lastname | nothing"/>
+                      <input type="hidden" name="city" tal:attributes="value request/city | nothing"/>
+                      <input type="hidden" name="country" tal:attributes="value request/country | nothing"/>
+
+		      <span tal:omit-tag="" tal:condition="request/iso_region | nothing">
+			<input type="hidden" name="iso_region" tal:attributes="value request/iso_region"/>
+		      </span>
+
+                      <input type="hidden" name="addr1" tal:attributes="value request/addr1 | nothing"/>
+                      <input type="hidden" name="addr2" tal:attributes="value request/addr2 | nothing"/>
+                      <input type="hidden" name="postal" tal:attributes="value request/postal | nothing"/>
+
+                      <input type="hidden" name="tax_id_num" tal:attributes="value request/tax_id_number | nothing"/>
+                      <input type="hidden" name="tax_reg_name" tal:attributes="value request/tax_reg_name | nothing"/>
+                      <input type="hidden" name="tax_class_id" tal:attributes="value request/tax_class_id | nothing"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <input type="submit" name="action" value="Confirm"/>
+
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+
+        </form>
+      </span>
+
+      <span tal:omit-tag="" tal:condition="python:request['radiobutton'] == 'radiobutton_company'">
+        <h3>You have chosen <span class="alert-high"><span tal:omit-tag="" tal:replace="request/name"/></span> to be the payee.</h3>
+        <p>Please confirm the Information as follows and then click the Confirm button or push back on your browser to make changes:</p>
+        <form name="form1" method="post" action="select_payee_scr">
+
+          <table width="100%">
+            <tr>
+              <td align="center">
+                
+
+
+                <table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><span tal:omit-tag="" tal:replace="request/name"/></td>
+                  </tr>
+                  <tr>
+                    <td><span tal:omit-tag="" tal:replace="request/addr1"/></td>
+                  </tr>
+                  <span tal:condition="request/addr2 | nothing">
+                    <tr>
+                      <td><span tal:omit-tag="" tal:replace="request/addr2"/></td>
+                    </tr>
+                  </span>
+                  <tr>
+                    <td><span tal:omit-tag="" tal:replace="request/city"/><span tal:condition="request/iso_region | nothing">,
+		    <span tal:omit-tag=""
+		    tal:replace="python:here.get_region_name_sql(iso_region=request['iso_region'])[0]['name']">
+		    </span>
+
+		    </span>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span tal:omit-tag="" tal:repeat="country countries">
+                        <span tal:omit-tag="" tal:condition="python:request['country'] == country['code']">
+                          <span tal:replace="country/name"/>
+                        </span>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span tal:omit-tag="" tal:replace="request/postal"/></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="hidden" name="radiobutton" tal:attributes="value request/radiobutton"/>
+                      <input type="hidden" name="name" tal:attributes="value request/name"/>
+                      <input type="hidden" name="addr1" tal:attributes="value request/addr1"/>
+                      <input type="hidden" name="addr2" tal:attributes="value request/addr2"/>
+                      <input type="hidden" name="city" tal:attributes="value request/city"/>
+                      <input type="hidden" name="country" tal:attributes="value request/country"/>
+
+			<span tal:condition="request/iso_region | nothing">
+			<input type="hidden" name="iso_region" tal:attributes="value request/iso_region"/>
+			</span>
+
+                      <input type="hidden" name="phone" tal:attributes="value request/phone"/>
+                      <input type="hidden" name="fax" tal:attributes="value request/fax"/>
+                      <input type="hidden" name="postal" tal:attributes="value request/postal"/>
+                      <input type="hidden" name="website" tal:attributes="value request/website"/>
+                      <input type="hidden" name="description" tal:attributes="value request/description"/>
+                      <input type="hidden" name="tax_id_num" tal:attributes="value request/tax_id_number | nothing"/>
+                      <input type="hidden" name="tax_reg_name" tal:attributes="value request/tax_reg_name | nothing"/>
+                      <input type="hidden" name="tax_class_id" tal:attributes="value request/tax_class_id | nothing"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <input type="submit" name="action" value="Confirm"/>
+
+                    </td>
+                  </tr>
+                </table>
+
+              </td>
+            </tr>
+          </table>
+        </form>
+      </span>
+    </span>
+    <p>&nbsp;</p>
+  </span>
+</html>
+
+
+
+ 
+ 
+<!-- This arch-tag is automatically generated. Do not remove. -->
+<!--  arch-tag: 9b83aab3-d5fb-4696-b92a-2181be28b070  -->

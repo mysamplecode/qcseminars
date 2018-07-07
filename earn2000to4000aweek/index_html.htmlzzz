@@ -1,0 +1,76 @@
+<html>
+<head></head>
+<body>
+
+
+		
+<script type="text/javascript">
+alert ('hi'); 
+</script>
+
+    <!-- the following is the preview of the Signup Form, but is only displayed once created -->
+    
+
+	<!-- Preview of signup form between this tag and next -->
+	<!--
+	<span tal:omit-tag="" tal:replace="structure python:here.signup.displayPersonDetails(formId=request['form_id'])" />
+-->
+	<script type="text/javascript" src="http://events.quantumchangeseminars.com/jscripts/checkUsername.js"></script> 
+<div id="form_id_136"><div class="opt_in_form">
+<h1>Fill in the Form</h1>
+<p>Please complete the form below and be sure to fill in all fields marked in
+<span style="color:red;">RED</span> before submitting.</p>
+<div class="form_header"></div>
+<div class="form_body">
+<form action="http://events.quantumchangeseminars.com//signup/processSignup" method="post" id="signup" name="person_signup">
+<input type="hidden" value="136" name="form_id">
+<input type="hidden" value="VOPT" name="form_type">
+
+<div class="required firstname form_row"><span class="heading">First Name:</span>
+<span class="input"><input type="text" value="" name="firstname"></span>
+</div>
+
+<div class="required lastname form_row"><span class="heading">Last Name:</span>
+<span class="input"><input type="text" value="" name="lastname"></span>
+</div>
+
+<div class="required email form_row"><span class="heading">email:</span>
+<span class="input"><input type="text" value="" name="email"><span class="instructions">Please triple check your email.</span></span>
+</div>
+
+<div class="required addr1 form_row"><span class="heading">Address Line 1:</span>
+<span class="input"><input type="text" value="" name="addr1"></span>
+</div>
+
+<div class="required city form_row"><span class="heading">City:</span>
+<span class="input"><input type="text" value="" name="city"></span>
+</div>
+
+<div class="required postal form_row"><span class="heading">Postal:</span>
+<span class="input"><input type="text" value="" name="postal"></span>
+</div>
+
+<div class="required cell_phone form_row"><span class="heading">Cell Phone:</span>
+<span class="input"><input type="text" value="" name="cell_phone"></span>
+</div>
+<script type="text/javascript" src="http://events.quantumchangeseminars.com/js/validate_email.js"></script>
+<div class="submit form_row">
+	    <input type="submit" onclick="return testEmail(form.email);" value="submit" name="action"></div>
+<div class="opt-in_alert form_row"><span>QC Seminars Respects your Privacy and does not practice nor tolerate spam in any shape or form. We do not communicate your email address or contact information to any third-part organization for resale. <b>You may unsubscribe at any time.</b><span>
+</span></span>
+</div>
+<div class="form_last_row"></div>
+</form>
+</div>
+<div class="form_footer"></div>
+</div>
+
+    
+
+
+     <!-- condition -->
+ 
+	</div>
+
+</body>
+</html>

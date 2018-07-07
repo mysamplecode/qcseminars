@@ -1,0 +1,181 @@
+
+
+.void
+    {
+	background-color: red;
+    background-image: url("/graphics/receipts_void.gif");
+    }
+
+table.receipts
+    {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    width: 700px;
+    padding: 10px;
+    }
+
+h1
+    {
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+    }
+
+.nameblock
+    {
+    font-size: 16px;
+    text-align: left;
+    vertical-align: top;
+    }
+
+.susblock
+    {
+    font-size: 16px;
+    text-align: right;
+    }
+
+.strong {
+	font-weight: bolder;
+}
+.major_section_separator {
+	border-bottom-style: solid;
+	border-bottom-width: 4px;
+	padding-bottom: 4px;
+}
+.section_separator
+    {
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding-bottom: 2px;
+    }
+
+.line_items td
+    {
+    border-top: thin;
+    border-right: thin;
+    border-bottom: thin solid;
+    border-left: thin;
+    }
+h3
+    {
+    }
+
+table.order_lines
+    {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    }
+
+table.sold_items
+    {
+    background-color: transparent;
+    padding-left: 0.5in;
+    }
+
+/*.sold_items thead>tr>th*/
+.sold_items thead th, .payments thead th
+    {
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    background-color: transparent;
+    }
+
+.order_lines thead th
+    {
+    background-color: transparent;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    }
+
+.state
+    {
+    width: 110px;
+    }
+.attendee
+    {
+    width: 150px;
+    }
+
+table.payments
+    {
+    }
+.amount {
+	width: 110px;
+}
+.date {
+	width: 150px;
+}
+.type {
+	width: 330px;
+}
+.payment {
+	width: 110px;
+}
+.total_amount, .total_amount td
+    {
+    font-size: 14px;
+    font-weight: bolder;
+    text-align: right;
+    border-top: thin solid black;
+    }
+
+.double_line {
+	border-top-style: double;
+}
+table.summary
+    {
+    text-align: right;
+    width: 100%;
+    }
+
+.summary th
+    {
+    background-color: white;
+    font-size: 14px;
+    font-weight: bolder;
+    text-decoration: underline;
+    }
+
+.subtotal
+    {
+    font-weight: bolder;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    }
+
+.grandtotal
+    {
+    font-size: 14px;
+    font-weight: bolder;
+    }
+
+.money
+    {
+    text-align: right;
+    }
+
+.subtotal .money
+    {
+    border-top-style: solid;
+    border-top-width: thin;
+    }
+
+.grandtotal .money
+    {
+    border-top-style: double;
+    }
+
+.record_number {
+	font-size: 9px;
+	text-align: center;
+}
+
+
+

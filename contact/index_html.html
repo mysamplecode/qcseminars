@@ -1,0 +1,160 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+<span tal:omit-tag="" metal:fill-slot="head">
+       <title>Contact Us</title>
+	   
+<script type="text/javascript">
+
+<!--
+function validate_form ( )
+{
+	valid = true;
+
+        if ( document.form1.yourName.value == "" )
+        {
+                alert ( "Please fill in the 'Your Name' box." );
+                valid = false;
+        }
+		
+        if ( document.form1.yourEmail.value == "" )
+        {
+                alert ( "Please fill in the 'Your Email' box." );
+                valid = false;
+        }
+			
+        if ( document.form1.subject.value == "" )
+        {
+                alert ( "Please fill in the 'Subject' box." );
+                valid = false;
+        }
+		
+        if ( document.form1.comments.value == "" )
+        {
+                alert ( "Please fill in the 'Comments' box." );
+                valid = false;
+        }
+		
+        return valid;
+}
+
+//-->
+</script>
+	   
+
+<style type="text/css">
+<!--
+.door_page_vopt div.form_body div.submit input{
+    background-image: url(graphics/signup_forms/contact_qcs_btn.png);
+	width: 300px;
+    height: 51px;
+}
+
+.ref_num {
+	color: #FF0000;
+	font-weight:bold;
+}
+
+-->
+</style>   
+	   
+	   
+</span>
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+
+
+
+        
+<img src="../graphics/contact_header.png" alt="Contact QC Seminars" width="595" height="98">
+<p>&nbsp;</p>
+<p>Address:<br>
+GPO Box 1617<br>
+Sydney NSW 2001<br>
+1300 733 642<br>
+Fax 02 4229 9193<br>
+</p>
+
+	<!-- This Code will display the CPID and Ambassador ID (WID) cookies if they exist along with an
+	alert to the customer to quote this reference number when calling QCS -->
+	<span tal:omit-tag="" tal:define="refnum python:request.get('cpid','0')+'-'+request.get('wid','0')">
+		<span tal:omit-tag="" tal:condition="python:refnum != '0-0'">
+			<p class="ref_num">When contacting us, please quote Reference# cpid-wid:<span tal:replace="refnum" /></p>
+		</span> 
+	</span> 
+
+<p>Free Call 1300 733 642</p>
+
+<div class="door_page_vopt">
+<div class="opt_in_form">
+<div class='form_header'></div>
+<div class='form_body'>
+<span tal:omit-tag="" tal:define="refnum python:request.get('cpid','0')+'-'+request.get('wid','0')">
+					  <div id="contact_us_form">
+					  
+					   <form name="form1" method="post" action="email_form" onSubmit="return validate_form ( );">
+						 <input type=hidden name=person_id  value="1" />
+						 <input type="hidden" name="email_id:list" value="1111" /><!-- office email -->
+						 <input name="exit_url" value="/contact/thankyou.html" type="hidden" />
+						 
+						 <input tal:attributes="value string:cpid-wid:${refnum}" name="ref_num"  type="hidden"/>
+						 
+						
+						<div class="form_row required"><div class="required_notice">*Required Fields in Red</div></div>
+		
+                        <div class="form_row required"><span class="heading">Your Name:</span><div class="input"><input name="yourName" type="text" size="30" maxlength="30" />
+                        </div></div>
+                        
+						<div class="form_row required"><span class="heading">Your Email:</span><div class="input"><input name="yourEmail" type="text" size="35" />
+						</div></div>
+                        
+						<div class="form_row required"><span class="heading">Topic:</span><div class="input">
+						<select name="topic">
+						  <option selected="selected">General Inquiry</option>
+							<option>FREE NLP Scholarship</option>
+							<option>Success Secrets Summit&trade;</option>
+							<option>Earn $1000 a Day</option>
+							<option>NLP Master Practitioner</option>
+							<option>NLP Trainers Training</option>
+							<option>Million Dollar Speaker</option>
+							<option>Other</option>
+						</select>
+						</div></div>
+						
+						<div class="form_row required"><span class="heading">Subject:</span><div class="input"><input name="subject" type="text" size="35" />
+						</div></div>
+						
+                        <div class="form_row"><span class="heading">Telephone:</span><div class="input"><input name="yourTelephone" type="text" /></div></div>
+						
+                        <div class="form_row"><span class="heading">City:</span><div class="input"><input name="yourCity" type="text" /></div></div>
+						
+						<div class="form_row required"><span class="heading">Comments:</span><div class="input"><textarea name="comments" cols="35" rows="10" type="text"></textarea>
+						</div></div>
+						
+                        <div class="form_row submit"><input name="submit" type="submit" value="Submit Form" /></div>
+                        
+						
+                      </form>
+					  </div>
+</span>				  
+</div>
+<div class='form_footer'></div>
+</div>
+</div>
+
+
+
+</span>
+
+
+  <span tal:omit-tag="" metal:fill-slot="right_bar">
+  	<span tal:omit-tag="" tal:replace='structure here/right_bar' />
+  </span>
+ 
+
+
+</html>
+ 
+ 

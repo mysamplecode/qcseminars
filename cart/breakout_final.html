@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+
+    <span tal:omit-tag="" metal:fill-slot="head">
+       <title>Shopping Cart</title>
+    </span>
+
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+    <span tal:omit-tag=""
+	tal:define="prices python:here.compute_prices_taxes(request)">
+
+    <span tal:replace="structure prices" />
+
+    </span> <!-- defs -->
+
+    </span> <!-- body -->
+</html>
+
+

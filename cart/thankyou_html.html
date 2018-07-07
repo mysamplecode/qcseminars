@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+
+<span tal:omit-tag="" metal:fill-slot="head">
+       <title>Thank You For Your Order</title>
+    </span>
+
+
+
+
+    <span tal:omit-tag="" metal:fill-slot="body">
+	<span tal:omit-tag="" tal:define="phone python:here.get_home_domain_phone_sql().dictionaries()[0]['value']">
+	<h1>Thank You For Your Order!</h1>
+	<p>Please review your order to ensure that no errors have been made. <strong>If you discover an error, please contact us as soon as possible at <span tal:replace="phone"/></strong>.</p>
+  	<h2>Order Details</h2>
+       <span tal:replace="structure python:here.thankyoubody_order(request)" />
+       <p>&nbsp;</p>
+	<h2>Courses Ordered:</h2>
+    <p>If you have purchased one or more seats to a live event they will appear in a table below.
+     <strong>Please click each Attendee ID link below because there may be additional actions that require your attention.</strong> </p>
+       	<span tal:replace="structure python:here.thankyoubody_events(request)" /> 
+       
+       
+       <p>&nbsp;</p>
+     <h2>Items  Ordered:</h2>
+    <p>If you have ordered one or more products that require shipping, they will be sent to the following address. Please review the list of items below to confirm they reflect your purchase. </p>
+       <span tal:replace="structure python:here.thankyoubody_products(request)" /> 
+	</span><!-- /phone refs -->
+    </span>
+
+</html>
+ 
+

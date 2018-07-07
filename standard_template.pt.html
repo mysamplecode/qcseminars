@@ -1,0 +1,90 @@
+<span tal:omit-tag="" metal:define-macro="page">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<base />
+
+<head>
+
+<link href="css/sus_base.css" rel="stylesheet" type="text/css" />
+<link href="css/dropdown.css" rel="stylesheet" type="text/css" />
+<link href="css/dd-formmailer.css" rel="stylesheet" type="text/css" />
+<link href="css/standardcopy.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/tubepress.css" rel="stylesheet" type="text/css" />
+<link href="css/helper.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/susjs/MochiKit.js"></script>
+
+
+
+<metal:block define-slot="head">
+<title>   
+<span tal:replace="template/title" /> 
+</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+</metal:block>
+
+
+
+</head>
+
+<body>
+
+<div id="header">
+	<div id="navigation">
+		<div class="nav_bar"> 
+		<!-- navigation elements called to from shopping cart one line code change if cart contains items or not -->
+		<span tal:omit-tag="" tal:replace='structure here/current_cart_one_line' />  
+		</div>
+	</div>
+</div>
+<div id="header_bottom"></div>
+
+<div id="content">
+	<div id="left_bar">
+		<div metal:define-slot="body"></div>
+	</div>
+	
+	<div metal:define-slot="right_bar"></div>
+
+<div style="clear:both"></div>
+
+</div>
+
+
+
+<div id="navigation-footer">
+
+<table width="100%" height="50px" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="14px"><img src="graphics/nav-left-cap.png" width="14" height="50" /></td>
+    <td width="972px%" valign="top">
+
+    <div id="navigation-bg">
+      <span tal:omit-tag="" tal:replace='structure here/includes/footer-nav' /> 
+    </div>
+    
+    <div id="navigation-bg-footer"></div></td>
+    <td width="14px"><div align="right"><img src="graphics/nav-right-cap.png" width="14" height="50" /></div></td>
+  </tr>
+</table>
+
+</div>
+
+<div id="footer">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+    <span tal:omit-tag="" tal:replace='structure here/includes/footer' /> 
+    </td>
+  </tr>
+</table>
+
+</div>
+
+</body>
+</html>
+</span>

@@ -1,0 +1,336 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+<span tal:omit-tag="" metal:fill-slot="head">
+
+<title>
+
+
+</title>
+
+
+<style type="text/css">
+<!--
+
+<!--
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+}
+#left_bar{
+padding:0;
+margin:1px;
+margin-top:0;
+}
+
+
+#quitsqueezeimagine {
+	background-image: url(images/imagine_photo_background.jpg);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 587px;
+	clear:both;
+	font-size:14px;
+}
+#quitlist{
+padding-top:60px;}
+#quitlist li {
+	list-style-position: inside;
+	list-style-image: url(images/arrow_bullet.jpg);
+	padding-left:50px;
+padding-bottom:10px;
+}
+h2 {
+	text-align: center;
+	font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #cc0000;
+	font-size: 36px;
+}
+#quitsqueezeimagine p {
+	padding-left: 350px;
+	padding-top: 120px;
+	clear:both;
+	
+}
+
+
+#sideform div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 272px;
+    height: 56px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor:pointer;
+	color: transparent;
+margin-left:-120px;
+
+
+}
+
+
+.door_page_vopt div.form_body div.submit input{
+    background-image: url(images/quit_reportdvd_btn.png);
+    background-repeat: no-repeat;
+ width: 270px;
+    height: 56px;
+
+}
+
+div.opt_in_form {
+    width: 500px;
+}
+
+div.form_body span.heading{
+    width: 130px;
+}
+
+.door_page_vopt div.form_body #prov_state_selector {
+	margin-left:130px;
+}
+
+.door_page_vopt div.form_body div.form_row{
+    padding-bottom: 10px;
+    padding-left: 10px;
+	 padding-top: 10px;
+}
+#sideform .opt_in_form div.form_body form#signup {
+
+padding:0;
+
+}
+#sideform{
+
+float:left;
+
+width:280px;
+-moz-border-radius:12px 12px 12px 12px;
+background-color:#FFFFDD;
+border:4px dashed #FF0000;
+
+padding-bottom:10px;
+padding-left:10px;
+padding-right:10px;
+margin-left:15px;
+}
+
+
+#sideform div.form_body span.heading {
+width: 88px !important;
+}
+#sideform div.form_body div.email input {
+width: 143px !important;
+}
+#sideform div.form_body span.instructions {
+padding-left: 0;
+}
+.tiny p {
+	font-size:7px;
+	line-height:10px;
+	color: #aaa;
+}
+#sideform div.form_body div.opt-in_alert {
+line-height: 10px !important;
+padding: 0;
+}
+
+#sideform p{
+text-align:center;
+padding-top:5px; 
+}
+
+
+#newquit li {
+	font-size: 14px;
+}
+.capsred {
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #ff0000;
+	text-align: center;
+	display: block;
+padding:0;
+margin:0;
+}
+
+.othercapsred{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	text-align: center;
+	display: block;
+padding:0;
+
+
+}
+.othercapsred span{
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #FFFFFF;
+	background-color: #990000;
+	font-size:10px;
+
+}
+.topboxtxt{
+font-size:16px;
+font-weight:bold;
+color:#cc0000;
+margin:0;
+}
+
+
+#quitsqueezeimagine h2{
+padding-top:80px;
+padding-left:20px;
+
+}
+#testimonials{
+padding:5px;
+}
+
+
+#testimonials h4{ 
+font-family: "Arial Black", Arial, Helvetica, sans-serif;
+	
+font-size:30px;
+line-height:110%;
+background-color:#ffffff;
+float:left;
+}
+#quote{
+color:#999999;
+width: 270px;
+float:left;
+padding-top: 20px;
+}
+.floatleft{
+float:left;
+}
+.floatright{
+float:right;
+}
+.clearall{
+clear:both;
+}
+#quote p{
+float:left;
+}
+.door_page_vopt div.opt_in_form {
+color:red;
+font-size:18px;
+font-weight:bold;
+
+}
+#quotetwo{
+color:#999999;
+width: 500px;
+float:left;
+padding-top: 20px;
+padding-left:45px;
+
+}
+
+
+#testimonials object{
+padding-bottom:10px;
+
+}
+
+-->
+</style>
+</span>
+<span tal:omit-tag="" metal:fill-slot="body">
+<div id="newquit">
+<div id="sideform">
+<p class="topboxtxt">Simply fill in your details below</p>
+<p class="capsred">FREE REPORT</p>
+<p class="othercapsred">+ DVD <span>(VALUED AT $97)</span> </p>
+
+<span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='108')" />
+</div>
+
+<div style="height: 349px; width: 510; float: right; padding-right:5px;">
+<img src="images/quit_head_top.jpg" width="510" height="217" alt="Make 1000 a day" />
+<h1 style="margin:0; padding:0;"><img src="images/quit_head_btm.jpg" width="510" alt="Make $1000 a day" /></h1>
+</div>
+
+<div id="quitsqueezeimagine">
+<p>The Lifestyle You Could Have If You Were <strong>Making $1,000 A Day!</strong></p>
+
+
+<p>Reversing the normal work-week by <strong>working only 2 days and 
+taking 5 whole days off.</strong> And as well as that…</p>
+<p>
+Taking an <strong>entire month off every 3 months</strong> and spending 
+that time on holiday!</p>
+
+
+<h2>When you attend this seminar <br />
+SOME of what you will get:</h2>
+</div> 
+<div style="clear:both; height: 5px;"></div>
+<div id="quitlist">
+  <ul>
+    <li>
+      
+      30 day Step-by-Step Action Plan to have you up and running <strong>making $1,000 a day or more 90 days after the seminar</strong></li>
+      
+     <li> How to earn $1,000 a day, all while still <strong>only working 2 days a week</strong></li>
+      
+      <li>Every single ad, brochure, business card, and marketing material you will need to start your business</li>
+      
+      <li>All the scripts and paperwork</li>
+      
+     <li> A market with 15% of the people in your area wanting what only you can give them</li>
+      
+      <li><strong>FREE</strong> follow up training and support</li>
+      
+ 
+  </ul>
+</div>
+
+<h2>Gain Instant Access to the<br /> 
+full 10 Page Report on How You Can <br /> 
+Easily Make $1,000 a Day:</h2> 
+
+<div class="door_page_vopt">
+
+<span tal:omit-tag="" tal:replace="structure python:here.signup.personLogin(formId='112')" /></div>
+<div align="center"><img src="http://quantumchangeseminars.com/programs/wp-content/themes/default/images/qc_privacy+spam.jpg" alt="Privacy" /></div>
+<div id="testimonials">
+<br />
+<img class="floatleft" src="http://quantumchangeseminars.com/programs/quit/images/freedvd.jpg" alt="FREE DVD" />
+<div id="quote">
+<h4>“I am going <br />
+to have 7 <br />
+- count that 7 - <br />
+$1000 days <br />
+in a row...”</h4>
+<p>-Di W, Coffs Harbour NSW</p>
+<img src="images/hearmore.gif" alt="Click to hear more" width="270" class="floatleft" style="padding-top:28px;"></div>
+<br /><br />
+<div class="floatright"><object width="324" height="250"><param name="movie" value="http://www.youtube.com/v/O4SjvV4_-DE&amp;hl=en_US&amp;fs=1"/><param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/><embed src="http://www.youtube.com/v/O4SjvV4_-DE&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="324" height="250"></embed></object></div>
+<div class="clearall"></div>
+<div class="floatright"><object width="324" height="250"><param name="movie" value="http://www.youtube.com/v/5HNDo6ywCS8&amp;hl=en_US&amp;fs=1"/><param name="allowFullScreen" value="true"/><param name="allowscriptaccess" value="always"/><embed src="http://www.youtube.com/v/5HNDo6ywCS8&amp;hl=en_US&amp;fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="324" height="250"></embed></object>
+</div>
+<div id="quotetwo">
+<h4>“Best thing that every happened to my life. . . <br />it allowed me to earn over $100,000 a year. . . <br />financial freedom plus”</h4><p>- Sharon</p>
+<img class="floatright" src="images/hearmore.gif" alt="Click to hear more" width="270">
+
+<br />
+
+</div>
+
+
+</div>
+
+</div>
+
+</span>
+
+
+</html>

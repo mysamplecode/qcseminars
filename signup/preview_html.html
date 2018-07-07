@@ -1,0 +1,30 @@
+
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  metal:use-macro="container/standard_template.pt/macros/page">
+  
+  <span tal:omit-tag="" metal:fill-slot="head">
+     <title><span tal:replace="template/title" /></title>
+  </span>
+
+  <span tal:omit-tag="" metal:fill-slot="titleimage"><img src="/graphics/titles/ppt.gif" width="600" height="65"></span>
+
+  <span tal:omit-tag="" metal:fill-slot="body">
+
+
+    <!-- the following is the preview of the Signup Form, but is only displayed once created -->
+    <span tal:omit-tag="" tal:condition="request/form_id | nothing">
+
+	<!-- Preview of signup form between this tag and next -->
+	<!--
+	<span tal:omit-tag="" tal:replace="structure python:here.signup.displayPersonDetails(formId=request['form_id'])" />
+-->
+	<span tal:omit-tag="" tal:replace="structure python:here.signup.demoForm(formId=request['form_id'])" />
+    
+
+
+    </span> <!-- condition -->
+ </span> <!-- pagebody -->
+</html>
